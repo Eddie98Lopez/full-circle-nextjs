@@ -29,9 +29,6 @@ body {
 .section {
   width: 100%;
   height: 85vh;
-
-
-
 }
 
 section{
@@ -74,7 +71,7 @@ section{
 }
 
 .display-2 {
-  font-family: "wilden", sans-serif;
+  font-family: "Wilden", sans-serif;
 }
 
 .btn {
