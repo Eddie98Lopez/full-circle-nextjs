@@ -1,0 +1,15 @@
+.icon{
+    width:auto;
+    height: 30px;
+    object-position: center center;
+
+}
+
+.wrapper{
+    padding: 2rem;
+    color: #2b2b22;
+    display:flex;
+    gap: .5rem;
+    flex-direction:column;
+    text-align: center;
+}

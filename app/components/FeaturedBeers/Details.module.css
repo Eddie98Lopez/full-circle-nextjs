@@ -1,0 +1,55 @@
+.segment {
+  width: 100%;
+  height: 4px;
+  border-radius: 500px;
+  background: var(--white);
+}
+
+.wrapper {
+  padding: 7rem 0;
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  gap: 0.5rem;
+  letter-spacing: 3px;
+  color: var(--white);
+}
+
+.wrapper > h3 {
+  font-size: 3rem;
+}
+
+.description {
+  letter-spacing: normal;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+    padding: 0;
+    letter-spacing: auto;
+  }
+
+
+  .wrapper > h3 {
+    font-size: 2.5rem;
+  }
+
+  .span {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .wrapper > h3 {
+    font-size: 2rem;
+  }
+
+
+
+
+  .span {
+    font-size: 1.15rem;
+  }
+}

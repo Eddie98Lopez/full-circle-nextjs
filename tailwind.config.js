@@ -5,6 +5,14 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  colors: {
+    'black': '#2b2b2b',
+    'white': '#ededed',
+    'green': '#69BF4A',
+    'yellow': '#E3C23B',
+    'grey': '#707070',
+  
+  },
   theme: {
     extend: {
       backgroundImage: {

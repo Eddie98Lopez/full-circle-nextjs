@@ -1,27 +1,91 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@700&display=swap");
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "wilden";
+  src: url("./wilden-webfont.woff2") format("woff2"),
+    url("./wilden-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --black: #2b2b2b;
+  --white: #ededed;
+  --green: #69bf4a;
+  --yellow: #e3c23b;
+  --grey: #707070;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #ededed;
+  width:100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.section {
+  width: 100%;
+  height: 85vh;
+
+}
+
+section{
+  width:100%;
+}
+
+.bg-1 {
+  background-image: url("/brick.svg");
+  background-repeat: repeat;
+}
+
+.bg-2 {
+  background-image: url("/paperBG.jpg");
+  background-color: var(--black, #2b2b2b);
+  background-size: cover;
+  background-blend-mode: color-burn;
+  color: var(--white, white);
+}
+
+.bg-3 {
+  background-image: url("/logo-full.svg");
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: -20% 50%;
+}
+
+.tagline {
+  display: grid;
+  place-content: center center;
+  text-align: center;
+  width: 100%;
+  min-height: 20vh;
+  padding: 2rem;
+  font-family: "Wilden", "Rubik", sans-serif;
+}
+
+.display-1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+}
+
+.display-2 {
+  font-family: "Wilden", "Rubik", sans-serif;
+}
+
+.btn {
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  padding: 0.75rem;
+  letter-spacing: 3px;
+  outline: solid 5px var(--white, white);
+  transition: 1s fade-in ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s fade-in ease-in;
+  background-color: var(--green, green);
+  outline: none;
 }

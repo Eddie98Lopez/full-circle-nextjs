@@ -1,0 +1,17 @@
+.list {
+  height: inherit;
+  display: block;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: ease-in-out .5s;
+  transform-origin: left;
+
+}
+
+.viewPort {
+  width: inherit;
+  margin: auto;
+  height: inherit;
+  overflow-x: hidden;
+}
