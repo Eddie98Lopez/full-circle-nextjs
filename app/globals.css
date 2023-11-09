@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "wilden";
+  font-family: "Wilden";
   src: url("./wilden-webfont.woff2") format("woff2"),
     url("./wilden-webfont.woff") format("woff");
   font-weight: normal;
@@ -65,7 +65,7 @@ section{
   width: 100%;
   min-height: 20vh;
   padding: 2rem;
-  font-family: Wilden , 'Rubik', sans-serif;
+  font-family: "Wilden", 'Rubik', sans-serif;
 }
 
 .display-1 {
@@ -74,7 +74,7 @@ section{
 }
 
 .display-2 {
-  font-family: Wilden, sans-serif;
+  font-family: "wilden", sans-serif;
 }
 
 .btn {
