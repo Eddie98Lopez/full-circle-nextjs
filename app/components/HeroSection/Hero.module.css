@@ -20,6 +20,7 @@
   height: fit-content;
   color: var(--white,white);
   z-index:1;
+  font-family: roboto, sans-serif;
 
 }
 
