@@ -15,7 +15,7 @@ const FeaturedBeerCard = ({ beer, ...props }) => {
 
       <div className={`${styles.wrapper}`}>
         <div className={styles.imageWrapper}>
-          <Image src='/12oz-can.png'alt='can-mockup' width={100} height={200}/>
+          <Image src='/images/12oz-can.png'alt='can-mockup' width={100} height={200}/>
         </div>
 
         <Details beer={beer}/>
