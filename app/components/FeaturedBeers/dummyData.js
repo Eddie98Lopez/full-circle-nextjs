@@ -1,7 +1,7 @@
 const dummyBeers = [
   {
     name: "Peachy Vibes",
-    beer_type: "wheate ale",
+    beer_type: "wheat ale",
     abv: 4.7,
     description: "fruity, crisp, crushable wheat ale with a peachy twist.",
     image_src:'',
@@ -9,7 +9,7 @@ const dummyBeers = [
   },
   {
     name: "Juicy Vibes",
-    beer_type: "wheate ale",
+    beer_type: "wheat ale",
     abv: 6,
     description:
       "citrus-packed, hazy pale-ale with fresh-squeezed orange notes and aromatic hops.",
@@ -18,7 +18,7 @@ const dummyBeers = [
   },
   {
     name: "Mango Vibes",
-    beer_type: "wheate ale",
+    beer_type: "wheat ale",
     abv: 6,
     description: "mango and tropical hops in a bright, crisp IPA",
     image_src:'',

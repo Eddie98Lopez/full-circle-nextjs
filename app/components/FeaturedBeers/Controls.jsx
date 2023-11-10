@@ -1,6 +1,7 @@
 import React from 'react'
-import { BsFillArrowRightCircleFill as RightCirle } from "react-icons/bs";
-import { BsFillArrowLeftCircleFill as LeftCirle } from "react-icons/bs";
+import { IoMdArrowDroprightCircle as RightCirle } from "react-icons/io";
+
+import { IoMdArrowDropleftCircle as LeftCirle } from "react-icons/io";
 import styles from './Controls.module.css'
 
 const Controls = ({previous,next}) => {

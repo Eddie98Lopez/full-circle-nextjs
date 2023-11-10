@@ -10,8 +10,6 @@
   font-style: normal;
 }
 
-
-
 :root {
   --black: #2b2b2b;
   --white: #ededed;
@@ -35,12 +33,12 @@ section {
 }
 
 .bg-1 {
-  background-image: url("/brick.svg");
+  background-image: url("/images/brick.svg");
   background-repeat: repeat;
 }
 
 .bg-2 {
-  background-image: url("/paperBG.jpg");
+  background-image: url("/images/paperBG.jpg");
   background-color: var(--black, #2b2b2b);
   background-size: cover;
   background-blend-mode: color-burn;
@@ -48,10 +46,21 @@ section {
 }
 
 .bg-3 {
-  background-image: url("/logo-full.svg");
+  background-image: url("/images/logo-full.svg");
   background-size: 65%;
   background-repeat: no-repeat;
   background-position: -20% 50%;
+
+  @media only screen and (max-width: 768px) {
+    background-size: 90%;
+    background-position: -200% 50%;
+  } 
+
+  @media only screen and (max-width: 500px) {
+    background-size: 100%;
+    background-position: top left -6rem;
+  }
+
 }
 
 .tagline {
