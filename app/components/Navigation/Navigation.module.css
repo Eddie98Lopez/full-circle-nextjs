@@ -18,9 +18,10 @@
     width: auto;
 }
 
-.logo>svg {
+.logo>img {
     height:inherit;
     width: auto;
+    object-fit: cover;
     transform-origin: center center;
     transform:scale(85%,85%);
 }

@@ -13,7 +13,7 @@ const NavBar = (props) => {
         
       <Hamburger />
       <div className={styles.logo}>
-        <LogoAnimated/>
+        <Image width={50} height={50} src='/images/logo-small-animated.svg'/>
       </div>
 
       <div>button</div>

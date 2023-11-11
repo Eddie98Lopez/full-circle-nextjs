@@ -2,57 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes eyeblink {
-  0% {
-    transform: translate(694.725 3340.344) scale(1, 0);
-  }
-  7% {
-    transform: translate(694.725 3340.344) scale(1, 0);
-  }
-  10% {
-    transform: translate(694.725 3340.344) scale(1, 1);
-  }
-  13% {
-    transform: translate(694.725 3340.344) scale(1, 1);
-  }
-  20% {
-    transform: translate(694.725 3340.344) scale(1, 0);
-  }
-  23% {
-    transform: translate(694.725 3340.344) scale(1, 1);
-  }
-  100% {
-    transform: translate(694.725 3340.344) scale(1, 1);
-  }
-}
-.eyeblinker {
-  animation: eyeblink 3000ms linear 1 normal forwards;
-  animation-iteration-count: infinite;
-}
 
-@keyframes e7YEiB5Czvd26_ts__ts {
-  0% {
-    transform: translate(111.954694px, 241.381456px) scale(1, 0);
-  }
-  6.666667% {
-    transform: translate(111.954694px, 241.381456px) scale(1, 0);
-  }
-  10% {
-    transform: translate(111.954694px, 241.381456px) scale(1, 1);
-  }
-  16.666667% {
-    transform: translate(111.954694px, 241.381456px) scale(1, 1);
-  }
-  20% {
-    transform: translate(111.954694px, 241.381456px) scale(1, 0);
-  }
-  23.333333% {
-    transform: translate(111.954694px, 241.381456px) scale(1, 1);
-  }
-  100% {
-    transform: translate(111.954694px, 241.381456px) scale(1, 1);
-  }
-}
+
 
 @font-face {
   font-family: "wilden";
