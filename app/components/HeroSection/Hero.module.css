@@ -27,6 +27,8 @@
 .wrapper {
   height:70vh;
   background-color: black;
+  animation: slideInLeft;
+  animation-duration: 2s;
 }
 
 @media only screen and (max-width:768px){
