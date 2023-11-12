@@ -18,7 +18,7 @@ const NavMenu = () => {
       </div>
 
       <div className={styles.button}>
-        <button className="btn">Shop</button>
+        <a href='/'><button className="btn">Shop</button></a>
       </div>
     </MenuLayout>
   );
