@@ -93,6 +93,7 @@ section {
   letter-spacing: 3px;
   outline: solid 5px var(--white, white);
   transition: 1s fade-in ease-in-out;
+  vertical-align: middle;
 }
 
 .btn:hover {
@@ -100,3 +101,7 @@ section {
   background-color: var(--green, green);
   outline: none;
 }
+
+
+
+

@@ -7,52 +7,62 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem;
+  padding: 0 1rem;
   position: sticky;
   top: 0;
   z-index: 200;
+  overflow: hidden;
 }
 
-.logo{
-    height: inherit;
-    width: auto;
+.logo {
+  height: inherit;
+  width: auto;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.logo>img {
-    height:inherit;
-    width: auto;
-    object-fit: cover;
-    transform-origin: center center;
-    transform:scale(85%,85%);
+.logo > img {
+  height: inherit;
+  width: auto;
+  object-fit: cover;
+  transform-origin: center center;
+  transform: scale(85%, 85%);
 }
 
-/*const OpenMenuSty = styled.div`
-width:100%;
-height: 100vh;
-position: fixed;
-top:0;
-right:0;
-z-index: 10000;
-${props=> props.theme.character.header};
-color:${props=> props.theme.colors.white};
-${props=> props.theme.background.paper};
-padding: 5% 20%;
-
-display:grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 50vh auto;
-
-fill:white;
-
-& div{
-    &img{
-        height: inherit;
-        width:auto;
-    }
-    & svg{
-        fill:white;
-    }
+.shop {
+  font-size: 1rem;
+  font-family: Rubik, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: 2px solid var(--white);
+  padding: 0.15rem 0.6rem 0 0.75rem;
+  text-align: center;
 }
-`
 
-*/
+.menu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: grid;
+  transform-origin: center center;
+  transform: translateY(-100%) scale(0.5, 0.5);
+  z-index: 10000;
+  font-family: Rubik, sans-serif;
+  color: var(--white);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50vh auto;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.openMenu {
+  opacity: 1;
+  transform: translateY(0%) scale(1, 1);
+  animation: zoomInDown;
+  animation-duration: 0.5s;
+}

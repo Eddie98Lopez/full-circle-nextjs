@@ -18,7 +18,7 @@ const FeaturedBeerCard = ({ beer, ...props }) => {
           <Image src='/images/12oz-can.png'alt='can-mockup' width={100} height={200}/>
         </div>
 
-        <Details beer={beer}/>
+        <Details beer={beer} dark={false}/>
 
 
       </div>

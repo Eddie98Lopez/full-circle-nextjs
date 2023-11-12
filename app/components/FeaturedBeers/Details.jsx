@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./Details.module.css";
 import FancySegment from "../FancySegment";
 
-const Details = ({ beer, ...props }) => {
+const Details = ({ beer,...props }) => {
   const { name, beer_type, abv, description } = beer;
+  const theme = (props.dark===false) ? styles.light : styles.dark
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} `}>
       <h3 className="display-2">{name}</h3>
-      
 
       <FancySegment/>
 
