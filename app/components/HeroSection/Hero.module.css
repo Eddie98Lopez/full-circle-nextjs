@@ -1,11 +1,10 @@
 .herovideo {
-  width:100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center center;
   pointer-events: none;
   opacity: 0.5;
-  
 }
 
 .tagline {
@@ -13,25 +12,30 @@
   margin: auto;
   position: absolute;
   z-index: auto;
-  top: 35vh;
+  top: 50%;
   left: 50%;
-  transform:translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 60%;
   height: fit-content;
-  color: var(--white,white);
-  z-index:1;
+  color: var(--white, white);
+  z-index: 1;
   font-family: roboto, sans-serif;
+}
 
+.tagline :nth-child(n) {
+  margin: 1rem 0;
 }
 
 .wrapper {
-  height:70vh;
+  height: 70vh;
   background-color: black;
+  animation: slideInLeft;
+  animation-duration: 2s;
+  position: relative;
 }
 
-@media only screen and (max-width:768px){
-  .tagline{
-    width:85%;
+@media only screen and (max-width: 768px) {
+  .tagline {
+    width: 85%;
   }
-  
 }

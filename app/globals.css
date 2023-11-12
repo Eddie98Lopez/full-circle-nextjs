@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 @font-face {
   font-family: "wilden";
   src: url("wilden-webfont.woff2") format("woff2"),
@@ -54,13 +57,12 @@ section {
   @media only screen and (max-width: 768px) {
     background-size: 90%;
     background-position: -200% 50%;
-  } 
+  }
 
   @media only screen and (max-width: 500px) {
     background-size: 100%;
     background-position: top left -6rem;
   }
-
 }
 
 .tagline {
@@ -91,6 +93,7 @@ section {
   letter-spacing: 3px;
   outline: solid 5px var(--white, white);
   transition: 1s fade-in ease-in-out;
+  vertical-align: middle;
 }
 
 .btn:hover {
@@ -98,3 +101,7 @@ section {
   background-color: var(--green, green);
   outline: none;
 }
+
+
+
+

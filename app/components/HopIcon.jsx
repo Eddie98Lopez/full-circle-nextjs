@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36.003" height="44.406" viewBox="0 0 36.003 44.406">
+import React from 'react'
+
+const HopIcon = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="36.003" height="44.406" viewBox="0 0 36.003 44.406">
   <g id="Artwork_3" data-name="Artwork 3" transform="translate(0 0)">
     <g id="Group_24" data-name="Group 24" transform="translate(0 0)">
       <path id="Path_146" data-name="Path 146" d="M15.6,16.882l3.187.066a60.965,60.965,0,0,1,7.476-7.52A36.265,36.265,0,0,0,17.21,0,39.735,39.735,0,0,0,8.08,9.351,86.558,86.558,0,0,1,15.6,16.882Z" transform="translate(0.83)"  />
@@ -10,3 +14,7 @@
     </g>
   </g>
 </svg>
+  )
+}
+
+export default HopIcon
