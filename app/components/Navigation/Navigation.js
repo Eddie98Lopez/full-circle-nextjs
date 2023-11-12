@@ -1,23 +1,20 @@
-'use client'
+"use client";
 
-import React, {useState} from 'react'
-import NavBar from './NavBar'
-
-import NavProvider from './NavProvider'
-import { type } from 'os';
-
+import React from "react";
+import NavBar from "./NavBar/NavBar";
+import styles from "./Navigation.module.css";
+import NavProvider from "./NavProvider";
+import NavMenu from "./NavLinkList/NavMenu";
 
 const Navigation = () => {
   return (
-    
     <NavProvider>
-    
-    <NavBar/>
-   
-    
+      <nav className={styles.nav}>
+        <NavBar />
+        <NavMenu />
+      </nav>
     </NavProvider>
-   
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

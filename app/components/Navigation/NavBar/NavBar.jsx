@@ -1,15 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { useOpen } from "./NavProvider";
-import Hamburger from "./Hamburger";
-import styles from "./Navigation.module.css";
-import OpenMenu from './OpenMenu'
+import Hamburger from "../Hamburger";
+import styles from "./NavBar.module.css";
 
 const NavBar = (props) => {
   return (
     <nav className={`${styles.nav}`}>
-
       <Hamburger />
       <div className={styles.logo}>
         <Image
@@ -20,9 +17,9 @@ const NavBar = (props) => {
         />
       </div>
 
-      <button className={`${styles.shop} `}>shop</button>
-
-      <OpenMenu/>
+      <a>
+        <button className={`${styles.shop} `}>shop</button>
+      </a>
     </nav>
   );
 };
