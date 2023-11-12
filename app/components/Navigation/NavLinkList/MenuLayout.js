@@ -9,7 +9,9 @@ const MenuLayout = ({ children }) => {
   return (
     <div className={`${styles.menu} bg-2 ${isOpen == true && styles.openMenu}`}>
       <div onClick={dispatch} className={styles.close}>
-        <RiCloseFill className="text-white" />
+        <button alt='close-menu-menu'>
+          <RiCloseFill className="text-white" />
+        </button>
       </div>
 
       <div>{children[0]}</div>
