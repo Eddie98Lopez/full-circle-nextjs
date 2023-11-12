@@ -47,22 +47,103 @@
   width: 100%;
   height: 100vh;
   position: fixed;
+  padding: 1rem;
   top: 0;
   right: 0;
   display: grid;
   transform-origin: center center;
-  transform: translateY(-100%) scale(0.5, 0.5);
+  transform: translateY(-100%) ;
   z-index: 10000;
   font-family: Rubik, sans-serif;
   color: var(--white);
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50vh auto;
+  grid-template-rows: 70vh auto;
   opacity: 0;
   transition: all 0.3s ease-in-out;
+
+  @media only screen and (max-width:526px){
+    display:flex;
+    flex-direction: column;
+    place-content: center center;
+    gap:2rem;
+  }
+
 }
+.menu :nth-child(n){
+    display: grid;
+    place-content: center center;
+  }
+
+
+.close {
+  position: absolute;
+  font-size: 3rem;
+  top: 1rem;
+  left: 1rem;
+  z-index:4;
+}
+.menuList {
+  width: 100%;
+  height: 100%;
+  font-family: Rubik, sans-serif;
+  color: var(--white);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.menuList :nth-child(n) {
+  transition: all 0.3s ease-in-out;
+  animation: fadeInLeft;
+  animation-duration: 1;
+  display: block;
+  letter-spacing: 3px;
+  margin: 1rem 0;
+
+  @media only screen and (max-width:526px){
+    margin: .5rem auto;
+  }
+}
+
 .openMenu {
+  transition: all 0.3s ease-in-out;
   opacity: 1;
-  transform: translateY(0%) scale(1, 1);
+  transform: translateY(0%);
   animation: zoomInDown;
   animation-duration: 0.5s;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  @media only screen and (max-width:526px){
+    height: 5rem;
+    width:auto;
+    ;}
+
+
+
+}
+
+.imageWrapper > img {
+  object-fit: cover;
+  object-position: center center;
+  height: 100%;
+  width: auto;
+  transform: scale(.5,.5);
+
+  @media only screen and (max-width:526px){
+    height: inherit;
+    width:auto;
+    transform: scale(1,1);
+
+    ;}
+}
+
+.button{
+    display:grid;
+    place-content: center center;
+    grid-column: 1/3;
 }
