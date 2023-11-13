@@ -23,7 +23,7 @@ const NavLinkList = () => {
             href={link.path}
             className={`${styles.open}`}
             style={{
-              animationDelay: `${0.3 * (i / navLinks.length)}s`,
+              animationDelay: `${ .2*(i / navLinks.length)}s`,
             }}
           >
             {link.name}
