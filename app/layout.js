@@ -1,5 +1,6 @@
 import "./css-reset.css";
 import "./globals.css";
+import './animate.css'
 import Footer from "./components/Footer/Footer";
 import Navigation from "./components/Navigation/Navigation.js";
 
@@ -9,6 +10,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <body>
