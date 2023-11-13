@@ -4,7 +4,6 @@ import { useOpen } from "../NavProvider";
 import { RiCloseFill } from "react-icons/ri";
 
 const MenuLayout = ({ children }) => {
-  console.log(children);
   const { isOpen, dispatch } = useOpen();
   return (
     <div className={`${styles.menu} bg-2 ${isOpen == true && styles.openMenu}`}>

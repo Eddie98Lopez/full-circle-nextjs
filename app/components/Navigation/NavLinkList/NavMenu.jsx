@@ -9,16 +9,21 @@ const NavMenu = () => {
   return (
     <MenuLayout>
       <div className={styles.imageWrapper}>
-        <Image src="/images/logo-full.svg" width={50} height={50} alt="logo" />
-        <div>social media component</div>
+        <Image
+          src="/images/opaque-full-logo.svg"
+          width={50}
+          height={50}
+          alt="logo"
+        />
       </div>
-
       <div>
         <NavLinkList />
       </div>
 
       <div className={styles.button}>
-        <a href='/'><button className="btn">Shop</button></a>
+        <a href="/">
+          <button className="btn">Shop</button>
+        </a>
       </div>
     </MenuLayout>
   );

@@ -19,6 +19,9 @@
   --green: #69bf4a;
   --yellow: #e3c23b;
   --grey: #707070;
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
 }
 
 body {

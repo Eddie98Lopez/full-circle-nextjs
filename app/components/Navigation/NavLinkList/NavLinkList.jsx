@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./NavList.module.css";
+import { useOpen } from "../NavProvider";
+import "../../../animate.css";
+import Navlink from "./Navlink";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -11,13 +14,22 @@ const navLinks = [
 ];
 
 const NavLinkList = () => {
+  const { isOpen } = useOpen();
   return (
     <div className={styles.list}>
       {navLinks.map((link, i) => {
         return (
-          <Link key={Math.random() * i} href={link.path}>
+          <Navlink
+            key={Math.random()}
+            href={link.path}
+            className={`${styles.open}`}
+            style={{
+              animationDelay: `${ .2*(i / navLinks.length)}s`,
+            }}
+            link={link}
+          >
             {link.name}
-          </Link>
+          </Navlink>
         );
       })}
     </div>
