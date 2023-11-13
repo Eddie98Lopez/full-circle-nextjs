@@ -59,6 +59,11 @@
   }
 }
 
+.head{
+
+
+}
+
 .imageWrapper > img {
   object-fit: cover;
   object-position: center center;
