@@ -4,11 +4,13 @@ import styles from './Social.module.css'
 
 const SocialList = ({ array, ...props }) => {
   return (
-    <ul className={`${styles.list} ${props.theme}`} >
+    <div className='w-full'>
+    <ul className={`${styles.socials} ${props.theme}`} >
       {array.map((link) => {
        return <SocialLink key ={link.id} link={link}/>;
       })}
     </ul>
+    </div>
   );
 };
 

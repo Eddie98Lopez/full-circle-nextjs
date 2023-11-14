@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import styles from './Social.module.css'
 import {
   BiLogoFacebookCircle,
   BiLogoInstagramAlt,
@@ -11,7 +12,7 @@ import {
 const SocialLink = ({ link, ...props }) => {
   const { type, href } = link;
   return (
-    <li className="text-4xl">
+    <li >
       <Link href={href}>
         {type == "facebook" && <BiLogoFacebookCircle />}
         {type == "instagram" && <BiLogoInstagramAlt />}

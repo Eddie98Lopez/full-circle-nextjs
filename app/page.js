@@ -4,6 +4,7 @@ import FeaturedSection from "./components/FeaturedBeers/FeaturedSection";
 import SloganTagline from "./components/Slogan/SloganTagline";
 import SocialList from "./components/SocialComponent/SocialList";
 import socialDummyData from "./components/SocialComponent/dummyData";
+import ImageLinkList from "./components/ImageLink/ImageLinkList";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
 
       <SloganTagline />
       <FeaturedSection />
+
+      <ImageLinkList/>
 
       <section className="section">image, hours, and map</section>
 
