@@ -1,20 +1,17 @@
 "use client";
 import React from "react";
-import styles from "./NavList.module.css";
-import Image from "next/image";
+import LogoSocial from "../LogoSocial";
 import MenuLayout from "./MenuLayout";
 import NavLinkList from "./NavLinkList";
+import styles from './NavList.module.css'
+import SocialList from "../../SocialComponent/SocialList";
+import socialDummyData from "../../SocialComponent/dummyData";
 
 const NavMenu = () => {
   return (
     <MenuLayout>
-      <div className={styles.imageWrapper}>
-        <Image
-          src="/images/opaque-full-logo.svg"
-          width={50}
-          height={50}
-          alt="logo"
-        />
+      <div>
+        <LogoSocial/>
       </div>
       <div>
         <NavLinkList />
