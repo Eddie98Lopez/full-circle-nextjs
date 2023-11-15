@@ -19,6 +19,11 @@
     font-size: 2.5rem;
     letter-spacing: 3px;
     position: relative;
+
+    @media only screen and (max-width:600px) {
+        font-size: 2rem;;
+        
+    }
 }
 
 .item > a{
