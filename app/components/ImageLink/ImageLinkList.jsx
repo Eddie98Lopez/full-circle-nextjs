@@ -7,7 +7,7 @@ const ImageLinkList = () => {
   return (
     <ul className={styles.list}>
       {links.map((item) => (
-        <li key={Math.random()} className={`${styles.item} display-2`}>{item}</li>
+        <li key={Math.random()} className={`${styles.item} display-2`}><a>{item}</a></li>
       ))}
     </ul>
   );
