@@ -1,0 +1,15 @@
+.imageWrapper{
+    width:auto;
+    height:50vh;
+    overflow: hidden;
+ 
+
+}
+
+.imageWrapper > img {
+    width:100%;
+    height:auto;
+    object-position: 50% 50%;
+    
+    
+}

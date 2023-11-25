@@ -10,7 +10,7 @@ const HeroSection = (props) => {
         <p className="text-2xl font-semibold">
           The world can be negative and full of bad vibes. So we made more
           approachable craft beer that acts as a social lubricant for positive
-          people to find to find their authentic self, craft their vibe, & find
+          people to find their authentic self, craft their vibe, & find
           their tribe.
         </p>
         <button className="btn">Learn More</button>
