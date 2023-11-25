@@ -45,22 +45,19 @@ const FeaturedBeersList = ({ array, ...props }) => {
   return (
     <div
       className={styles.viewPort}
-      onTouchStart={onTouchStart}
+  /*     onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
-      onTouchMove={onTouchMove}
+      onTouchMove={onTouchMove} */
     >
       <ul
         className={`${styles.list}`}
-        style={{
-          transform: `translateX(-${current * (100 / array.length)}%)`,
-          width: `${array.length * 100}%`,
-        }}
+ 
       >
-        {array.map((item) => (
-          <FeaturedBeerCard key={item.id} beer={item} />
+        {array.map((item) => (<div key={item.id} className={styles.listdiv}>
+          <FeaturedBeerCard  beer={item} /></div>
         ))}
       </ul>
-      <Controls next={next} previous={previous} />
+      {/* <Controls next={next} previous={previous} /> */}
     </div>
   );
 };
