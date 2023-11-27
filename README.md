@@ -8,7 +8,7 @@ I am not, nor have I ever been affiliated with Full Circle Brewing Co. This is a
 
 I designed the UI with references and inspiration from their established visual identity and branded touch points. I did not design the brand or the visual or video assets. I designed the UI with branded visual assets as well as other assets I felt aligned with their visual identity. For example the brick background in the "featured beers" section was inspired the painted brick wall they have in their taproom and the mural they have in their patio area. The crumpled paper background was inspired by concert posters due to their frequent live music events. I added these textures because I felt it aligned with their alt almost grungy visual aesthetic and it paired well with their custom fonts.
 
-I also looked at other brewing company websites for UI layout and styling ideas. I am a big fun of Firestone Brewing's website.
+I also looked at other brewing company websites for UI layout and styling ideas. I am a big fan of Firestone Brewing's website.
 
 [WireFrame Link](https://xd.adobe.com/view/dd5fd7f0-5740-4e40-ba3d-1a2154da5458-880c/)
 
