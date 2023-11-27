@@ -1,17 +1,69 @@
 .list {
   height: inherit;
-  display: block;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  transition: ease-in-out .5s;
+  transition: ease-in-out 0.5s;
   transform-origin: left;
+  width: 100%;
+  display: flex;
+  margin: 1em auto;
+  flex: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+}
 
+.listdiv {
+  scroll-snap-align: start;
+  flex: none;
 }
 
 .viewPort {
-  width: inherit;
+  width: 55vw;
   margin: auto;
-  height: inherit;
-  overflow-x: hidden;
+  height: 30rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+}
+
+.list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+.viewPort::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.viewPort::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+}
+
+.viewPort::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  .viewPort {
+    width: 90vw;
+    height: 30rem;
+    position: relative;
+    margin: auto;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
 }

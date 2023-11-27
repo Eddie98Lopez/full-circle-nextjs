@@ -1,24 +1,23 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from "react";
 
-const useOnScreen = (ref, rootMargin = '0px') => {
-    const [visible, setVisible] = useState(false)
-    const observer = new IntersectionObserver(([entry])=>{
-        setVisible(entry.isIntersecting)
-    }, {rootMargin})
+const useOnScreen = (ref, options) => {
+  const [visible, setVisible] = useState(false);
 
-    useEffect(()=>{
-        const element = ref.current
-        if (element){
-            observer.observe(element)
-        }
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setVisible(entry.isIntersecting);
+    }, options);
+    const element = ref.current;
+    if (element) {
+      observer.observe(element);
+    }
 
-        return ()=>{
-            observer.unobserve(element)
-        }
-    },[])
+    return () => {
+      observer.unobserve(element);
+    };
+  }, []);
 
-    return visible
+  return visible;
+};
 
-}
-
-export default useOnScreen
+export default useOnScreen;
