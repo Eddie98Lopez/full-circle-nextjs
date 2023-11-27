@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## Full Circle Brewing Web Concept
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I am not, nor have I ever been affiliated with Full Circle Brewing Co. This is a concept, portfolio, web-project inspired by Full Circle Brewing Co.'s existing brand. It is built with React.js in the Next.js framework. I wanted to explore micro-interactions and animations. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+I designed the UI with references and inspiration from their established visual identity and branded touch points. I did not design the brand or the visual or video assets. I designed the UI with branded visual assets as well as other assets I felt aligned with their visual identity. For example the brick background in the "featured beers" section was inspired the painted brick wall they have in their taproom and the mural they have in their patio area. The crumpled paper background was inspired by concert posters due to their frequent live music events. I added these textures because I felt it aligned with their alt almost grungy visual aesthetic and it paired well with their custom fonts.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+I also looked at other brewing company websites for UI layout and styling ideas. I am a big fun of Firestone Brewing's website.
 
-## Learn More
+[WireFrame Link](https://xd.adobe.com/view/dd5fd7f0-5740-4e40-ba3d-1a2154da5458-880c/)
 
-To learn more about Next.js, take a look at the following resources:
+## Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is built with React.js in the Next.js framework. Next version 14.0.1. I wanted to explore what a real website project for a local business would look like. And tried to build similar components that explore custom styling, micro-interactions, animations, etc. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Some new things I learned on this project were:
+-useRef Hook
+-Intersection Observer API
+-Tailwind and CSS Modules (I had always styled with style-components almost exclusively until now)
+-Some basic parallax implementations 
+-animated SVGs 
 
-## Deploy on Vercel
+[Live Demo](https://full-circle-nextjs.vercel.app)
+[WireFrame Link](https://xd.adobe.com/view/dd5fd7f0-5740-4e40-ba3d-1a2154da5458-880c/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---------------------------------------------------------
+Full Circle Brewing Co.
+[Official Website](https://www.fullcirclebrewing.com/)
