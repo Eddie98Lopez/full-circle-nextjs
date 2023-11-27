@@ -1,0 +1,21 @@
+.left{
+    position:absolute;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    color:white;
+    height:100%;
+    font-size:2rem;
+}
+
+.right{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index:4;
+    color:white;
+    height:100%;
+    font-size:2rem;
+}

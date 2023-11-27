@@ -24,10 +24,6 @@
 }
 .list {
   height: inherit;
- /*  display: block;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap; */
   transition: ease-in-out .5s;
   transform-origin: left;
   width:100%;
