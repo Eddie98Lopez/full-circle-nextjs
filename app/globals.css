@@ -77,8 +77,9 @@ section {
   min-height: 20vh;
   padding: 2rem;
   font-family: "Wilden", "Rubik", sans-serif;
-  @media only screen and(max-width:768px) {
-    background-attachment: unset;
+
+  @media only screen and (max-width:768px) {
+    background-attachment: scroll;
     
   }
 }
@@ -87,7 +88,7 @@ section {
   background-attachment: fixed;
 
   @media only screen and(max-width:768px) {
-    background-attachment: unset;
+    background-attachment: scroll;
     
   }
 
