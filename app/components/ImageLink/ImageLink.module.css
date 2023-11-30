@@ -1,11 +1,13 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
+    filter: blur(5px);
 
   }
 
   to {
     opacity: 1;
+    filter:blur(0px)
 
   }
 }
@@ -29,11 +31,13 @@
   color: var(--white);
   text-align: center;
   width: 100%;
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-size: 2.5rem;
   letter-spacing: 3px;
   position: relative;
-  animation: fadeIn 0.5s linear .2s backwards;
+  filter:blur(10px);
+  opacity: 0;
+  animation: fadeIn 0.5s linear .2s forwards;
 
 
   @media only screen and (max-width: 600px) {
