@@ -18,6 +18,9 @@ const ImageLinkList = () => {
           className={`${styles.item} display-2`}
           style={{ backgroundImage: `url(${item.href})` }}
         >
+          <div className={styles.bgdiv}>
+            
+          </div>
           <a>{item.display}</a>
         </li>
       ))}
