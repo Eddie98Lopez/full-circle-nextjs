@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./ImageLink.module.css";
-
 import ImageLink from "./ImageLink";
 
 const links = [

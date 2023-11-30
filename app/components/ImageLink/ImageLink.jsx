@@ -14,7 +14,7 @@ const ImageLink = ({link,...props}) => {
     <li
     ref={linkRef}
       key={Math.random()}
-      className={`${styles.item} display-2 ${visible && 'animate__fadeIn'}`}
+      className={`${styles.item} display-2`}
       style={{ backgroundImage: `url(${href})` }}
     >
       <div className={styles.bgdiv}>
