@@ -1,59 +1,69 @@
-.list{
-    display: grid;
-    width:100%;
-    height: 70vh;
-    grid-template-columns: 1fr 1fr;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
 
-    @media only screen and (max-width:425px){
-        grid-template-columns: 1fr;
-        gap:.5rem;
+  }
 
-    }
+  to {
+    opacity: 1;
+
+  }
 }
 
-.item{
-    background-color:var(--black);
-    background-position: center;
-    background-size: cover;
-    color:var(--white);
-    text-align: center;
-    width:100%;
-    transition: background-color .3s ease-in-out;
-    font-size: 2.5rem;
-    letter-spacing: 3px;
-    position: relative;
+.list {
+  display: grid;
+  width: 100%;
+  height: 70vh;
+  grid-template-columns: 1fr 1fr;
 
-    @media only screen and (max-width:600px) {
-        font-size: 2rem;;
-        
-    }
+  @media only screen and (max-width: 425px) {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
 }
 
-.item > a{
-    width:100%;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+.item {
+  background-color: var(--black);
+  background-position: center;
+  background-size: cover;
+  color: var(--white);
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  position: relative;
+  animation: fadeIn 0.5s linear .2s backwards;
+
+
+  @media only screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
 }
 
-.item:hover{
- 
-    transition: background-color .3s ease-in-out;
-    background-color:var(--yellow)
+.item > a {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.item > div{
-    background-color: var(--yellow);
-    width: 100%;
-    height: 100%;
-    opacity:0;
-    z-index: 0;
-    transition: opacity .3s ease-in-out;
-  
+.item:hover {
+  transition: background-color 0.3s ease-in-out;
+  background-color: var(--yellow);
 }
 
-.item:hover > div{
-    transition: opacity .3s ease-in-out;
-    opacity:.6;
+.item > div {
+  background-color: var(--yellow);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.item:hover > div {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.6;
 }
