@@ -71,17 +71,13 @@ section {
 .tagline {
   display: grid;
   place-content: center center;
-  background-attachment: fixed;
   text-align: center;
   width: 100%;
   min-height: 20vh;
   padding: 2rem;
   font-family: "Wilden", "Rubik", sans-serif;
 
-  @media only screen and (max-width:768px) {
-    background-attachment: scroll;
-    
-  }
+
 }
 
 .parallax-fixed{
