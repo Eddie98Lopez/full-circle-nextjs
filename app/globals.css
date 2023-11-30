@@ -79,7 +79,7 @@ section {
   font-family: "Wilden", "Rubik", sans-serif;
 
   @media only screen and (max-width:768px) {
-    background-attachment: unset;
+    background-attachment: scroll;
     
   }
 }
