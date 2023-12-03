@@ -13,12 +13,14 @@ const SocialLink = ({ link, ...props }) => {
   const { type, href } = link;
   return (
     <li >
-      <Link href={href}>
+      <Link href={href} rel="noopener noreferrer" target="_blank">
+       
         {type == "facebook" && <BiLogoFacebookCircle />}
         {type == "instagram" && <BiLogoInstagramAlt />}
         {type == "linkedIn" && <BiLogoLinkedinSquare />}
         {type == "tikTok" && <BiLogoTiktok />}
         {type == "twitter" && <BiLogoTwitter />}
+    
       </Link>
     </li>
   );
