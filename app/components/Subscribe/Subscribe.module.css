@@ -1,0 +1,16 @@
+.input{
+    padding:1rem;
+    font-size:1rem;
+    font-family: roboto, sans-serif;
+    width:20rem;
+}
+
+.label{
+    font-size:1.5rem;
+    display:block;
+}
+
+.button{
+    padding:.25rem;
+    font-size:1rem;
+}
