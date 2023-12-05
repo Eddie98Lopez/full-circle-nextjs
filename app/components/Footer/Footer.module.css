@@ -1,4 +1,5 @@
 .footer{
+    gap:1rem;
     grid-template-areas: 
     'sub div links'
     'social logo hours'
@@ -17,6 +18,13 @@
     }
 }
 
+.footer:nth-child(n){
+    box-sizing: border-box;
+  
+
+
+}
+
 
 .divider{
     height:100%;
@@ -24,14 +32,21 @@
     border-radius: 500px;
     background-color: var(--white,white);
     grid-area: div;
+    margin: auto;
+   
+   
 }
 
 .sub{
     grid-area: sub;
+    width:40vw;
+   
 }
 
 .links{
     grid-area: links;
+    width:40vw;
+
 }
 
 .social{

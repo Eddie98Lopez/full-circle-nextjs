@@ -15,9 +15,10 @@ const SubscribeForm = () => {
     console.log(email);
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className="">
+      <div className="w-full">
         <label className={`${styles.label} display-1 `}>Join the Tribe!</label>
+        <div>
         <input
         className={`${styles.input}`}
           name="email"
@@ -26,6 +27,7 @@ const SubscribeForm = () => {
           onChange={handleChange}
         />
          <button className={`btn ${styles.button}`}>subscribe</button>
+      </div>
       </div>
      
     </form>
