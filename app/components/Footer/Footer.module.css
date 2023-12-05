@@ -1,19 +1,49 @@
 .footer{
-    width:100%;
-    height: 80vh;
-    display:grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    padding: 3rem;
+    grid-template-areas: 
+    'sub div links'
+    'social logo hours'
+    'order logo hours';
 
-    @media screen {
-        
+    @media only screen and (max-width:500px){
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        'sub'
+        'social'
+        'order'
+        'logo'
+        'hours'
+        'links';
     }
 }
+
 
 .divider{
     height:100%;
     width:4px;
     border-radius: 500px;
     background-color: var(--white,white);
+    grid-area: div;
+}
+
+.sub{
+    grid-area: sub;
+}
+
+.links{
+    grid-area: links;
+}
+
+.social{
+    grid-area: social;
+}
+
+.logo{grid-area: logo;}
+
+.hours{
+    grid-area: hours;
+}
+
+.order{
+    grid-area: order;
 }
