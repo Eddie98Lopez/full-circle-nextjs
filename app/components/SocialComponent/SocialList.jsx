@@ -10,7 +10,7 @@ const SocialList = ({ array, align, ...props }) => {
   }
   return (
     <div className='w-full'>
-    <ul className={` ${flex()}  ${styles.socials} ${props.theme} max-[500px]:justify-center`} >
+    <ul className={` ${flex()}  ${styles.socials} ${props.theme} max-[768px]:justify-center`} >
       {array.map((link) => {
        return <SocialLink key ={link.id} link={link}/>;
       })}

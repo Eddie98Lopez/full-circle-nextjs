@@ -1,14 +1,16 @@
 .footer {
   gap: 1rem;
+  padding: 5%;
   grid-template-areas:
     "sub div links"
     "social logo hours"
     "order logo hours";
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 768px) {
+    padding: 3rem 5%;
     justify-content: center;
     align-items: center;
-    gap:2rem;
+    gap: 3rem;
     grid-template-areas:
       "sub"
       "social"
@@ -21,11 +23,10 @@
 
 .footer:nth-child(n) {
   box-sizing: border-box;
+  width: 100%;
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 768px) {
     text-align: center;
-    justify-content: center;
-    width: 100%;
   }
 }
 
@@ -36,23 +37,23 @@
   background-color: var(--white, white);
   grid-area: div;
   margin: auto;
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 768px) {
     display: none;
   }
 }
 
 .sub {
   grid-area: sub;
-  width: 40vw;
-  @media only screen and (max-width: 500px) {
+  width: 30vw;
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 }
 
 .links {
   grid-area: links;
-  width: 40vw;
-  @media only screen and (max-width: 500px) {
+  width: 30vw;
+  @media only screen and (max-width: 768px) {
     width: 100%;
     text-align: center;
   }

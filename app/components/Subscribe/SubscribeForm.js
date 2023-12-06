@@ -16,7 +16,7 @@ const SubscribeForm = () => {
   };
   return (
     <form onSubmit={handleSubmit} className="">
-      <div className="w-full">
+      <div >
         <label className={`${styles.label} display-1 `}>Join the Tribe!</label>
         <div>
         <input
@@ -26,7 +26,7 @@ const SubscribeForm = () => {
           type="email"
           onChange={handleChange}
         />
-         <button className={`btn ${styles.button}`}>subscribe</button>
+         <button className={`btn text-xl ${styles.button}`}>subscribe</button>
       </div>
       </div>
      
