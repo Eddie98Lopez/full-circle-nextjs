@@ -6,7 +6,7 @@ const SubscribeForm = () => {
   const [email, setEmail] = useState();
 
   const handleChange = (e) => {
-    const { name, value } = e;
+    const { name, value } = e.target;
     setEmail(value);
   };
 

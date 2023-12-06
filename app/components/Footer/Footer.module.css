@@ -1,64 +1,75 @@
-.footer{
-    gap:1rem;
-    grid-template-areas: 
-    'sub div links'
-    'social logo hours'
-    'order logo hours';
+.footer {
+  gap: 1rem;
+  grid-template-areas:
+    "sub div links"
+    "social logo hours"
+    "order logo hours";
 
-    @media only screen and (max-width:500px){
-        justify-content: center;
-        align-items: center;
-        grid-template-areas: 
-        'sub'
-        'social'
-        'order'
-        'logo'
-        'hours'
-        'links';
-    }
+  @media only screen and (max-width: 500px) {
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    grid-template-areas:
+      "sub"
+      "social"
+      "order"
+      "logo"
+      "hours"
+      "links";
+  }
 }
 
-.footer:nth-child(n){
-    box-sizing: border-box;
-  
+.footer:nth-child(n) {
+  box-sizing: border-box;
 
-
+  @media only screen and (max-width: 500px) {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
-
-.divider{
-    height:100%;
-    width:4px;
-    border-radius: 500px;
-    background-color: var(--white,white);
-    grid-area: div;
-    margin: auto;
-   
-   
+.divider {
+  height: 95%;
+  width: 4px;
+  border-radius: 500px;
+  background-color: var(--white, white);
+  grid-area: div;
+  margin: auto;
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 }
 
-.sub{
-    grid-area: sub;
-    width:40vw;
-   
+.sub {
+  grid-area: sub;
+  width: 40vw;
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
 }
 
-.links{
-    grid-area: links;
-    width:40vw;
-
+.links {
+  grid-area: links;
+  width: 40vw;
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-.social{
-    grid-area: social;
+.social {
+  grid-area: social;
 }
 
-.logo{grid-area: logo;}
-
-.hours{
-    grid-area: hours;
+.logo {
+  grid-area: logo;
 }
 
-.order{
-    grid-area: order;
+.hours {
+  grid-area: hours;
+}
+
+.order {
+  grid-area: order;
 }
