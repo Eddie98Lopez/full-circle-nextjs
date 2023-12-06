@@ -1,0 +1,76 @@
+.footer {
+  gap: 1rem;
+  padding: 5%;
+  grid-template-areas:
+    "sub div links"
+    "social logo hours"
+    "order logo hours";
+
+  @media only screen and (max-width: 768px) {
+    padding: 3rem 5%;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    grid-template-areas:
+      "sub"
+      "social"
+      "order"
+      "logo"
+      "hours"
+      "links";
+  }
+}
+
+.footer:nth-child(n) {
+  box-sizing: border-box;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.divider {
+  height: 95%;
+  width: 4px;
+  border-radius: 500px;
+  background-color: var(--white, white);
+  grid-area: div;
+  margin: auto;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.sub {
+  grid-area: sub;
+  width: 30vw;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.links {
+  grid-area: links;
+  width: 30vw;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.social {
+  grid-area: social;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.hours {
+  grid-area: hours;
+}
+
+.order {
+  grid-area: order;
+}

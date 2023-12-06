@@ -1,0 +1,20 @@
+.ul {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  font-size: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+
+  @media only screen and (max-width:500px){
+    grid-template-columns:  1fr 1fr;
+  }
+}
+
+.ul > a {
+  text-align: right;
+  font-weight: 800;
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
+}

@@ -1,0 +1,26 @@
+.input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: roboto, sans-serif;
+  color:black;
+  margin-right: 0.5rem;
+  gap: 2rem;
+
+  @media only screen and (max-width: 500px) {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.label {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.button {
+  padding: 0.25rem;
+  font-size: 1rem;
+  @media only screen and (max-width: 500px) {
+    margin: .5rem;
+  }
+}

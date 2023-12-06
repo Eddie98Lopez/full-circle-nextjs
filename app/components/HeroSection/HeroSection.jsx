@@ -13,7 +13,7 @@ const HeroSection = (props) => {
           people to find their authentic self, craft their vibe, & find
           their tribe.
         </p>
-        <button className="btn">Learn More</button>
+        <button className="btn text-2xl">Learn More</button>
       </div>
       <video
         className={styles.herovideo}
