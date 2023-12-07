@@ -22,8 +22,11 @@ const Footer = (props) => {
         <SocialList array={socialDummyData} theme="light" align="left" />
       </div>
       <div className={styles.order}>
-        <button className='btn margin-auto'>order now</button>
+        <h3 className="display-1 text-2xl">Order Now</h3>
+        <div className="flex gap-3 max-[768px]:justify-center">
+        <button className='btn margin-auto'>delivery</button>
         <button className='btn margin-auto'>pick-up</button>
+        </div>
       </div>
       <div className={styles.logo}>
         <FooterLogo/>
