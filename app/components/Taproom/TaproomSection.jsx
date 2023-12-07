@@ -9,7 +9,7 @@ const TaproomSection = () => {
         <Image
           width={300}
           height={100}
-          src="/images/location.png"
+          src="/images/location.webp"
           alt="photo-of-Taproom-street-view"
         />
       </div>
