@@ -19,7 +19,7 @@ const NavMenu = () => {
 
       <div className={styles.button}>
         <a href="/">
-          <button className="btn">Shop</button>
+          <button className="btn text-2xl">Shop</button>
         </a>
       </div>
     </MenuLayout>

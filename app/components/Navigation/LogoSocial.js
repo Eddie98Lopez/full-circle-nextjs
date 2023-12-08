@@ -6,7 +6,7 @@ import SocialList from "../SocialComponent/SocialList";
 
 const LogoSocial = () => {
   return (
-    <div className="flex-col place-content-center">
+    <div className="flex-col place-content-center w-full center">
       <div className={styles.imageWrapper}>
         <Image
           src={"/images/opaque-full-logo.svg"}

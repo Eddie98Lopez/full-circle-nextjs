@@ -16,7 +16,7 @@ const navLinks = [
 const NavLinkList = () => {
   const { isOpen } = useOpen();
   return (
-    <div className={styles.list}>
+    <div className={`${styles.list} center`}>
       {navLinks.map((link, i) => {
         return (
           <Navlink
