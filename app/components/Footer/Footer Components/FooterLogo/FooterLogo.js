@@ -7,7 +7,7 @@ const FooterLogo = () => {
     <div className={styles.wrapper}>
       <div className={styles.imgWrap}>
         <Image
-          src="images/opaque-full-logo.svg"
+          src="/images/opaque-full-logo.svg"
           width={50}
           height={50}
           alt="logo-in-footer"
