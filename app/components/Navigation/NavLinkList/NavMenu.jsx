@@ -16,8 +16,8 @@ const NavMenu = () => {
         <NavLinkList />
       </div>
 
-      <div className="margin-auto flex place-content-center center">
-        <a href="/">
+      <div className="relative w-full h-full">
+        <a href="/" className={styles.button}>
           <button className="btn text-2xl" >Shop</button>
         </a>
       </div>
