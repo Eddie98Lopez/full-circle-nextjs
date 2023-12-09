@@ -3,7 +3,6 @@
   width: 100%;
   height: 100vh;
   position: fixed;
-  padding: 1rem;
   top: 0;
   right: 0;
   display: grid;
@@ -14,20 +13,17 @@
   color: var(--white);
   opacity: 0;
   transition: all 0.3s ease-in-out;
-  gap: 2rem;
+
 
   grid-template-areas:
     "logo div links"
+    "button button button"
     "button button button";
 
   @media only screen and (max-width: 526px) {
-   
-
-    grid-template-areas: 'logo' 'links' 'button';
+    grid-template-areas: "logo" "links" "button";
     flex-direction: column;
-    padding: 5% 0;
     gap: 0;
-  
   }
 }
 
@@ -52,7 +48,6 @@
   width: 47vw;
   @media only screen and (max-width: 526px) {
     width: 100%;
-    
   }
 }
 
@@ -72,16 +67,14 @@
   grid-area: links;
   width: 47vw;
   @media only screen and (max-width: 526px) {
-    position: static;
+
     width: 100%;
     height: 100%;
-    
-
   }
 }
 
 .button {
-  position: relative;
   grid-area: button;
   width: 100%;
+  height: 100%;
 }
