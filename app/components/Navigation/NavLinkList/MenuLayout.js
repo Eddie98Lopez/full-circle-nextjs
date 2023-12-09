@@ -13,9 +13,10 @@ const MenuLayout = ({ children }) => {
         </button>
       </div>
 
-      <div>{children[0]}</div>
-      <div>{children[1]}</div>
-      <div className={styles.full}>{children[2]}</div>
+      <div className={styles.logo}>{children[0]}</div>
+      <div className={styles.div}></div>
+      <div className={styles.links}>{children[1]}</div>
+      <div  className={styles.button}>{children[2]}</div>
     </div>
   );
 };

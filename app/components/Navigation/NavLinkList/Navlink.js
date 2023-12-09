@@ -11,7 +11,7 @@ const Navlink = ({ children,link, ...props }) => {
 
 
   return (
-    <Link {...props} className={`${props.className} ${ active && styles.active }`}>
+    <Link {...props} className={`${props.className} ${ active && styles.active } `}>
       {children}
     </Link>
   );

@@ -1,0 +1,38 @@
+.wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  @media only screen and (max-width: 568px) {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+.imageWrapper {
+  width: auto;
+  margin: 1rem auto;
+  height: auto;
+  text-align: center;
+
+  @media only screen and (max-width: 526px) {
+    width: auto;
+    height: 7rem;
+  }
+}
+
+.imageWrapper > img {
+  object-fit: cover;
+  text-align: center;
+
+  height: 20rem;
+  width: auto;
+
+  @media only screen and (max-width: 526px) {
+    height: inherit;
+    width: auto;
+  }
+}
