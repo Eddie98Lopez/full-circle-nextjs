@@ -1,0 +1,40 @@
+.wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--white);
+}
+
+
+
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:-1
+}
+
+.invert{
+    width: 100%;
+    height:50%;
+    top:0;
+    position: absolute;
+    background: var(--white);
+    mix-blend-mode: exclusion;
+   
+}
+
+.answers{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:3rem;
+}
+
+.top{
+    color:var(--black)
+}
+
+.bottom{
+    color: var(--white)
+}

@@ -138,3 +138,13 @@ footer {
   opacity: 1;
   filter: blur(0);
 }
+
+.close-btn{
+    position: absolute;
+    font-size: 3rem;
+    top: 1rem;
+    left: 1rem;
+    z-index: 4;
+
+  
+}

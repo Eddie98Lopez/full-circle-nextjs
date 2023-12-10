@@ -3,6 +3,8 @@ import "./globals.css";
 import './animate.css'
 import Footer from "./components/Footer/Footer";
 import Navigation from "./components/Navigation/Navigation.js";
+import Modal from "./components/Modal/Modal";
+import VerifyAge from "./components/VerifyAge/VerifyAge";
 
 export const metadata = {
   title: "Full Circle Brewing",
@@ -14,6 +16,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Modal visible={true}>
+          <VerifyAge/>
+        </Modal>
         <Navigation/>
         {children}
 
