@@ -10,7 +10,7 @@ const Modal = ({ children, visible, ...props }) => {
   //const display = () => (modal ? "block" : "none");
   return (
     <ModalProvider>
-      <div className={styles.modal} /* style={{ display: display() }} */>
+      <div className={styles.modalWrapper} /* style={{ display: display() }} */>
         <div className="close-btn">
           <button alt="close-modal-button">
             <RiCloseFill className="text-white" />
