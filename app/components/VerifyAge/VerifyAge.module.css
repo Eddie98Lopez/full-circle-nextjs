@@ -38,3 +38,17 @@
 .bottom{
     color: var(--white)
 }
+
+.imageWrap{
+    clip-path: circle(20rem at center);
+    align-self: center;
+    box-sizing: border-box;
+    width:20rem;
+    background-color: var(--black);
+    height: 20rem;
+}
+
+.imageWrap > img{
+    width:inherit;
+    height: inherit;
+}

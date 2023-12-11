@@ -1,9 +1,22 @@
-import React, {useState, useContext, createContext} from 'react'
+"use client";
+import React, { useState, useContext, createContext } from "react";
 
-const ModalProvider = () => {
+const ModalContext = createContext();
+const useModal = () => useContext(ModalContext)
+
+
+const ModalProvider = ({ children }) => {
+  const [modal, setModal] = useState(false);
+  const dispatch = ()=>{setModal(!modal)}
+
   return (
-    <div>ModalProvider</div>
-  )
-}
+    <ModalContext.Provider value={{modal, dispatch}}>
+      {children}
+    </ModalContext.Provider>
+  );
+};
 
-export default ModalProvider
+
+
+export default ModalProvider;
+export {useModal}
