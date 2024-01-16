@@ -8,6 +8,9 @@ I am not, nor have I ever been affiliated with Full Circle Brewing Co. This is a
 
 [WireFrame Link](https://xd.adobe.com/view/dd5fd7f0-5740-4e40-ba3d-1a2154da5458-880c/)
 
+![img-1]([http://url/to/img.png](https://ldrjmzbrinwdylthbzry.supabase.co/storage/v1/object/public/images/48/bc1a69ce-d2d8-4cd1-a879-0e2b7a237061-jpg1.jpg)
+![img-1]([http://url/to/img.png](https://ldrjmzbrinwdylthbzry.supabase.co/storage/v1/object/public/images/48/ab47e277-bfa5-4036-8c70-99cbfc908f42-jpg2.jpg)
+
 ## Design
 
 I designed the UI layout using Full Circle's branded visual assets and other assets I felt aligned with their visual identity. For example the brick background in the "featured beers" section was inspired by the painted brick wall they have in their taproom and the mural they have in their patio area. The crumpled paper background was inspired by concert posters due to their frequent live music events. I added these textures because I felt it aligned with their alt, almost grungy visual aesthetic.
