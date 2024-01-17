@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import styles from "./NavList.module.css";
 import { useOpen } from "../NavProvider";
 import "../../../animate.css";
@@ -24,7 +23,7 @@ const NavLinkList = () => {
             href={link.path}
             className={`${styles.open}`}
             style={{
-              animationDelay: `${ .2*(i / navLinks.length)}s`,
+              animationDelay: `${0.2 * (i / navLinks.length)}s`,
             }}
             link={link}
           >
