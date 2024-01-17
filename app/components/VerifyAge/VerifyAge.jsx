@@ -20,6 +20,7 @@ const VerifyAge = (props) => {
     <div className={`w-full h-full ${styles.wrapper} `}>
       <div className="w-full h-full flex place-content-center">
         <div className={styles.imageWrap}>
+          <div className={styles.circle}></div>
         <Image src='/images/opaque-full-logo.svg' alt='logo' width={100} height={100}/>
         </div>
       </div>
