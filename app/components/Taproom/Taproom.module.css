@@ -17,6 +17,10 @@
   height: 90%;
   width: 3px;
   border-radius: 50px;
+  @media only screen and (max-width: 768px) {
+    height: 5px;
+    width: 90%;
+  }
 }
 
 .aside {
@@ -27,27 +31,46 @@
   @media only screen and (max-width: 768px) {
     grid-template-areas:
       "tap"
+      "divider"
       "hrs";
 
-      .tap{
-        text-align: center;
-      }
-      .hrs{
-        text-align: center;
-      }
+    .tap {
+      text-align: center;
+    }
+    .hrs {
+      text-align: center;
+      font-size: 2rem;
+    }
   }
 }
 
 .tap {
   grid-area: tap;
   text-align: right;
+  display: grid;
+  place-content: center;
+  gap:0;
 }
 
 .tap > h3 {
   font-size: 5vw;
+  margin: 0;
+  @media only screen and (max-width: 768px) {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
+.tap > p {
+  font-size: 2rem;
+  margin: 0;
+  @media only screen and (max-width: 768px) {
+    
+  }
 }
 
 .hrs {
   grid-area: hrs;
   text-align: left;
+  display: grid;
+  place-content: center;
 }
