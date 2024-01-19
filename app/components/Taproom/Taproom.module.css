@@ -1,15 +1,53 @@
-.imageWrapper{
-    width:auto;
-    height:50vh;
-    overflow: hidden;
- 
-
+.imageWrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .imageWrapper > img {
-    width:100%;
-    height:auto;
-    object-position: 50% 50%;
-    
-    
+  width: 100%;
+  height: auto;
+  object-position: 50% 50%;
+}
+
+.divider {
+  grid-area: divider;
+  background-color: var(--white, white);
+  margin: auto;
+  height: 90%;
+  width: 3px;
+  border-radius: 50px;
+}
+
+.aside {
+  display: grid;
+  grid-template-areas: "tap tap divider hrs";
+  gap: 1rem;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-areas:
+      "tap"
+      "hrs";
+
+      .tap{
+        text-align: center;
+      }
+      .hrs{
+        text-align: center;
+      }
+  }
+}
+
+.tap {
+  grid-area: tap;
+  text-align: right;
+}
+
+.tap > h3 {
+  font-size: 5vw;
+}
+
+.hrs {
+  grid-area: hrs;
+  text-align: left;
 }

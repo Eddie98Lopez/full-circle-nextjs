@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./Taproom.module.css";
+import TaproomAside from "./TaproomAside";
 
 const TaproomSection = () => {
   return (
@@ -13,10 +14,7 @@ const TaproomSection = () => {
           alt="photo-of-Taproom-street-view"
         />
       </div>
-      <aside className={` bg-2 tagline`}>
-        <h3>Full cirlce brewing Co.</h3>
-        <p>1234 Boop st Fresno CA 97300</p>
-      </aside>
+      <TaproomAside />
 
       <div className="w-full">
         <iframe
