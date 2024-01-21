@@ -4,7 +4,7 @@
     justify-content: space-between;
     flex-flow: column nowrap;
     font-family: monospace;
-    padding-left:1rem;
+    
 
     @media only screen and (max-width:768px) {
         padding:0;
@@ -22,6 +22,7 @@
     overflow-y: hidden;
     gap:1rem;
     scroll-snap-type: x mandatory;
+    padding:0 1rem;
   }
 
   .container::-webkit-scrollbar {
@@ -42,13 +43,6 @@
     width: 40vw;
     height: 50vh;
     background-color: grey;
-    text-align: center;
-    scroll-snap-align: none start;
+    scroll-snap-align: none center;
     flex: none;
-
-    @media only screen and (max-width:768px) {
-        width:85vw;
-        scroll-snap-align: none center;
-        
-    }
   }
