@@ -6,6 +6,7 @@ import SocialList from "./components/SocialComponent/SocialList";
 import socialDummyData from "./components/SocialComponent/dummyData";
 import ImageLinkList from "./components/ImageLink/ImageLinkList";
 import TaproomSection from "./components/Taproom/TaproomSection";
+import BlogHolster from "./components/HomeBlogSection/BlogHolster";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
 
       <section className="section">
         <SectionHeader title="blog" />
+        <BlogHolster/>
       </section>
     </main>
   );

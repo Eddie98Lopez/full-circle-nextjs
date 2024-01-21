@@ -1,0 +1,30 @@
+.holster {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    font-family: monospace;
+
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    margin: 1em auto;
+    outline: 1px dashed lightgray;
+    flex: none;
+    overflow-x:scroll;
+    flex-flow: row nowrap;
+    overflow-y: hidden;
+    gap:1rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  
+  .container > div {
+    width: 40vw;
+    height: 30vh;
+    background-color: grey;
+    text-align: center;
+    scroll-snap-align: none start;
+    flex: none;
+  }
