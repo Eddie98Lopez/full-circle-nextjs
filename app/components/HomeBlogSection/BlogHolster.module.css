@@ -4,13 +4,13 @@
     justify-content: space-between;
     flex-flow: column nowrap;
     font-family: monospace;
+    padding-left:1rem;
 
   }
   .container {
     width: 100%;
     display: flex;
     margin: 1em auto;
-    outline: 1px dashed lightgray;
     flex: none;
     overflow-x:scroll;
     flex-flow: row nowrap;
@@ -19,12 +19,31 @@
     scroll-snap-type: x mandatory;
   }
 
+  .container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  .container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+
   
   .container > div {
     width: 40vw;
-    height: 30vh;
+    height: 50vh;
     background-color: grey;
     text-align: center;
     scroll-snap-align: none start;
     flex: none;
+
+    @media only screen and (max-width:768px) {
+        width:85vw;
+        scroll-snap-align: none center;
+        
+    }
   }
