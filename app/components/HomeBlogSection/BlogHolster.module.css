@@ -6,11 +6,6 @@
     font-family: monospace;
     
 
-    @media only screen and (max-width:768px) {
-        padding:0;
-
-    }
-
   }
   .container {
     width: 100%;
@@ -45,4 +40,10 @@
     background-color: grey;
     scroll-snap-align: none center;
     flex: none;
+
+    @media only screen and (max-width:768px) {
+        width:85vw;
+        scroll-snap-align: none center;
+        
+    }
   }
