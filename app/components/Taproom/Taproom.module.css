@@ -63,12 +63,13 @@
 .tap > p {
   font-size: 2rem;
   margin: 0;
-  @media only screen and (max-width: 768px) {
-    
-  }
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-weight:600;
 }
 
 .hrs {
+  font-size: 1.15rem;
   grid-area: hrs;
   text-align: left;
   display: grid;

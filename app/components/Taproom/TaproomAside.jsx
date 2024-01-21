@@ -15,6 +15,8 @@ const TaproomAside = () => {
             <p>wed 9-5</p>
             <p>thurs 9-5</p>
             <p>fri 9-5</p>
+            <p>sat 9-5</p>
+            <p>sun 9-5</p>
 
 
         </div>
