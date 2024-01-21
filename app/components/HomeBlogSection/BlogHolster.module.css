@@ -6,6 +6,11 @@
     font-family: monospace;
     padding-left:1rem;
 
+    @media only screen and (max-width:768px) {
+        padding:none;
+        
+    }
+
   }
   .container {
     width: 100%;
