@@ -1,0 +1,43 @@
+.holster {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    font-family: monospace;
+    box-sizing:border-box;
+
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    margin: 1em auto;
+    flex: none;
+    overflow-x:scroll;
+    flex-flow: row nowrap;
+    overflow-y: hidden;
+    gap:1rem;
+    scroll-snap-type: x mandatory;
+    box-sizing:border-box;
+    padding:1rem;
+    scroll-behavior: smooth;
+  }
+
+  .container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  .container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  
+  .container :nth-child(n) {
+    scroll-snap-align: none center;
+    flex: none;
+
+  }
