@@ -14,14 +14,15 @@
   opacity: 0;
   transition: all 0.3s ease-in-out;
 
-
   grid-template-areas:
     "logo div links"
     "button button button"
     "button button button";
 
   @media only screen and (max-width: 526px) {
-    grid-template-areas: "logo" "links" "button";
+    /*  grid-template-areas: "logo""links""button"; */
+    grid-template-areas: unset;
+    display: flex;
     flex-direction: column;
     gap: 0;
   }
@@ -48,6 +49,7 @@
   width: 47vw;
   @media only screen and (max-width: 526px) {
     width: 100%;
+    height: 32vh;
   }
 }
 
@@ -60,21 +62,27 @@
   border-radius: 50px;
   @media only screen and (max-width: 526px) {
     display: none;
+  
   }
 }
 
 .links {
   grid-area: links;
   width: 47vw;
-  @media only screen and (max-width: 526px) {
 
+  @media only screen and (max-width: 526px) {
+    grid-area: unset;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 }
 
 .button {
   grid-area: button;
-  width: 100%;
-  height: 100%;
+  margin: auto;
+  display: flex;
+  width: min-content;
+  height: auto;
+  flex-direction: column;
+  place-content: center;
 }

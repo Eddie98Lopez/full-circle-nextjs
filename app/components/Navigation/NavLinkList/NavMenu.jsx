@@ -3,22 +3,22 @@ import React from "react";
 import LogoSocial from "../NavLogoSection/LogoSocial";
 import MenuLayout from "./MenuLayout";
 import NavLinkList from "./NavLinkList";
-import styles from './NavList.module.css'
-
+import styles from "./MenuLayout.module.css";
 
 const NavMenu = () => {
   return (
     <MenuLayout>
-      <div className="relative w-full h-full">
-        <LogoSocial/>
+      <div className={styles.logo}>
+        <LogoSocial />
       </div>
-      <div className="relative w-full h-full">
+      <div className={styles.links}>
         <NavLinkList />
       </div>
+      <div className={styles.div}></div>
 
-      <div className="relative w-full h-full">
-        <a href="/" className={styles.button}>
-          <button className="btn text-2xl" >Shop</button>
+      <div className={styles.button}>
+        <a href="/">
+          <button className="btn text-2xl">Shop</button>
         </a>
       </div>
     </MenuLayout>
