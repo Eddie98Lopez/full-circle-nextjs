@@ -1,41 +1,36 @@
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Getting Started
 
-## Full Circle Brewing Web Concept
+First, run the development server:
 
-I am not, nor have I ever been affiliated with Full Circle Brewing Co. This is a concept, portfolio, web-project inspired by Full Circle Brewing Co.'s existing brand. It is built with React.js in the Next.js framework. I wanted to use this project as an oppotunity to explore a real life, fully custom designed, mobile-friendly, and production level project. It is still a work in progress and I am exploring animations and micro-iteractions to engage the user. 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-[Live Demo](https://full-circle-nextjs.vercel.app)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-[WireFrame Link](https://xd.adobe.com/view/dd5fd7f0-5740-4e40-ba3d-1a2154da5458-880c/)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Design
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-I designed the UI layout using Full Circle's branded visual assets and other assets I felt aligned with their visual identity. For example the brick background in the "featured beers" section was inspired by the painted brick wall they have in their taproom and the mural they have in their patio area. The crumpled paper background was inspired by concert posters due to their frequent live music events. I added these textures because I felt it aligned with their alt, almost grungy visual aesthetic.
+## Learn More
 
-I did research on a multitude of other craft brewing company websites for layout, UI design, and micro-interaction inspiration. I then wireframed in Adobe XD to help me organize my design decisions and plan out components for the development process. I did not add prototyping functionality to the wireframes because I knew I would be the sole designer and developer for this project. 
+To learn more about Next.js, take a look at the following resources:
 
-[WireFrame Link](https://xd.adobe.com/view/dd5fd7f0-5740-4e40-ba3d-1a2154da5458-880c/)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-![img-1](https://ldrjmzbrinwdylthbzry.supabase.co/storage/v1/object/public/images/48/bc1a69ce-d2d8-4cd1-a879-0e2b7a237061-jpg1.jpg)
-![img-2](https://ldrjmzbrinwdylthbzry.supabase.co/storage/v1/object/public/images/48/ab47e277-bfa5-4036-8c70-99cbfc908f42-jpg2.jpg)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Deploy on Vercel
 
-## Development
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-This React.js project utilizes Next.js for server-side rendering and a mix of CSS modules and Tailwind for styling. Some notable components are the "featured beers" and a "blog" section, although the data is currently hardcoded and intended to be fetched from an API in the future. I am working to build all components for reusability and mobile friendliness.
-
-Some new things I learned on this project were:
-- useRef Hook
-- snap-scroll-type
-- Intersection Observer API
-- Tailwind and CSS Modules (I had always styled with style-components almost exclusively until now)
-- Some basic parallax implementations 
-- animated SVGs 
-
-[Live Demo](https://full-circle-nextjs.vercel.app)
-
----------------------------------------------------------
-
-You can check out Full Circle's offical website below to compare and contrast.
-Full Circle Brewing Co.
-[Official Website](https://www.fullcirclebrewing.com/)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
