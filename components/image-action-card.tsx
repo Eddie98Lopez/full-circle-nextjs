@@ -1,8 +1,0 @@
-import React from "react";
-import Image from "next/image";
-
-const ImageActionCard = () => {
-  return <div></div>;
-};
-
-export default ImageActionCard;

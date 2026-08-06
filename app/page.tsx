@@ -1,6 +1,10 @@
+import ImageLinkCard from "@/components/image-link-card";
 import SectionTitle from "@/components/section-title";
 import { Button } from "@/components/ui/button";
+import { homeActions } from "@/lib/actions";
+import Banner from "@/components/ui/banner";
 import Image from "next/image";
+import SocialLinksBar, { dummySocialLinks } from "@/components/social-bar";
 import Link from "next/link";
 
 export default function Home() {
@@ -22,7 +26,7 @@ export default function Home() {
             translate to your brand, book a call and we'll see whether a custom
             version tailored to your brewery makes sense for your business.
           </p>
-          <Button>
+          <Button variant={"outline"}>
             <Link
               href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Mavz2MffYH9bwfpA4fcYKQlxHUh2JuV636QELOg7nOlRCjM9W7_RUW76BAFJTc3Y1Non5XxRb"
               target="_blank"
@@ -32,14 +36,15 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="w-full bg-black">
-        <div className="flex w-full max-w-[1600px] mx-auto flex items-center justify-center text-white gap-4">
-          <div>Good Beer</div>
-          <div>Good Crowd</div>
-          <div>Great Time</div>
+      <Banner>
+        {" "}
+        <div className="flex flex-col gap-4 lg:flex-row w-full h-full mx-auto flex items-center justify-center text-white lg:gap-12 font-heading text-6xl">
+          <div>Good Beer.</div>
+          <div>Good Crowd.</div>
+          <div>Great Time.</div>
         </div>
-      </section>
-      <section>
+      </Banner>
+      <section className="background-brick h-[50vh]">
         <div>
           <SectionTitle>Featured Beers</SectionTitle>
           <div>Carousel</div>
@@ -47,24 +52,22 @@ export default function Home() {
       </section>
       <section>
         <div className="w-full h-full grid md:grid-cols-2">
-          <div className="w-full h-[150px] md:h-full md:aspect-2/1 bg-gray-500 hover:bg-green-500 transition-all">
-            1
-          </div>
-          <div className="w-full h-[150px] md:h-full md:aspect-2/1 bg-gray-500 hover:bg-green-500 transition-all">
-            2
-          </div>
-          <div className="w-full h-[150px] md:h-full md:aspect-2/1 bg-gray-500 hover:bg-green-500 transition-all">
-            3
-          </div>
-          <div className="w-full h-[150px] md:h-full md:aspect-2/1 bg-gray-500 hover:bg-green-500 transition-all">
-            4
-          </div>
+          {homeActions.map((act, i) => (
+            <ImageLinkCard
+              key={`image-link-home-${i}`}
+              href={act.href}
+              label={act.label}
+              image={act.image}
+            />
+          ))}
         </div>
       </section>
       <section>
-        <div className="w-full max-w-[1280px] mx-auto">
+        <div className="w-full max-w-[1280px] mx-auto space-y-4">
           <SectionTitle>Follow Us</SectionTitle>
-          <div>social bar</div>
+          <div className="mx-auto w-min">
+            <SocialLinksBar links={dummySocialLinks} />
+          </div>
           <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="w-full aspect-square bg-gray-200">
               instagram photo

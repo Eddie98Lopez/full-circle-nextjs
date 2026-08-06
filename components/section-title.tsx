@@ -10,7 +10,7 @@ const SectionTitle = ({
 }) => {
   return (
     <div className="flex justify-center items-center w-full">
-      <div className="mx-auto">
+      <div className="mx-auto space-y-2">
         <div className="mx-auto w-[24px]">
           <Image
             src="/hop.svg"
@@ -20,7 +20,7 @@ const SectionTitle = ({
             className="fill-green-500"
           />
         </div>
-        <h2 className="text-center">
+        <h2 className="text-center font-heading text-3xl">
           <span>{children ?? title}</span>
         </h2>
       </div>
