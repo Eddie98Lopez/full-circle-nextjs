@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="">
-      <section id="hero" className="grid grid-cols-1 grid-rows-[65vh]">
+      <section id="hero" className="grid grid-cols-1 lg:grid-rows-[65vh]">
         {/* Video layer */}
         <div className="w-full h-full bg-foreground col-start-1 row-start-1 aspect-4/5 z-1 lg:aspect-16/9 overflow-hidden flex justify-center items-center">
           <video
@@ -77,7 +77,7 @@ export default function Home() {
           <div className="mx-auto w-min">
             <SocialLinksBar links={dummySocialLinks} />
           </div>
-          <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div className="w-full aspect-square bg-gray-200">
               instagram photo
             </div>
