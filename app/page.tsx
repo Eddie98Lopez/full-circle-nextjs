@@ -3,28 +3,37 @@ import SectionTitle from "@/components/section-title";
 import { Button } from "@/components/ui/button";
 import { homeActions } from "@/lib/actions";
 import Banner from "@/components/ui/banner";
-import Image from "next/image";
 import SocialLinksBar, { dummySocialLinks } from "@/components/social-bar";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="">
-      <section id="hero" className="grid grid-cols-1 grid-rows-[60vh]">
+      <section id="hero" className="grid grid-cols-1 grid-rows-[65vh]">
         {/* Video layer */}
-        <div className="col-start-1 row-start-1 bg-gray-500 z-0">
-          vidoe wrapper
+        <div className="w-full h-full bg-foreground col-start-1 row-start-1 aspect-4/5 z-1 lg:aspect-16/9 overflow-hidden flex justify-center items-center">
+          <video
+            autoPlay
+            loop
+            muted
+            /* ADDED object-cover, REMOVED stray "fill" class */
+            className="w-full h-full object-cover object-center opacity-30"
+          >
+            <source src="/breweryHero.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* Content layer, on top */}
-        <div className="col-start-1 row-start-1 z-10 flex flex-col items-center justify-center text-center md:w-1/2 md:mx-auto">
+        <div className="col-start-1 row-start-1 z-5 flex flex-col items-center justify-center text-center md:w-1/2 md:mx-auto text-background">
           <h1>Feels Like Your Taproom</h1>
           <p>
             You put real care into your brewery. It makes sense to want that
             same level of craftsmanship to carry through to your website. This
             is a demo site, just a concept, but if you see ideas here that could
-            translate to your brand, book a call and we'll see whether a custom
-            version tailored to your brewery makes sense for your business.
+            translate to your brand, book a call and we will see whether a
+            custom version tailored to your brewery makes sense for your
+            business.
           </p>
           <Button variant={"outline"}>
             <Link
@@ -44,7 +53,7 @@ export default function Home() {
           <div>Great Time.</div>
         </div>
       </Banner>
-      <section className="background-brick h-[50vh]">
+      <section className="background-brick h-[50vh] py-12 px-8">
         <div>
           <SectionTitle>Featured Beers</SectionTitle>
           <div>Carousel</div>
@@ -62,7 +71,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section>
+      <section className="py-12 px-8">
         <div className="w-full max-w-[1280px] mx-auto space-y-4">
           <SectionTitle>Follow Us</SectionTitle>
           <div className="mx-auto w-min">
@@ -97,7 +106,7 @@ export default function Home() {
           <div>map</div>
         </div>
       </section>
-      <section>
+      <section className="py-12 px-8">
         <div>
           <SectionTitle>Blog</SectionTitle>
           <div>Blog horizontal scroll</div>
