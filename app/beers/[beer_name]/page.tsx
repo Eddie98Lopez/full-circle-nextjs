@@ -1,15 +1,14 @@
+import FeaturedBeerCard from "@/components/featured-beer";
 import SectionTitle from "@/components/section-title";
 import React from "react";
 
 const Page = () => {
   return (
     <div>
-      <section className="grid grid-cols-3 w-full h-[60vh]">
-        <div className="col-[1/2] w-full h-full bg-gray-200">
-          artwork and beer can
-        </div>
-        <div className="col-[2/4] w-full h-full flex justify-start items-center bg-primary">
-          <div className="background-paper w-7/10 h-1/2">boop</div>
+      <section className="grid grid-rows-[3vh_35vh_auto] md:grid-rows-[20vh_25vh_auto] w-full min-h-[60vh]">
+        <div className="w-full h-full row-start-1 row-end-3 bg-gray-400 col-start-1 col-end-2 "></div>
+        <div className="w-full h-full row-start-2 row-end-4 col-start-1 col-end-2 px-8 ">
+          <FeaturedBeerCard />
         </div>
       </section>
       <section>
@@ -22,18 +21,32 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="background-paper w-full h-100 px-8 py-16">
+      <section className="background-paper w-full px-8 py-16 space-y-8">
         <SectionTitle>
           <span className="text-white">You Might Like</span>
-          <div>
-            <ul></ul>
-          </div>
         </SectionTitle>
+        <div className="max-w-[1600px] mx-auto">
+          <ul className="flex flex-nowrap gap-6 snap-x overflow-x-scroll w-full">
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+          </ul>
+        </div>
       </section>
-      <section className="px-8 py-16 background-logo">
+      <section className="px-8 py-16 background-logo space-y-8">
         <SectionTitle>Merch</SectionTitle>
-        <div>
-          <ul> Merch list</ul>
+        <div className="max-w-[1600px] mx-auto">
+          <ul className="flex flex-nowrap gap-6 snap-x overflow-x-scroll w-full">
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
+          </ul>
         </div>
       </section>
     </div>

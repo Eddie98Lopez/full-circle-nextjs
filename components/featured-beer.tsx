@@ -3,11 +3,11 @@ import { Separator } from "./ui/separator";
 
 const FeaturedBeerCard = () => {
   return (
-    <li className="grid grid-cols-1 md:grid-cols-[1fr_2fr] max-w-4xl mx-auto h-90">
-      <div className="row-start-1 row-end-2 md:row-start-1 md:row-end-2 md:col-start-1 md:col-end-2 w-full z-1 sm:translate-y-10 md:translate-y-0">
+    <li className="grid grid-cols-1 md:grid-cols-[1fr_2fr] max-w-4xl mx-auto min-h-90 h-full relative">
+      <div className="row-start-1 row-end-2 md:row-start-1 md:row-end-2 md:col-start-1 md:col-end-2 w-full z-1 translate-y-10 md:translate-y-0 h-full min-h-70 bg-red-500/50">
         picture
       </div>
-      <div className=" sm:pt-10 md:pt-0 row-start-2 row-end-3 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3 z-1">
+      <div className=" text-center md:text-left pt-4 md:pt-0 row-start-2 row-end-3 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3 z-1">
         <div className="flex items-center w-full h-full my-auto p-8">
           <div className="w-full h-full flex flex-col justify-center text-white gap-3.5">
             <h3 className="text-3xl md:text-5xl font-heading">Beer Name</h3>

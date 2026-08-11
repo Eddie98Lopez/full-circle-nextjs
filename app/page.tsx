@@ -60,10 +60,10 @@ export default function Home() {
           <div>Great Time.</div>
         </div>
       </Banner>
-      <section className="background-brick h-[50vh] py-12 px-8 pb-10">
+      <section className="background-brick min-h-[50vh] p-8">
         <div>
           <SectionTitle>Featured Beers</SectionTitle>
-          <div className="mt-6 max-w-4xl mx-auto p-6">
+          <div className=" max-w-4xl mx-auto p-4">
             <Carousel>
               <CarouselContent>
                 <CarouselItem>
@@ -121,15 +121,26 @@ export default function Home() {
       </section>
       <section>
         <div>
-          <div>image</div>
-          <div>banner</div>
-          <div>map</div>
+          <div className="relative h-[400px] w-full bg-[url(/images/47334.jpg)] bg-cover md:bg-fixed"></div>
+          <Banner>
+            <div className="h-80">Stuff goes here</div>
+          </Banner>
+          <div className="bg-gray-300 h-80">map</div>
         </div>
       </section>
-      <section className="py-12 px-8">
-        <div>
+      <section className="py-12 px-8 background-logo">
+        <div className="space-y-8">
           <SectionTitle>Blog</SectionTitle>
-          <div>Blog horizontal scroll</div>
+          <div className="max-w-[1600px] mx-auto">
+            <div className="flex flex-nowrap gap-8 snap-x overflow-x-scroll w-full">
+              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
+              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
+              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
+              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
+              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
+              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
