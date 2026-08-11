@@ -5,12 +5,19 @@ import { homeActions } from "@/lib/actions";
 import Banner from "@/components/ui/banner";
 import SocialLinksBar, { dummySocialLinks } from "@/components/social-bar";
 import Link from "next/link";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import FeaturedBeerCard from "@/components/featured-beer";
 
 export default function Home() {
   return (
     <div className="">
       <section id="hero" className="grid grid-cols-1 lg:grid-rows-[65vh]">
-        {/* Video layer */}
         <div className="w-full h-full bg-foreground col-start-1 row-start-1 aspect-4/5 z-1 lg:aspect-16/9 overflow-hidden flex justify-center items-center">
           <video
             autoPlay
@@ -53,10 +60,23 @@ export default function Home() {
           <div>Great Time.</div>
         </div>
       </Banner>
-      <section className="background-brick h-[50vh] py-12 px-8">
+      <section className="background-brick h-[50vh] py-12 px-8 pb-10">
         <div>
           <SectionTitle>Featured Beers</SectionTitle>
-          <div>Carousel</div>
+          <div className="mt-6 max-w-4xl mx-auto p-6">
+            <Carousel>
+              <CarouselContent>
+                <CarouselItem>
+                  <FeaturedBeerCard />
+                </CarouselItem>
+                <CarouselItem>
+                  <FeaturedBeerCard />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselNext />
+              <CarouselPrevious />
+            </Carousel>
+          </div>
         </div>
       </section>
       <section>

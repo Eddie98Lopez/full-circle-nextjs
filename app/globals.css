@@ -58,7 +58,7 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: #e2e2e2;
   --foreground: #2b2b2b;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -148,4 +148,21 @@
 
 .background-brick {
   background: url("/brick.svg") repeat;
+}
+
+.background-logo {
+  background-image: url("/images/full-logo.svg");
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: -20% 50%;
+
+  @media only screen and (max-width: 768px) {
+    background-size: 90%;
+    background-position: -200% 50%;
+  }
+
+  @media only screen and (max-width: 500px) {
+    background-size: 100%;
+    background-position: top left -6rem;
+  }
 }

@@ -30,7 +30,7 @@ const Page = () => {
           </div>
         </SectionTitle>
       </section>
-      <section className="px-8 py-16">
+      <section className="px-8 py-16 background-logo">
         <SectionTitle>Merch</SectionTitle>
         <div>
           <ul> Merch list</ul>
