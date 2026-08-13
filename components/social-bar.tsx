@@ -62,7 +62,7 @@ export const dummySocialLinks: SocialLink[] = [
 
 export default function SocialLinksBar({ links }: SocialLinksBarProps) {
   return (
-    <ul className="flex items-center gap-3">
+    <ul className="flex items-center gap-3 justify-center">
       {links.map(({ platform, href }) => {
         const Icon = ICONS[platform.toLowerCase()];
         if (!Icon) return null; // skip any platform that isn't mapped

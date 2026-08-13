@@ -3,20 +3,39 @@ import React from "react";
 import SocialLinksBar, { dummySocialLinks } from "./social-bar";
 import { Separator } from "./ui/separator";
 import Logo from "./logo";
+import EmailOptIn from "./email-subscribe";
+import { Button } from "./ui/button";
 
-const Footer = () => {
+const hours = [
+  { day: "Sun", time: "9 AM – 5 PM" },
+  { day: "Mon", time: "9 AM – 5 PM" },
+  { day: "Tue", time: "9 AM – 5 PM" },
+  { day: "Wed", time: "9 AM – 5 PM" },
+  { day: "Thu", time: "9 AM – 5 PM" },
+  { day: "Fri", time: "9 AM – 5 PM" },
+  { day: "Sat", time: "9 AM – 5 PM" },
+];
+
+function Footer() {
   return (
     <footer className="w-full h-full flex justify-center background-paper p-16 md:bg-fixed">
-      <div className="w-full max-w-[11600px] lg:grid lg:grid-cols-3 gap-8 content-center items-center text-center">
-        <div>newsletter signup</div>
-        <div className="h-20 mx-auto">
+      <div className="w-full max-w-[1600px] mx-auto flex flex-col lg:grid lg:grid-cols-3 gap-8 place-content-between items-center  text-center ">
+        <div>
+          <EmailOptIn />
+        </div>
+        <div className="h-20 mx-auto hidden md:block ">
           <Separator orientation="vertical" className="bg-background h-full" />
         </div>
-        <div className="min-w mx-auto text-center lg:text-right space-y-4">
+        <div className="text-center lg:text-right space-y-4 ">
           <p className="font-heading text-2xl">Follow Us</p>
-          <SocialLinksBar links={dummySocialLinks} />
+          <div className="flex justify-center md:justify-end w-full">
+            <SocialLinksBar links={dummySocialLinks} />
+          </div>
         </div>
         <div>footer menu</div>
+        <div className="h-10 mx-auto md:hidden">
+          <Separator orientation="vertical" className="bg-background h-full" />
+        </div>
         <div>
           <div className="text-center text-white">
             <Link href="/" className="min-w mx-auto bg-green-500">
@@ -32,12 +51,29 @@ const Footer = () => {
             <p>1234 W Street St</p>
           </div>
         </div>
-        <div>business hours</div>
-        <div>order action buttons</div>
-        <div className="h-20 mx-auto">
+        <div className="flex justify-center md:justify-end">
+          <ul className="min-w-40 font-heading">
+            {hours.map(({ day, time }) => (
+              <li
+                key={day}
+                className="flex justify-between text-lg md:text-base py-1 max-w-xs"
+              >
+                <span className="">{day}</span>
+                <span>{time}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex flex-col md:flex-row w-full gap-2">
+          <Button size="lg">Order Now</Button>{" "}
+          <Button size="lg" variant={"outline"}>
+            Find Beer
+          </Button>
+        </div>
+        <div className="h-10 md:h-20 mx-auto ">
           <Separator orientation="vertical" className="bg-background h-full" />
         </div>
-        <div>
+        <div className="text-center md:text-right w-full">
           copyright 2026 by{" "}
           <Link href="https://www.lopezed.com" target="_blank">
             Lopezed LLC
@@ -46,6 +82,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

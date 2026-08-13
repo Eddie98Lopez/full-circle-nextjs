@@ -11,8 +11,8 @@ const AboutPage = () => {
         <div className="bg-foreground translate-y-25 size-75 mx-auto p-4 rounded-full">
           <Logo className="fill-background" />
         </div>
-        <div className="background-paper text-white p-8  md:p-20 md:pt-30 max-w-[1280px] mx-auto">
-          <div className="font-sans text-center space-y-8 w-full text-lg md:8/10 lg:w-2/3 mx-auto">
+        <div className="background-paper text-white p-8 pt-30  md:p-20 md:pt-30 max-w-[1280px] mx-auto">
+          <div className="font-sans text-center space-y-8 w-full text-lg lg:w-2/3 mx-auto">
             <h1 className="font-heading text-5xl">
               The Website Your Beer Has Been Waiting For...
             </h1>

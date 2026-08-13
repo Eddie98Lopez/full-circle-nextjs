@@ -32,9 +32,11 @@ export default function Home() {
         </div>
 
         {/* Content layer, on top */}
-        <div className="col-start-1 row-start-1 z-5 flex flex-col items-center justify-center text-center md:w-1/2 md:mx-auto text-background">
-          <h1>Feels Like Your Taproom</h1>
-          <p>
+        <div className="col-start-1 row-start-1 z-5 flex flex-col gap-4 items-center justify-center text-center max-w-4xl md:mx-auto text-background p-8">
+          <h1 className="text-display-small">
+            Feels Like <br /> Your Taproom
+          </h1>
+          <p className="text-body text-lg">
             You put real care into your brewery. It makes sense to want that
             same level of craftsmanship to carry through to your website. This
             is a demo site, just a concept, but if you see ideas here that could
@@ -42,19 +44,18 @@ export default function Home() {
             custom version tailored to your brewery makes sense for your
             business.
           </p>
-          <Button variant={"outline"}>
-            <Link
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Mavz2MffYH9bwfpA4fcYKQlxHUh2JuV636QELOg7nOlRCjM9W7_RUW76BAFJTc3Y1Non5XxRb"
-              target="_blank"
-            >
+          <Link
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Mavz2MffYH9bwfpA4fcYKQlxHUh2JuV636QELOg7nOlRCjM9W7_RUW76BAFJTc3Y1Non5XxRb"
+            target="_blank"
+          >
+            <Button variant={"outline"} size={"lg"}>
               Book A Call
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </section>
       <Banner>
-        {" "}
-        <div className="flex flex-col gap-4 lg:flex-row w-full h-full mx-auto flex items-center justify-center text-white lg:gap-12 font-heading text-6xl">
+        <div className="flex flex-col gap-4 lg:flex-row w-full h-full mx-auto flex items-center justify-center text-white lg:gap-12  text-headline">
           <div>Good Beer.</div>
           <div>Good Crowd.</div>
           <div>Great Time.</div>
