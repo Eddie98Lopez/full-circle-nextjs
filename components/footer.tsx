@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import SocialLinksBar, { dummySocialLinks } from "./social-bar";
+import SocialLinksBar from "./social-bar";
+import { dummySocialLinks } from "@/lib/menus";
 import { Separator } from "./ui/separator";
 import Logo from "./logo";
 import EmailOptIn from "./email-subscribe";

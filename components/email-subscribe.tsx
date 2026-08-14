@@ -8,7 +8,7 @@ export default function EmailOptIn() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // native validation already passed at this point
     console.log("Subscribed:", email);

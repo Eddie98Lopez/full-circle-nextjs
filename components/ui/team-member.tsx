@@ -10,13 +10,15 @@ interface TeamMemberCardProps {
 const TeamMemberCard = ({ image, name, role }: TeamMemberCardProps) => {
   return (
     <li>
-      <Card>
-        <CardContent>
-          <div className="size-80 bg-primary rounded-full">
+      <Card className="bg-transparent border-none shadow-none ring-0 outline-none">
+        <CardContent className="border-none flex flex-col items-center">
+          <div className="size-80 bg-primary rounded-full overflow-hidden">
             <Image src={image} alt={name} width={600} height={600} />
           </div>
-          <CardTitle>{name}</CardTitle>
-          <CardDescription>{role}</CardDescription>
+          <CardTitle className="tex-title text-[2rem]">{name}</CardTitle>
+          <CardDescription className="text-lg uppercase font-bold">
+            {role}
+          </CardDescription>
         </CardContent>
       </Card>
     </li>

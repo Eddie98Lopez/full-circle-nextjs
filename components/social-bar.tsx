@@ -52,14 +52,6 @@ const ICONS: Record<string, ComponentType<IconProps>> = {
   github: SiGithub,
 };
 
-export const dummySocialLinks: SocialLink[] = [
-  { platform: "facebook", href: "https://facebook.com/yourpage" },
-  { platform: "instagram", href: "https://instagram.com/yourhandle" },
-  { platform: "tiktok", href: "https://tiktok.com/@yourhandle" },
-  { platform: "twitter", href: "https://twitter.com/yourhandle" },
-  { platform: "youtube", href: "https://youtube.com/@yourchannel" },
-];
-
 export default function SocialLinksBar({ links }: SocialLinksBarProps) {
   return (
     <ul className="flex items-center gap-3 justify-center">

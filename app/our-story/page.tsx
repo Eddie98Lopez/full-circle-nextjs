@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Logo from "@/components/logo";
 import SectionTitle from "@/components/section-title";
+import { dummyTeam } from "@/lib/dummyData";
+import TeamMemberCard from "@/components/ui/team-member";
 
 const AboutPage = () => {
   return (
@@ -52,7 +54,16 @@ const AboutPage = () => {
         <div className="w-full max-w-[1600px] mx-auto">
           <SectionTitle>Meet the Team</SectionTitle>
           <div>
-            <ul>{}</ul>
+            <ul className="flex gap-4 flex-wrap mx-auto justify-center">
+              {dummyTeam.map((member) => (
+                <TeamMemberCard
+                  key={`${member.id}-teammember`}
+                  image={member.image}
+                  role={member.jobTitle}
+                  name={`${member.firstName} ${member.lastName}`}
+                />
+              ))}
+            </ul>
           </div>
         </div>
       </section>

@@ -3,7 +3,8 @@ import SectionTitle from "@/components/section-title";
 import { Button } from "@/components/ui/button";
 import { homeActions } from "@/lib/actions";
 import Banner from "@/components/ui/banner";
-import SocialLinksBar, { dummySocialLinks } from "@/components/social-bar";
+import SocialLinksBar from "@/components/social-bar";
+import { dummySocialLinks } from "@/lib/menus";
 import Link from "next/link";
 import {
   Carousel,
@@ -24,7 +25,7 @@ export default function Home() {
             loop
             muted
             /* ADDED object-cover, REMOVED stray "fill" class */
-            className="w-full h-full object-cover object-center opacity-30"
+            className="w-full h-full object-cover object-center opacity-20"
           >
             <source src="/breweryHero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
