@@ -6,6 +6,7 @@ import Banner from "@/components/ui/banner";
 import SocialLinksBar from "@/components/social-bar";
 import { dummySocialLinks } from "@/lib/menus";
 import Link from "next/link";
+import { dummyMyBeers } from "@/lib/dummyData";
 import {
   Carousel,
   CarouselContent,
@@ -68,12 +69,13 @@ export default function Home() {
           <div className=" max-w-4xl mx-auto p-4">
             <Carousel>
               <CarouselContent>
-                <CarouselItem>
-                  <FeaturedBeerCard />
-                </CarouselItem>
-                <CarouselItem>
-                  <FeaturedBeerCard />
-                </CarouselItem>
+                {dummyMyBeers
+                  .filter((beer) => beer.isFeaturedBeer == true)
+                  .map((beer) => (
+                    <CarouselItem key={`featured-beer-${beer.id}`}>
+                      <FeaturedBeerCard beer={beer} />
+                    </CarouselItem>
+                  ))}
               </CarouselContent>
               <CarouselNext />
               <CarouselPrevious />
