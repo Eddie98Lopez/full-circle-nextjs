@@ -3,13 +3,6 @@ import { Separator } from "./ui/separator";
 import Image from "next/image";
 import type { Beer } from "@/lib/dummyData";
 
-interface FeaturedBeerCardProps {
-  name: string;
-  type: string;
-  abv: string;
-  description: string;
-}
-
 const FeaturedBeerCard = ({ beer }: { beer: Beer }) => {
   return (
     <li className="grid grid-cols-1 md:grid-cols-[1fr_2fr] max-w-4xl mx-auto min-h-90 h-full relative">

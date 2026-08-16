@@ -1,14 +1,18 @@
 import FeaturedBeerCard from "@/components/featured-beer";
 import SectionTitle from "@/components/section-title";
+import { dummyMyBeers } from "@/lib/dummyData";
 import React from "react";
 
-const Page = () => {
+const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
+  const { beer_name } = await params;
+  console.log(beer_name);
+  const beer = dummyMyBeers.filter((beer) => beer.slug == beer_name)[0];
   return (
     <div>
       <section className="grid grid-rows-[3vh_35vh_auto] md:grid-rows-[20vh_25vh_auto] w-full min-h-[60vh]">
         <div className="w-full h-full row-start-1 row-end-3 bg-gray-400 col-start-1 col-end-2 "></div>
         <div className="w-full h-full row-start-2 row-end-4 col-start-1 col-end-2 px-8 ">
-          <FeaturedBeerCard />
+          <FeaturedBeerCard beer={beer} />
         </div>
       </section>
       <section>

@@ -96,11 +96,13 @@ export interface Beer {
   myBeersRelatedBeers: string[];
   publishDate: ISODateString;
   unpublishDate: ISODateString | null;
+  slug: string;
 }
 
 export const dummyMyBeers: Beer[] = [
   {
     title: "Hop Static",
+    slug: "hop-static",
     shortDescription: "Bright, aromatic IPA with a restrained bitterness.",
     longDescription:
       '<p class="font_7">Hop Static leans into citrus and pine without overpowering the palate. A balanced malt base keeps the hops in check. It finishes dry and clean, making it surprisingly drinkable for the style.</p>',
@@ -125,6 +127,7 @@ export const dummyMyBeers: Beer[] = [
   },
   {
     title: "Midnight Run",
+    slug: "midnight-run",
     shortDescription: "Bold imperial porter brewed for late nights.",
     longDescription:
       '<p class="font_7">Midnight Run is rich and layered with notes of cocoa and toasted malt. A warming alcohol presence adds depth without burning. This beer is intentionally bold and meant to be savored.</p>',
@@ -149,6 +152,7 @@ export const dummyMyBeers: Beer[] = [
   },
   {
     title: "Valley Gold",
+    slug: "valley-gold",
     shortDescription: "A crisp, easy-drinking lager built for long afternoons.",
     longDescription:
       '<p class="font_7">Valley Gold is clean and straightforward with a soft malt backbone. Light bitterness keeps it refreshing without feeling thin. This is the kind of beer you can drink more than one of without thinking about it.</p>',
@@ -173,6 +177,7 @@ export const dummyMyBeers: Beer[] = [
   },
   {
     title: "Back Alley Stout",
+    slug: "black-alley-stout",
     shortDescription: "Smooth stout with roasted depth and subtle sweetness.",
     longDescription:
       '<p class="font_7">Back Alley Stout opens with notes of coffee and dark chocolate. The body is full but not heavy, with a soft, rounded finish. It\u2019s built for slow sipping but still approachable.</p>',
@@ -197,6 +202,7 @@ export const dummyMyBeers: Beer[] = [
   },
   {
     title: "Citrus Press",
+    slug: "citrus-press",
     shortDescription: "Tart, refreshing sour with real citrus character.",
     longDescription:
       '<p class="font_7">Citrus Press delivers bright acidity without being harsh. Fresh citrus notes lead, followed by a clean, dry finish. It\u2019s light, refreshing, and designed for warm weather.</p>',
