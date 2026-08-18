@@ -152,19 +152,19 @@ export default function Home() {
                 <div className="aspect-7/4 w-full"></div>
               </li>
               <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
               </li>
               <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
               </li>
               <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
               </li>
               <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
               </li>
               <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
               </li>
             </ul>
           </div>

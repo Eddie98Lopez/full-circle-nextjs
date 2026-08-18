@@ -306,7 +306,7 @@ export const dummyEvents: BreweryEvent[] = [
 // ----------------------------------------------------------------------------
 
 export interface Product {
-  title: string;
+  name: string;
   productType: string;
   shortDescription: string;
   longDescription: string;
@@ -318,11 +318,12 @@ export interface Product {
   isFeaturedProduct: boolean;
   slug: string;
   id: string;
+  badges?: string[];
 }
 
 export const dummyProducts: Product[] = [
   {
-    title: "Logo Can Coozie",
+    name: "Logo Can Coozie",
     productType: "coozie",
     shortDescription: "Neoprene coozie that keeps your can cold.",
     longDescription:
@@ -338,7 +339,7 @@ export const dummyProducts: Product[] = [
     id: "p1",
   },
   {
-    title: "Cork-Back Coaster",
+    name: "Cork-Back Coaster",
     productType: "coaster",
     shortDescription: "Absorbent cork-back coaster with our crest.",
     longDescription:
@@ -354,7 +355,7 @@ export const dummyProducts: Product[] = [
     id: "p2",
   },
   {
-    title: "Insulated Tumbler",
+    name: "Insulated Tumbler",
     productType: "tumbler",
     shortDescription: "20oz stainless tumbler, double-walled.",
     longDescription:
@@ -370,7 +371,7 @@ export const dummyProducts: Product[] = [
     id: "p3",
   },
   {
-    title: "Classic Logo T-Shirt",
+    name: "Classic Logo T-Shirt",
     productType: "t-shirt",
     shortDescription: "Soft cotton tee with the flagship logo.",
     longDescription:
@@ -386,7 +387,7 @@ export const dummyProducts: Product[] = [
     id: "p4",
   },
   {
-    title: "Branded Pint Glass",
+    name: "Branded Pint Glass",
     productType: "pint-glass",
     shortDescription: "16oz shaker pint glass with etched logo.",
     longDescription:
