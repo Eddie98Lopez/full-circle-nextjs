@@ -5,6 +5,7 @@ import Logo from "@/components/logo";
 import SectionTitle from "@/components/section-title";
 import { dummyTeam } from "@/lib/dummyData";
 import TeamMemberCard from "@/components/ui/team-member";
+import { StaggerReveal } from "@/components/ui/stagger-wrapper";
 
 const AboutPage = () => {
   return (
@@ -14,7 +15,10 @@ const AboutPage = () => {
           <Logo className="fill-background" />
         </div>
         <div className="background-paper text-white p-8 pt-30  md:p-20 md:pt-30 max-w-[1280px] mx-auto">
-          <div className="font-sans text-center space-y-8 w-full text-lg lg:w-2/3 mx-auto">
+          <StaggerReveal
+            direction="y"
+            className="font-sans text-center space-y-8 w-full text-lg lg:w-2/3 mx-auto"
+          >
             <h1 className="font-heading text-5xl">
               The Website Your Beer Has Been Waiting For...
             </h1>
@@ -39,7 +43,7 @@ const AboutPage = () => {
                 Book a call to see if this layout is right for your brewery.
               </strong>
             </p>
-            <Button variant={"outline"}>
+            <Button variant={"outline"} size={"lg"}>
               <Link
                 href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Mavz2MffYH9bwfpA4fcYKQlxHUh2JuV636QELOg7nOlRCjM9W7_RUW76BAFJTc3Y1Non5XxRb"
                 target="_blank"
@@ -47,14 +51,17 @@ const AboutPage = () => {
                 Book A Call
               </Link>
             </Button>
-          </div>
+          </StaggerReveal>
         </div>
       </section>
       <section className="background-brick p-8 py-16">
         <div className="w-full max-w-[1600px] mx-auto">
           <SectionTitle>Meet the Team</SectionTitle>
           <div>
-            <ul className="flex gap-4 flex-wrap mx-auto justify-center">
+            <StaggerReveal
+              as="ul"
+              className="flex gap-4 flex-wrap mx-auto justify-center"
+            >
               {dummyTeam.map((member) => (
                 <TeamMemberCard
                   key={`${member.id}-teammember`}
@@ -63,7 +70,7 @@ const AboutPage = () => {
                   name={`${member.firstName} ${member.lastName}`}
                 />
               ))}
-            </ul>
+            </StaggerReveal>
           </div>
         </div>
       </section>

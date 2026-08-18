@@ -48,6 +48,7 @@ export function MobileNav() {
                 <ul>
                   <StaggerReveal
                     direction="y"
+                    delay={0.25}
                     className="flex flex-col gap-6 text-center lg:text-left"
                     preset="faster"
                   >

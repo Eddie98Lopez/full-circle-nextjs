@@ -7,6 +7,7 @@ import SocialLinksBar from "@/components/social-bar";
 import { dummySocialLinks } from "@/lib/menus";
 import Link from "next/link";
 import { dummyMyBeers } from "@/lib/dummyData";
+import { StaggerReveal } from "@/components/ui/stagger-wrapper";
 import {
   Carousel,
   CarouselContent,
@@ -34,7 +35,12 @@ export default function Home() {
         </div>
 
         {/* Content layer, on top */}
-        <div className="col-start-1 row-start-1 z-5 flex flex-col gap-4 items-center justify-center text-center max-w-4xl md:mx-auto text-background p-8">
+        <StaggerReveal
+          preset="default"
+          direction="y"
+          delay={0.2}
+          className="col-start-1 row-start-1 z-5 flex flex-col gap-4 items-center justify-center text-center max-w-4xl md:mx-auto text-background p-8"
+        >
           <h1 className="text-display-small">
             Feels Like <br /> Your Taproom
           </h1>
@@ -54,14 +60,19 @@ export default function Home() {
               Book A Call
             </Button>
           </Link>
-        </div>
+        </StaggerReveal>
       </section>
       <Banner>
-        <div className="flex flex-col gap-4 lg:flex-row w-full h-full mx-auto flex items-center justify-center text-white lg:gap-12  text-headline">
+        <StaggerReveal
+          preset="slower"
+          direction="y"
+          delay={0.8}
+          className="flex flex-col gap-4 lg:flex-row w-full h-full mx-auto flex items-center justify-center text-white lg:gap-12  text-headline"
+        >
           <div>Good Beer.</div>
           <div>Good Crowd.</div>
-          <div>Great Time.</div>
-        </div>
+          <div>Great Website.</div>
+        </StaggerReveal>
       </Banner>
       <section className="background-brick min-h-[50vh] p-8">
         <div>
@@ -136,14 +147,26 @@ export default function Home() {
         <div className="space-y-8">
           <SectionTitle>Blog</SectionTitle>
           <div className="max-w-[1600px] mx-auto">
-            <div className="flex flex-nowrap gap-8 snap-x overflow-x-scroll w-full">
-              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
-              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
-              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
-              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
-              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
-              <div className="flex-none snap-center w-full max-w-xl bg-gray-300 aspect-4/3 hover:bg-gray-600 transition-all"></div>
-            </div>
+            <ul className="flex flex-nowrap gap-4 snap-x overflow-x-scroll w-full ">
+              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
+                <div className="aspect-7/4 w-full"></div>
+              </li>
+              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
+                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+              </li>
+              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
+                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+              </li>
+              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
+                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+              </li>
+              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
+                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+              </li>
+              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
+                <div className="aspect-4/5 lg:aspect-7/5 w-full"></div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
