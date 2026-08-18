@@ -3,6 +3,7 @@ import { LogoSmall } from "./logo";
 import { MobileNav } from "./navigation";
 import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
+import SideCart from "./commerce/side-cart";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
           <LogoSmall className="" />
         </Link>
         <div>
-          <ShoppingBag />
+          <SideCart />
         </div>
         <div>
           <MobileNav />

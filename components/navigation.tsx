@@ -10,11 +10,14 @@ import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { header_menu } from "@/lib/menus";
 import { Separator } from "./ui/separator";
+import { StaggerReveal } from "./ui/stagger-wrapper";
 import { usePathname } from "next/navigation";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+
+  console.log(pathname);
 
   const [prevPathname, setPrevPathname] = useState(pathname);
   if (pathname !== prevPathname) {
@@ -42,19 +45,27 @@ export function MobileNav() {
           <div className="flex justify-center items-center">
             <div className="w-40 lg:w-80 ">
               <nav>
-                {" "}
-                <ul className="flex flex-col gap-4 text-center lg:text-left">
-                  {header_menu.map((link) => (
-                    <li key={link.slug}>
-                      <Link
-                        href={`/${link.slug}`}
-                        onClick={() => setOpen(false)}
-                        className="text-4xl font-bold uppercase hover:text-primary"
+                <ul>
+                  <StaggerReveal
+                    direction="y"
+                    className="flex flex-col gap-6 text-center lg:text-left"
+                    preset="faster"
+                  >
+                    {header_menu.map((link) => (
+                      <li
+                        key={link.slug}
+                        className="group hover:translate-x-2 transition-all"
                       >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
+                        <Link
+                          href={`/${link.slug}`}
+                          onClick={() => setOpen(false)}
+                          className={`text-4xl font-bold uppercase group-hover:text-primary ${pathname.includes(link.slug) && link.slug !== "" && "text-yellow-500"} ${link.slug == "" && pathname == "/" && "text-yellow-500"}`}
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </StaggerReveal>
                 </ul>
               </nav>
             </div>
