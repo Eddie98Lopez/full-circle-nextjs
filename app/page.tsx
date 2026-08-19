@@ -90,8 +90,16 @@ export default function Home() {
                     </CarouselItem>
                   ))}
               </CarouselContent>
-              <CarouselNext />
-              <CarouselPrevious />
+              <div>
+                <CarouselPrevious
+                  className="relative -left-0 rounded-none"
+                  variant={"secondary"}
+                />
+                <CarouselNext
+                  className="relative -right-0 rounded-none"
+                  variant={"secondary"}
+                />
+              </div>
             </Carousel>
           </div>
         </div>
@@ -155,7 +163,10 @@ export default function Home() {
             itemWrapperClass="flex-none basis-9/10 lg:basis-3/7 snap-center transition-all"
           >
             {dummyBlogPosts.map((post) => (
-              <li key={`blog-card-${post.id}`} className="decoration-none">
+              <li
+                key={`blog-card-${post.id}`}
+                className="decoration-none w-full h-full flex aspect-4/5 lg:aspect-9/7"
+              >
                 <BlogCard post={post} />
               </li>
             ))}
