@@ -22,6 +22,7 @@ const EventsPage = () => {
                 date={event.startDate}
                 location={event.location}
                 image={event.image}
+                description={event.shortDescription}
               />
             ))}
           </StaggerReveal>

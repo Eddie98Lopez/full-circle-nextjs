@@ -5,6 +5,16 @@ import { SlidersHorizontal, ListSortDescending } from "lucide-react";
 import { dummyProducts } from "@/lib/dummyData";
 import { StaggerReveal } from "@/components/ui/stagger-wrapper";
 import ProductCard from "@/components/product-card";
+import { Separator } from "@/components/ui/separator";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+const categories = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const ShopPage = () => {
   return (
     <div className="relative">
@@ -15,15 +25,39 @@ const ShopPage = () => {
       <section className="py-16 px-8">
         <div className="max-w-[1600px] mx-auto space-y-8">
           <SectionTitle>Merch Store</SectionTitle>
-          <div className="border-b-2 border-black/50 p-4 my-8 w-full">
-            <ul className="flex gap-8 justify-center ">
-              <li>Categroy</li>
-              <li>Categroy</li>
-              <li>Categroy</li>
-              <li>Categroy</li>
-              <li>Categroy</li>
-            </ul>
-          </div>
+          <Separator className="bg-foreground border border-foreground/50 my-8" />
+          <Carousel>
+            <div className="wfull flex justify-between items-center flex-wrap mb-4">
+              <h2 className="font-heading text-2xl">Categories</h2>{" "}
+              <div className="space-x-2">
+                <CarouselPrevious
+                  className="relative -left-0 rounded-none"
+                  variant={"secondary"}
+                  size={"lg"}
+                />
+                <CarouselNext
+                  className="relative -right-0 rounded-none"
+                  variant={"secondary"}
+                  size={"lg"}
+                />
+              </div>
+            </div>
+            <CarouselContent>
+              {categories.map((cat) => (
+                <CarouselItem
+                  key={`category-${cat}`}
+                  className="basis-3/7 md:basis-1/7"
+                >
+                  <Card className="aspect-2/1 rounded ring-0 bg-primary text-white hover:bg-primary/80 transition-all">
+                    <CardContent className="font-bold uppercase text-center h-full grid place-content-center">
+                      <div>Category {cat}</div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <Separator className="bg-foreground border border-foreground/50 my-8" />
           <div className="flex items-center gap-4">
             <div>
               <Button variant={"ghost"}>
@@ -40,7 +74,7 @@ const ShopPage = () => {
           </div>
           <StaggerReveal
             as="ul"
-            className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8"
             direction="y"
           >
             {dummyProducts.map((product) => {

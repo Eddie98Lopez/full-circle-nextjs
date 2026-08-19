@@ -5,6 +5,7 @@ import { homeActions } from "@/lib/actions";
 import Banner from "@/components/ui/banner";
 import SocialLinksBar from "@/components/social-bar";
 import { dummySocialLinks } from "@/lib/menus";
+import Image from "next/image";
 import Link from "next/link";
 import { dummyBlogPosts, dummyMyBeers } from "@/lib/dummyData";
 import { StaggerReveal } from "@/components/ui/stagger-wrapper";
@@ -16,7 +17,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import FeaturedBeerCard from "@/components/featured-beer";
-import { ImageIcon } from "lucide-react";
 import BlogCard from "@/components/ui/blog-card";
 
 export default function Home() {
@@ -124,22 +124,31 @@ export default function Home() {
           </div>
           <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div className="w-full aspect-square bg-gray-200">
-              instagram photo
+              <Image
+                className="object-cover aspect-square w-full"
+                src="/images/insta-1.jpg"
+                width={300}
+                height={300}
+                alt="instagram"
+              />
             </div>
             <div className="w-full aspect-square bg-gray-200">
-              instagram photo
+              <Image
+                className="object-cover aspect-square w-full"
+                src="/images/insta-2.jpg"
+                width={300}
+                height={300}
+                alt="instagram"
+              />
             </div>
             <div className="w-full aspect-square bg-gray-200">
-              instagram photo
-            </div>
-            <div className="w-full aspect-square bg-gray-200">
-              instagram photo
-            </div>
-            <div className="w-full aspect-square bg-gray-200">
-              instagram photo
-            </div>
-            <div className="w-full aspect-square bg-gray-200">
-              instagram photo
+              <Image
+                className="object-cover aspect-square w-full"
+                src="/images/insta-3.jpg"
+                width={300}
+                height={300}
+                alt="instagram"
+              />
             </div>
           </div>
         </div>
