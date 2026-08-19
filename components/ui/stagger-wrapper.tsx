@@ -52,6 +52,7 @@ type StaggerRevealProps = {
   as?: ElementType;
   className?: string;
   direction?: "x" | "y";
+  itemWrapperClass?: string;
 };
 
 export function StaggerReveal({
@@ -65,6 +66,7 @@ export function StaggerReveal({
   direction = "x",
   once = true,
   as = "div",
+  itemWrapperClass,
   ...props
 }: StaggerRevealProps) {
   const base = PRESETS[preset];
@@ -108,7 +110,7 @@ export function StaggerReveal({
   return (
     <MotionTag variants={container} initial="hidden" {...trigger} {...props}>
       {Children.map(children, (child, i) => (
-        <motion.div key={i} variants={item}>
+        <motion.div key={i} variants={item} className={itemWrapperClass}>
           {child}
         </motion.div>
       ))}

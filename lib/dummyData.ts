@@ -415,29 +415,29 @@ export interface BlogPost {
 
 export const dummyBlogPosts: BlogPost[] = [
   {
+    title:
+      "Pour It Online: Why Solid Web Infrastructure Powers Growing Businesses",
+    image: "/images/blog-web-infra.jpg",
+    id: "post5",
+  },
+  {
+    title: "From Label to Loyalty: Building a Brewery Brand People Remember",
+    image: "/images/blog-brand-loyalty.jpg",
+    id: "post4",
+  },
+  {
+    title: "Can Design That Sells: Branding Your Beer on the Shelf",
+    image: "/images/blog-can-design.jpg",
+    id: "post3",
+  },
+  {
     title: "Small-Batch Brewing: Why Fresh Always Wins",
-    image: "/images/blog-small-batch.png",
+    image: "/images/blog-small-batch.jpg",
     id: "post1",
   },
   {
     title: "Hops 101: A Beginner's Guide to Bitterness and Aroma",
-    image: "/images/blog-hops-101.png",
+    image: "/images/blog-hops-101.jpg",
     id: "post2",
-  },
-  {
-    title: "Can Design That Sells: Branding Your Beer on the Shelf",
-    image: "/images/blog-can-design.png",
-    id: "post3",
-  },
-  {
-    title: "From Label to Loyalty: Building a Brewery Brand People Remember",
-    image: "/images/blog-brand-loyalty.png",
-    id: "post4",
-  },
-  {
-    title:
-      "Pour It Online: Why Solid Web Infrastructure Powers Growing Businesses",
-    image: "/images/blog-web-infra.png",
-    id: "post5",
   },
 ];

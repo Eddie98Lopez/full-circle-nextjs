@@ -1,7 +1,6 @@
 import Link from "next/link";
-import React from "react";
 import SocialLinksBar from "./social-bar";
-import { dummySocialLinks } from "@/lib/menus";
+import { dummySocialLinks, footer_menu } from "@/lib/menus";
 import { Separator } from "./ui/separator";
 import Logo from "./logo";
 import EmailOptIn from "./email-subscribe";
@@ -21,7 +20,7 @@ function Footer() {
   return (
     <footer className="w-full h-full flex justify-center background-paper p-16 md:bg-fixed">
       <div className="w-full max-w-[1600px] mx-auto flex flex-col lg:grid lg:grid-cols-3 gap-8 place-content-between items-center  text-center ">
-        <div>
+        <div className="w-full">
           <EmailOptIn />
         </div>
         <div className="h-20 mx-auto hidden md:block ">
@@ -33,7 +32,20 @@ function Footer() {
             <SocialLinksBar links={dummySocialLinks} />
           </div>
         </div>
-        <div>footer menu</div>
+        <div>
+          <ul className="flex flex-col justify-center lg:items-start">
+            {footer_menu.map((link) => (
+              <li
+                key={`footer-link-${link.slug}`}
+                className="hover:translate-x-2 transition-all h-full p-2 lg:p-1 text-xl"
+              >
+                <Link href={`/${link.slug}`} className="font-heading">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="h-10 mx-auto md:hidden">
           <Separator orientation="vertical" className="bg-background h-full" />
         </div>

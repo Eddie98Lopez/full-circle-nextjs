@@ -6,7 +6,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import SocialLinksBar from "./social-bar";
 import { dummySocialLinks } from "@/lib/menus";
 import Logo from "./logo";
-import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { header_menu } from "@/lib/menus";
 import { Separator } from "./ui/separator";
@@ -70,9 +69,6 @@ export function MobileNav() {
                 </ul>
               </nav>
             </div>
-          </div>
-          <div className="col-span-3 flex flex-col mx-auto lg:w-5xl">
-            <Button size={"lg"}>Shop Now</Button>
           </div>
         </div>
       </SheetContent>

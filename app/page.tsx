@@ -6,7 +6,7 @@ import Banner from "@/components/ui/banner";
 import SocialLinksBar from "@/components/social-bar";
 import { dummySocialLinks } from "@/lib/menus";
 import Link from "next/link";
-import { dummyMyBeers } from "@/lib/dummyData";
+import { dummyBlogPosts, dummyMyBeers } from "@/lib/dummyData";
 import { StaggerReveal } from "@/components/ui/stagger-wrapper";
 import {
   Carousel,
@@ -16,6 +16,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import FeaturedBeerCard from "@/components/featured-beer";
+import { ImageIcon } from "lucide-react";
+import BlogCard from "@/components/ui/blog-card";
 
 export default function Home() {
   return (
@@ -146,28 +148,18 @@ export default function Home() {
       <section className="py-12 px-8 background-logo">
         <div className="space-y-8">
           <SectionTitle>Blog</SectionTitle>
-          <div className="max-w-[1600px] mx-auto">
-            <ul className="flex flex-nowrap gap-4 snap-x overflow-x-scroll w-full ">
-              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-7/4 w-full"></div>
+          <StaggerReveal
+            direction="y"
+            as="ul"
+            className="flex flex-nowrap gap-2 lg:gap-4 snap-x overflow-x-scroll overflow-y-visible w-full h-full"
+            itemWrapperClass="flex-none basis-9/10 lg:basis-3/7 snap-center transition-all"
+          >
+            {dummyBlogPosts.map((post) => (
+              <li key={`blog-card-${post.id}`} className="decoration-none">
+                <BlogCard post={post} />
               </li>
-              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
-              </li>
-              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
-              </li>
-              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
-              </li>
-              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
-              </li>
-              <li className="flex-none basis-6/7 lg:basis-3/7 snap-center bg-gray-300 hover:bg-gray-600 transition-all">
-                <div className="aspect-4/5 lg:aspect-9/7 w-full"></div>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </StaggerReveal>
         </div>
       </section>
     </div>

@@ -13,7 +13,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         <div className="z-1 col-start-1 row-start-1 w-full h-full flex place-items-center place-content-center ">
           <ImageIcon />
         </div>
-        <div className="flex flex-col justify-between w-full z-2 col-start-1 row-start-1 h-full p-4">
+        <div className="flex flex-col justify-between w-full z-2 col-start-1 row-start-1 h-full p-2 md:p-4">
           <div>badges</div>
           <Button
             size={"lg"}
@@ -25,8 +25,8 @@ const ProductCard = ({ product }: { product: Product }) => {
         </div>
       </div>
       <div className="text-center mt-2">
-        <p className="font-bold text-lg text-foreground/50">{product.name}</p>
-        <p className="font-heading text-xl">${product.price} USD</p>
+        <p className="font-medium text-lg text-foreground/50">{product.name}</p>
+        <p className="font-heading text-2xl">${product.price} USD</p>
       </div>
     </div>
   );

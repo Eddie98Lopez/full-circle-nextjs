@@ -7,6 +7,7 @@ export type SocialLink = {
 export const header_menu = [
   { label: "Home", slug: "" },
   { label: "Our Story", slug: "our-story" },
+  { label: "Store", slug: "shop" },
   { label: "Beers", slug: "beers" },
   { label: "Events", slug: "events" },
   { label: "Blog", slug: "blog" },
@@ -18,6 +19,7 @@ export const footer_menu = [
   { label: "Beers", slug: "beers" },
   { label: "Events", slug: "events" },
   { label: "Blog", slug: "blog" },
+  { label: "Shop", slug: "shop" },
 ];
 
 export const dummySocialLinks: SocialLink[] = [
