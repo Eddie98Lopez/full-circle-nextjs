@@ -38,7 +38,7 @@ function SideCart() {
         <ShoppingBag />
       </SheetTrigger>
 
-      <SheetContent className="z-5001 bg-transparent data-[side=right]:sm:max-w-none data-[side=right]:w-min grid gap-0 grid-cols-[auto_1fr] ">
+      <SheetContent className="z-5001 bg-transparent data-[side=right]:w-full data-[side=right]:sm:max-w-none data-[side=right]:md:max-w-min grid gap-0 grid-cols-[auto_1fr] md:grid-cols-[auto_minmax(450px,_1fr)] ">
         <SheetClose className="z-5002 group fixed top-2 right-2 size-10  flex justify-center items-center">
           <XCircle className="opacity-25 group-hover:opacity-50" />
         </SheetClose>
@@ -50,7 +50,7 @@ function SideCart() {
               animate={{ width: 280, opacity: 1, transitionDelay: 0.2 }}
               exit={{ width: 0, opacity: 0, transitionDelay: 0 }}
               transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-              className="z-1 hidden lg:block col-start-1 overflow-hidden h-full bg-neutral-200 flex flex-col"
+              className="z-1 hidden md:block col-start-1 overflow-hidden h-full bg-neutral-200 flex flex-col"
             >
               <div className="w-70 p-4 flex flex-col shrink-0">
                 <p className="uppercase font-bold text-foreground/70 tracking-wider text-center">
@@ -60,7 +60,7 @@ function SideCart() {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="z-2 bg-white shadow-lg flex flex-col col-start-2 data-[side=right]:sm:max-w-3xl group-data-[side=right]:sm:max-w-3xl w-md">
+        <div className="z-2 bg-white shadow-lg flex flex-col col-start-2 ">
           <SheetHeader className="mb-0 pb-0">
             <div className="text-xl font-heading">
               Cart {`(${cartItems.reduce((a, b) => a + b.quantity, 0)})`}
@@ -69,7 +69,6 @@ function SideCart() {
           </SheetHeader>
           {cartItems.length > 0 ? (
             <>
-              {" "}
               <div className="px-4 flex-1 overflow-y-scroll">
                 <ul>
                   {cartItems.map((item) => (
@@ -99,7 +98,15 @@ function SideCart() {
               </SheetFooter>
             </>
           ) : (
-            <div>Your cart is empty</div>
+            <div className="w-full text-center font-bold text-xl my-auto space-y-3">
+              <ShoppingBag className="size-12 mx-auto" />
+              <p>Your cart is empty</p>
+              <SheetClose>
+                <Button variant={"secondary"} size={"sm"} className="uppercase">
+                  Continue Shopping
+                </Button>
+              </SheetClose>
+            </div>
           )}
         </div>
       </SheetContent>
