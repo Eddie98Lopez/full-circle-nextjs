@@ -1,0 +1,149 @@
+"use client";
+import React from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetFooter,
+  SheetTrigger,
+  SheetClose,
+} from "../ui/sheet";
+import { ShoppingBag } from "lucide-react";
+import { Separator } from "../ui/separator";
+import { Button } from "../ui/button";
+import { XCircle } from "lucide-react";
+import { useCart } from "./cart-provider";
+import { motion, AnimatePresence } from "motion/react";
+import { ImageIcon, PlusIcon, MinusIcon } from "lucide-react";
+import type { CartItem } from "./cart-provider";
+
+function SideCart() {
+  const { cartItems, cartTotal, itemCount } = useCart();
+  return (
+    <Sheet>
+      <SheetTrigger className="flex gap-1.5 items-center" id="header-cart-btn">
+        {cartItems.length > 0 && (
+          <motion.div
+            key={itemCount}
+            initial={{ scale: 0.4 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 500, damping: 12 }}
+            className="size-5 rounded-full bg-primary flex justify-center items-center text-sm font-bold"
+          >
+            <p className="[text-box-trim:both] text-center text-white">
+              {itemCount}
+            </p>
+          </motion.div>
+        )}
+        <ShoppingBag />
+      </SheetTrigger>
+
+      <SheetContent className="z-5001 bg-transparent data-[side=right]:sm:max-w-none data-[side=right]:w-min grid gap-0 grid-cols-[auto_1fr] ">
+        <SheetClose className="z-5002 group fixed top-2 right-2 size-10  flex justify-center items-center">
+          <XCircle className="opacity-25 group-hover:opacity-50" />
+        </SheetClose>
+        <AnimatePresence>
+          {cartItems.length !== 0 && (
+            <motion.div
+              key="recommendations"
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: 280, opacity: 1, transitionDelay: 0.2 }}
+              exit={{ width: 0, opacity: 0, transitionDelay: 0 }}
+              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+              className="z-1 hidden lg:block col-start-1 overflow-hidden h-full bg-neutral-200 flex flex-col"
+            >
+              <div className="w-70 p-4 flex flex-col shrink-0">
+                <p className="uppercase font-bold text-foreground/70 tracking-wider text-center">
+                  You might like
+                </p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <div className="z-2 bg-white shadow-lg flex flex-col col-start-2 data-[side=right]:sm:max-w-3xl group-data-[side=right]:sm:max-w-3xl w-md">
+          <SheetHeader className="mb-0 pb-0">
+            <div className="text-xl font-heading">
+              Cart {`(${cartItems.reduce((a, b) => a + b.quantity, 0)})`}
+            </div>
+            <Separator className="mt-2 border" />
+          </SheetHeader>
+          {cartItems.length > 0 ? (
+            <>
+              {" "}
+              <div className="px-4 flex-1 overflow-y-scroll">
+                <ul>
+                  {cartItems.map((item) => (
+                    <li key={`side-cart-item-${item.product.id}`}>
+                      <SideCartRowItem item={item} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <SheetFooter className="mt-auto">
+                <Separator className="border mb-2" />
+                <div className="flex justify-between text-lg font-bold">
+                  <p>Estimated Total</p>
+                  <p>${cartTotal}</p>
+                </div>
+                <p className="text-foreground/80">
+                  Taxes and shipping are calculated at checkout.
+                </p>
+                <div className="flex flex-col justify-center gap-2 mt-3">
+                  <Button size={"lg"} id="side-cart-checkout-btn">
+                    Checkout
+                  </Button>
+                  <Button size={"lg"} variant={"secondary"}>
+                    View Cart
+                  </Button>
+                </div>
+              </SheetFooter>
+            </>
+          ) : (
+            <div>Your cart is empty</div>
+          )}
+        </div>
+      </SheetContent>
+    </Sheet>
+  );
+}
+
+export function SideCartRowItem({ item }: { item: CartItem }) {
+  const { updateQuantity } = useCart();
+  return (
+    <div className="flex gap-2 border-b py-4">
+      <div className="size-20 bg-neutral-200 flex-none flex justify-center items-center">
+        <ImageIcon />
+      </div>
+      <div className="flex-1 flex items-center">
+        <div className="flex-1">
+          <p className="font-medium">{item.product.name}</p>
+          <p>${item.product.price}</p>
+        </div>
+
+        <div className="ml-auto space-y-2">
+          <p className="text-xl font-heading text-right">
+            ${item.product.price * item.quantity}
+          </p>
+          <div className="flex items-center justify-center w-min">
+            <Button
+              variant={"secondary"}
+              className="aspect-square rounded"
+              onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
+            >
+              <MinusIcon />
+            </Button>
+            <p className="aspect-square w-6 text-center">{item.quantity}</p>
+            <Button
+              className="aspect-square rounded"
+              onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
+            >
+              <PlusIcon />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default SideCart;
