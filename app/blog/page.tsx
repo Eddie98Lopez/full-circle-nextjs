@@ -21,13 +21,13 @@ const categories = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const EventsPage = () => {
   return (
     <div>
-      <section className="p-8 lg:p-16 space-y-8">
+      <section className="p-4 py-6 md:p-8 lg:p-16  space-y-8">
         <h1 className="sr-only">The Blog</h1>
         <SectionTitle>The Blog</SectionTitle>
         <Separator className="bg-foreground border border-foreground/50 max-w-[1280px] mx-auto" />
         <div className="max-w-[1280px] mx-auto space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div className="w-full aspect-4/5 lg:aspect-13/6 h-full flex rounded overflow-hidden bg-neutral-300 lg:col-span-full">
+            <div className="w-full aspect-4/5 md:aspect-9/7 lg:aspect-13/6 h-full flex rounded overflow-hidden bg-neutral-300 lg:col-span-full">
               <BlogCard post={dummyBlogPosts[0]} />
             </div>
             <div className="w-full h-full aspect-4/3 flex rounded overflow-hidden bg-neutral-300 ">
@@ -89,21 +89,30 @@ const EventsPage = () => {
           </Carousel>
           <Separator className="bg-foreground border border-foreground/50 my-8" />
 
-          <StaggerReveal
-            direction="y"
-            as="ul"
-            className="flex flex-nowrap gap-2 lg:gap-4 snap-x overflow-x-scroll overflow-y-visible w-full h-full"
-            itemWrapperClass="flex-none basis-9/10 lg:basis-4/7 snap-center transition-all"
-          >
-            {dummyBlogPosts.slice(2).map((post) => (
-              <li
-                key={`blog-card-${post.id}`}
-                className="decoration-none w-full h-full flex aspect-4/5 lg:aspect-4/3"
-              >
-                <BlogCard post={post} />
-              </li>
-            ))}
-          </StaggerReveal>
+          <Carousel>
+            <CarouselContent className="-ml-0 md:-ml-2">
+              {dummyBlogPosts.slice(2).map((post) => (
+                <CarouselItem
+                  key={`blog-card-${post.id}`}
+                  className=" flex-none basis-9/10 lg:basis-3/7 snap-center transition-all pl-1 md:pl-4"
+                >
+                  <div className="decoration-none w-full h-full flex aspect-4/5 md:aspect-9/7">
+                    <BlogCard post={post} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious
+              className="left-0 rounded-none"
+              variant={"secondary"}
+              size={"lg"}
+            />
+            <CarouselNext
+              className="right-0 rounded-none"
+              variant={"secondary"}
+              size={"lg"}
+            />
+          </Carousel>
         </div>
       </section>
     </div>

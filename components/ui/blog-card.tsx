@@ -16,7 +16,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
       ></div>
       <div className="w-full h-full col-start-1 row-start-1 z-2 grid place-content-center bg-linear-to-t from-black to-black/0"></div>
       <div className="col-start-1 row-start-1 z-3 flex flex-col items-start justify-end p-4">
-        <CardTitle className="text-3xl lg:text-5xl font-medium text-pretty text-background group-hover:text-yellow-500 transition-all group-hover:-translate-y-1.25">
+        <CardTitle className="text-3xl md:text-4xl lg:text-5xl font-medium text-pretty text-background group-hover:text-yellow-500 transition-all group-hover:-translate-y-1.25">
           {post.title}
         </CardTitle>
       </div>

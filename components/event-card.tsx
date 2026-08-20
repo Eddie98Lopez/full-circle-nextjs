@@ -32,7 +32,7 @@ const EventCard = ({ event }: { event: BreweryEvent }) => {
               </div>
             )}
 
-            <div className="background-paper border text-white font-heading flex flex-col aspect-square  w-20 justify-center items-center text-center p-1 absolute right-6 -bottom-10">
+            <div className="background-paper border text-white font-heading flex flex-col aspect-square  w-20 justify-center items-center text-center p-1 absolute right-4 md:right-6 -bottom-10">
               <div className="text-4xl">
                 {String(formatedDate.getDate()).padStart(2, "0")}
               </div>

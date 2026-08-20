@@ -22,7 +22,7 @@ const ShopPage = () => {
         <p>Sign up for our mailing list and get 20% your first order!</p>{" "}
         <Button>Sign Up</Button>
       </aside>
-      <section className="py-16 px-8">
+      <section className="p-4 py-6 md:p-8 lg:p-16">
         <div className="max-w-[1600px] mx-auto space-y-8">
           <SectionTitle>Merch Store</SectionTitle>
           <Separator className="bg-foreground border border-foreground/50 my-8" />

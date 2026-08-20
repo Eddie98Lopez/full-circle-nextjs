@@ -69,7 +69,7 @@ const EventCarousel = ({ events }: { events: BreweryEvent[] }) => {
                 ></div>
                 <div className="col-start-1 row-start-1 w-full h-full bg-linear-to-t from-black to-black/0  z-1 " />
                 <div className="col-start-1 p-8 row-start-1 h-full z-3">
-                  <div className="flex w-full h-full flex flex-col justify-end lg:flex-row lg:justify-between lg:items-end">
+                  <div className="flex w-full h-full flex flex-col gap-2 justify-end lg:flex-row lg:justify-between lg:items-end">
                     <div className="text-white">
                       <h3 className="text-title text-4xl text-pretty lg:text-5xl">
                         {event.title}

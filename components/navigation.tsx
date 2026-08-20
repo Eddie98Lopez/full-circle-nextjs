@@ -29,7 +29,7 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent
         side="right"
-        className="z-5000 background-paper data-[side=right]:w-full data-[side=right]:sm:max-w-none border-none p-8 place-content-center"
+        className="z-5000 background-paper data-[side=right]:w-full data-[side=right]:sm:max-w-none border-none p-8 place-content-center overflow-y-scroll"
       >
         <div className="flex flex-col lg:grid lg:grid-cols-[1fr_auto_1fr] lg:grid-rows-[1fr_auto] gap-8 h-[80vh] mx-auto max-w-[1600px] w-full">
           <div className="flex flex-col items-center justify-center gap-8 w-full">

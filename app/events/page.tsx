@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 const EventsPage = () => {
   return (
     <div>
-      <section className="p-8 lg:p-16 background-logo">
+      <section className="p-4 py-6 md:p-8 lg:p-16 background-logo">
         <div className="mx-auto max-w-[1600px] space-y-8 overlow-hidden">
           <SectionTitle>Events</SectionTitle>
           <div className="w-full h-full grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:grid-rows-3 gap-4 min-h-[40vh]">
@@ -46,7 +46,7 @@ const EventsPage = () => {
                 </CardContent>
               </Card>
             </div>
-            <div className="lg:row-start-1 lg:col-start-2 lg:row-span-2 w-full min-w-md h-full flex">
+            <div className="lg:row-start-1 lg:col-start-2 lg:row-span-2 w-full h-full flex">
               <Banner>
                 <div className="w-full h-full flex flex-col justify-center items-center gap-8">
                   <div className="text-center md:text-left">

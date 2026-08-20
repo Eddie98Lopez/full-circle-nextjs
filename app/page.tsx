@@ -76,27 +76,30 @@ export default function Home() {
           <div>Great Website.</div>
         </StaggerReveal>
       </Banner>
-      <section className="background-brick min-h-[50vh] p-8">
+      <section className="background-brick min-h-[50vh] p-4 py-6 md:p-8 lg:p-16">
         <div>
           <SectionTitle>Featured Beers</SectionTitle>
-          <div className=" max-w-4xl mx-auto p-4">
+          <div className=" md:max-w-4xl mx-auto">
             <Carousel>
-              <CarouselContent>
+              <CarouselContent className="-ml-0">
                 {dummyMyBeers
                   .filter((beer) => beer.isFeaturedBeer == true)
                   .map((beer) => (
-                    <CarouselItem key={`featured-beer-${beer.id}`}>
+                    <CarouselItem
+                      key={`featured-beer-${beer.id}`}
+                      className="p-0"
+                    >
                       <FeaturedBeerCard beer={beer} />
                     </CarouselItem>
                   ))}
               </CarouselContent>
               <div>
                 <CarouselPrevious
-                  className="relative -left-0 rounded-none"
+                  className="-left-0 rounded-none"
                   variant={"secondary"}
                 />
                 <CarouselNext
-                  className="relative -right-0 rounded-none"
+                  className="-right-0 rounded-none"
                   variant={"secondary"}
                 />
               </div>
@@ -116,7 +119,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="py-12 px-8">
+      <section className="py-12 p-4 md:p-8 lg:p-16">
         <div className="w-full max-w-[1280px] mx-auto space-y-4">
           <SectionTitle>Follow Us</SectionTitle>
           <div className="mx-auto w-min">
@@ -162,24 +165,33 @@ export default function Home() {
           <div className="bg-gray-300 h-80">map</div>
         </div>
       </section>
-      <section className="py-12 px-8 background-logo">
+      <section className="p-4 py-6 md:p-8 lg:p-16  background-logo">
         <div className="space-y-8">
           <SectionTitle>Blog</SectionTitle>
-          <StaggerReveal
-            direction="y"
-            as="ul"
-            className="flex flex-nowrap gap-2 lg:gap-4 snap-x overflow-x-scroll overflow-y-visible w-full h-full"
-            itemWrapperClass="flex-none basis-9/10 lg:basis-3/7 snap-center transition-all"
-          >
-            {dummyBlogPosts.map((post) => (
-              <li
-                key={`blog-card-${post.id}`}
-                className="decoration-none w-full h-full flex aspect-4/5 lg:aspect-9/7"
-              >
-                <BlogCard post={post} />
-              </li>
-            ))}
-          </StaggerReveal>
+          <Carousel>
+            <CarouselContent className="-m-0">
+              {dummyBlogPosts.map((post) => (
+                <CarouselItem
+                  key={`blog-card-${post.id}`}
+                  className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-3/7 snap-center transition-all"
+                >
+                  <div className="decoration-none w-full h-full flex aspect-4/5 md:aspect-9/7">
+                    <BlogCard post={post} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious
+              className="left-0 rounded-none"
+              variant={"secondary"}
+              size={"lg"}
+            />
+            <CarouselNext
+              className="right-0 rounded-none"
+              variant={"secondary"}
+              size={"lg"}
+            />
+          </Carousel>
         </div>
       </section>
     </div>
