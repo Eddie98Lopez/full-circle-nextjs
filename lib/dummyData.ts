@@ -253,8 +253,7 @@ export const dummyEvents: BreweryEvent[] = [
     shortDescription: "A full lineup of seasonal pours and live music.",
     longDescription:
       '<p class="font_7">Join us as we tap our spring seasonals for the first time. Local food trucks, a live band, and limited-run pours all afternoon.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/event-spring.png#originWidth=1600&originHeight=900",
+    image: "/images/tap.jpg",
     imageAltText: "Spring Tap Takeover",
     location: "Main Taproom",
     startDate: "2026-04-18T21:00:00Z",
@@ -270,8 +269,7 @@ export const dummyEvents: BreweryEvent[] = [
     shortDescription: "A five-course meal paired with our flagship beers.",
     longDescription:
       '<p class="font_7">An intimate evening pairing each course with a hand-selected beer, hosted by our brewmaster. Seating is limited.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/event-dinner.png#originWidth=1600&originHeight=900",
+    image: "/images/dinner.jpg",
     imageAltText: "Brewmaster's Dinner",
     location: "Barrel Room",
     startDate: "2026-05-09T01:30:00Z",
@@ -287,8 +285,7 @@ export const dummyEvents: BreweryEvent[] = [
     shortDescription: "Celebrating our tart and refreshing sour releases.",
     longDescription:
       '<p class="font_7">A day dedicated to sours, featuring Citrus Press and three brand-new fruited releases. Outdoor patio, lawn games, and cornhole.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/event-sour.png#originWidth=1600&originHeight=900",
+    image: "/images/fest.jpg",
     imageAltText: "Summer Sour Fest",
     location: "Beer Garden",
     startDate: "2026-06-20T19:00:00Z",

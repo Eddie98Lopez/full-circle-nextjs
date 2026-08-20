@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import SectionTitle from "@/components/section-title";
 import Banner from "@/components/ui/banner";
 import EmailOptIn from "@/components/email-subscribe";
+import Hop from "@/components/hop";
 import {
   Carousel,
   CarouselContent,
@@ -33,7 +34,8 @@ const EventsPage = () => {
               <BlogCard post={dummyBlogPosts[1]} />
             </div>
             <Banner>
-              <div className="w-full h-full flex flex-col justify-end items-center gap-8 ">
+              <div className="w-full h-full flex flex-col relative justify-end items-center gap-8 ">
+                <Hop className="fill-primary mb-2 mx-auto ml-none md:mb-auto md:mx-0 md:self-start" />
                 <div className="text-center md:text-left">
                   <h2 className="text-title">Never miss a post</h2>
                   <p className="text-pretty md:text-balance">
@@ -41,7 +43,7 @@ const EventsPage = () => {
                     our content and special pricing for cool merch drops.
                   </p>
                 </div>
-                <div className="ml-auto text-center md:text-left">
+                <div className="md:ml-auto text-center md:text-left">
                   {" "}
                   <EmailOptIn />
                   <p className="text-xs mt-2 text-white/60">
