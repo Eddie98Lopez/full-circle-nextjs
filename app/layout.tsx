@@ -4,6 +4,15 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { CartProvider } from "@/components/commerce/cart-provider";
+import { Rubik } from "next/font/google";
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-rubik",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,8 +38,9 @@ export default function RootLayout({
     <CartProvider>
       <html
         lang="en"
-        className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} h-full antialiased`}
       >
+        <head></head>
         <body className="min-h-full flex flex-col">
           <Header />
           {children}
