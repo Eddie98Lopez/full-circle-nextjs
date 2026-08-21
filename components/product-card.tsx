@@ -4,6 +4,8 @@ import type { Product } from "@/lib/dummyData";
 import { ImageIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { useCart } from "./commerce/cart-provider";
+import { Badge } from "./ui/badge";
+import { cn } from "@/lib/utils";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
@@ -14,10 +16,28 @@ const ProductCard = ({ product }: { product: Product }) => {
           <ImageIcon />
         </div>
         <div className="flex flex-col justify-between w-full z-2 col-start-1 row-start-1 h-full p-2 md:p-4">
-          <div>badges</div>
+          <div className="flex flex-col gap-1">
+            {product.inStock ? (
+              product.badges?.map((badge) => (
+                <Badge
+                  key={`product-${product.id}-badge-${badge.label}`}
+                  variant={"default"}
+                  className={`uppercase`}
+                  style={{ backgroundColor: badge.color }}
+                >
+                  {badge.label}
+                </Badge>
+              ))
+            ) : (
+              <Badge variant={"destructive"} className="uppercase">
+                Out of Stock
+              </Badge>
+            )}
+          </div>
           <Button
+            disabled={!product.inStock}
             size={"lg"}
-            className=" lg:block lg:translate-y-15 text-white font-bold uppercase lg:opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+            className=" lg:block lg:translate-y-15 text-white font-bold uppercase lg:opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 disabled:hidden"
             onClick={() => addToCart(product)}
           >
             Add to Cart

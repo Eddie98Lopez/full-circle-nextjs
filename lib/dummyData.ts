@@ -303,6 +303,10 @@ export const dummyEvents: BreweryEvent[] = [
 // Products (dummy — no CSV source)
 // ----------------------------------------------------------------------------
 
+export interface ProductBadge {
+  label: string;
+  color?: string;
+}
 export interface Product {
   name: string;
   productType: string;
@@ -316,7 +320,7 @@ export interface Product {
   isFeaturedProduct: boolean;
   slug: string;
   id: string;
-  badges?: string[];
+  badges?: ProductBadge[];
 }
 
 export const dummyProducts: Product[] = [
@@ -335,6 +339,7 @@ export const dummyProducts: Product[] = [
     isFeaturedProduct: false,
     slug: "/shop/logo-can-coozie",
     id: "p1",
+    badges: [{ label: "new", color: "primary" }],
   },
   {
     name: "Cork-Back Coaster",
@@ -351,6 +356,7 @@ export const dummyProducts: Product[] = [
     isFeaturedProduct: false,
     slug: "/shop/cork-back-coaster",
     id: "p2",
+    badges: [{ label: "Sale", color: `red` }, { label: "Limited time" }],
   },
   {
     name: "Insulated Tumbler",
@@ -367,6 +373,7 @@ export const dummyProducts: Product[] = [
     isFeaturedProduct: true,
     slug: "/shop/insulated-tumbler",
     id: "p3",
+    badges: [{ label: "Sale", color: `red` }, { label: "Limited time" }],
   },
   {
     name: "Classic Logo T-Shirt",
@@ -395,7 +402,7 @@ export const dummyProducts: Product[] = [
     imageAltText: "Branded Pint Glass",
     price: 9,
     sku: "MERCH-PINT-001",
-    inStock: true,
+    inStock: false,
     isFeaturedProduct: false,
     slug: "/shop/branded-pint-glass",
     id: "p5",
