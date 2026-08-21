@@ -20,7 +20,7 @@ const categories = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const EventsPage = () => {
   return (
-    <div>
+    <div className="background-brick">
       <section className="p-4 py-6 md:p-8 lg:p-16  space-y-8">
         <h1 className="sr-only">The Blog</h1>
         <SectionTitle>The Blog</SectionTitle>

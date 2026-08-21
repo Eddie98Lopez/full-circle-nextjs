@@ -19,11 +19,11 @@ export interface TeamMember {
 
 export const dummyTeam: TeamMember[] = [
   {
-    firstName: "Robert",
-    lastName: "Garcia",
-    jobTitle: "Taproom Manager",
-    image: "/team/robert-garcia.jpg",
-    id: "t1",
+    firstName: "Eddie",
+    lastName: "Lopez",
+    jobTitle: "Web Developer",
+    image: "/team/eddie-lopez.png",
+    id: "t6",
   },
   {
     firstName: "Mark",
@@ -32,6 +32,14 @@ export const dummyTeam: TeamMember[] = [
     image: "/team/mark-evans.png",
     id: "t2",
   },
+  {
+    firstName: "Robert",
+    lastName: "Garcia",
+    jobTitle: "Taproom Manager",
+    image: "/team/robert-garcia.jpg",
+    id: "t1",
+  },
+
   {
     firstName: "Alice",
     lastName: "Johnson",
@@ -52,13 +60,6 @@ export const dummyTeam: TeamMember[] = [
     jobTitle: "Sales Representative",
     image: "/team/liam-reynolds.png",
     id: "t5",
-  },
-  {
-    firstName: "Eddie",
-    lastName: "Lopez",
-    jobTitle: "Web Developer",
-    image: "/team/eddie-lopez.png",
-    id: "t6",
   },
 ];
 

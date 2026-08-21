@@ -14,7 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-const categories = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const categories = ["Merch", "Apparel", "Glassware", "Hats"];
 const ShopPage = () => {
   return (
     <div className="relative">
@@ -29,7 +29,7 @@ const ShopPage = () => {
           <Carousel>
             <div className="wfull flex justify-between items-center flex-wrap mb-4">
               <h2 className="font-heading text-2xl">Categories</h2>{" "}
-              <div className="space-x-2">
+              <div className="space-x-2 md:hidden">
                 <CarouselPrevious
                   className="relative -left-0 rounded-none"
                   variant={"secondary"}
@@ -46,11 +46,11 @@ const ShopPage = () => {
               {categories.map((cat) => (
                 <CarouselItem
                   key={`category-${cat}`}
-                  className="basis-3/7 md:basis-1/7"
+                  className="basis-3/7 md:basis-1/4"
                 >
-                  <Card className="aspect-2/1 rounded ring-0 bg-primary text-white hover:bg-primary/80 transition-all">
+                  <Card className="aspect-5/2 rounded ring-0 bg-primary text-white hover:bg-primary/80 transition-all">
                     <CardContent className="font-bold uppercase text-center h-full grid place-content-center">
-                      <div>Category {cat}</div>
+                      <div>{cat}</div>
                     </CardContent>
                   </Card>
                 </CarouselItem>

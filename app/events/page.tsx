@@ -21,7 +21,7 @@ const EventsPage = () => {
       <section className="p-4 py-6 md:p-8 lg:p-16 background-logo">
         <div className="mx-auto max-w-[1600px] space-y-8 overlow-hidden">
           <SectionTitle>Events</SectionTitle>
-          <div className="w-full h-full grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:grid-rows-3 gap-4 min-h-[40vh]">
+          <div className="w-full h-full grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] lg:grid-rows-3 gap-4 min-h-[40vh]">
             <div className="lg:col-start-1 lg:row-span-3 min-w-0">
               <EventCarousel events={dummyEvents} />
             </div>

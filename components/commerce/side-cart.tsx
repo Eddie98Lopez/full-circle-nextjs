@@ -99,7 +99,19 @@ function SideCart() {
               </SheetFooter>
             </>
           ) : (
+<<<<<<< Updated upstream
             <div>Your cart is empty</div>
+=======
+            <div className="w-full text-center font-bold text-xl my-auto space-y-3">
+              <ShoppingBag className="size-12 mx-auto" />
+              <p>Your cart is empty</p>
+              <SheetClose asChild>
+                <Button variant={"secondary"} size={"sm"} className="uppercase">
+                  Continue Shopping
+                </Button>
+              </SheetClose>
+            </div>
+>>>>>>> Stashed changes
           )}
         </div>
       </SheetContent>
