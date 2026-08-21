@@ -101,7 +101,7 @@ function SideCart() {
             <div className="w-full text-center font-bold text-xl my-auto space-y-3">
               <ShoppingBag className="size-12 mx-auto" />
               <p>Your cart is empty</p>
-              <SheetClose>
+              <SheetClose asChild>
                 <Button variant={"secondary"} size={"sm"} className="uppercase">
                   Continue Shopping
                 </Button>
