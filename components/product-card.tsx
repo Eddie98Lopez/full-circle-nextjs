@@ -11,7 +11,7 @@ const ProductCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
   return (
     <div className="w-full group">
-      <div className="w-full aspect-7/9 bg-neutral-300 grid group-hover:bg-white transition-all grid-cols-1 grid-rows-1 place-items-center place-content-center overflow-hidden">
+      <div className="w-full aspect-7/9 bg-neutral-300 grid group-hover:bg-white transition-all duration-200 grid-cols-1 grid-rows-1 place-items-center place-content-center overflow-hidden">
         <div className="relative z-1 col-start-1 row-start-1 w-full h-full flex place-items-center place-content-center overflow-hidden">
           {product.image !== "" ? (
             <Image
@@ -19,7 +19,7 @@ const ProductCard = ({ product }: { product: Product }) => {
               alt={product.imageAltText}
               fill
               sizes=""
-              className="object-cover bg-transparent"
+              className="object-cover group-hover:scale-105 transition-scale duration-300"
             />
           ) : (
             <ImageIcon />

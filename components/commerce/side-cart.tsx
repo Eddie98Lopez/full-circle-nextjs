@@ -53,7 +53,11 @@ function SideCart() {
               initial={{ width: 0, opacity: 0 }}
               animate={{ width: 280, opacity: 1, transitionDelay: 0.2 }}
               exit={{ width: 0, opacity: 0, transitionDelay: 0 }}
-              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+              transition={{
+                duration: 0.4,
+                ease: [0.4, 0, 0.2, 1],
+                delay: 0.15,
+              }}
               className="z-1 hidden md:flex flex-col col-start-1 overflow-hidden h-full bg-neutral-200"
             >
               <div className="w-70 p-4 flex flex-col flex-1 min-h-0 gap-4">
@@ -62,6 +66,7 @@ function SideCart() {
                 </p>
                 <StaggerReveal
                   as="ul"
+                  delay={0.25}
                   className="flex-1 min-h-0 overflow-y-auto gap-4 flex flex-col"
                 >
                   {dummyProducts.map((product) => (

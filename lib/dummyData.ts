@@ -330,7 +330,7 @@ export const dummyProducts: Product[] = [
     shortDescription: "Neoprene coozie that keeps your can cold.",
     longDescription:
       '<p class="font_7">A snug neoprene coozie printed with our logo. Fits standard 12oz cans and folds flat when you\u2019re done.</p>',
-    image: "",
+    image: "/images/coozie.png",
     imageAltText: "Logo Can Coozie",
     price: 6,
     sku: "MERCH-COOZIE-001",
@@ -393,7 +393,7 @@ export const dummyProducts: Product[] = [
     shortDescription: "16oz shaker pint glass with etched logo.",
     longDescription:
       '<p class="font_7">A classic 16oz shaker pint glass with a permanently etched logo. Dishwasher safe and built to last.</p>',
-    image: "",
+    image: "/images/pint-glass.png",
     imageAltText: "Branded Pint Glass",
     price: 9,
     sku: "MERCH-PINT-001",
