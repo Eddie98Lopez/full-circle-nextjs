@@ -58,9 +58,7 @@ export default function Home() {
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Mavz2MffYH9bwfpA4fcYKQlxHUh2JuV636QELOg7nOlRCjM9W7_RUW76BAFJTc3Y1Non5XxRb"
             target="_blank"
           >
-            <Button variant={"outline"} size={"lg"}>
-              Book A Call
-            </Button>
+            <Button size={"lg"}>Book A Call</Button>
           </Link>
         </StaggerReveal>
       </section>

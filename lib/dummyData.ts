@@ -330,8 +330,7 @@ export const dummyProducts: Product[] = [
     shortDescription: "Neoprene coozie that keeps your can cold.",
     longDescription:
       '<p class="font_7">A snug neoprene coozie printed with our logo. Fits standard 12oz cans and folds flat when you\u2019re done.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/coozie.png#originWidth=1000&originHeight=1000",
+    image: "",
     imageAltText: "Logo Can Coozie",
     price: 6,
     sku: "MERCH-COOZIE-001",
@@ -347,8 +346,7 @@ export const dummyProducts: Product[] = [
     shortDescription: "Absorbent cork-back coaster with our crest.",
     longDescription:
       '<p class="font_7">A durable cork-back coaster that protects your table and soaks up condensation. Sold individually.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/coaster.png#originWidth=1000&originHeight=1000",
+    image: "/images/coaster.png",
     imageAltText: "Cork-Back Coaster",
     price: 4,
     sku: "MERCH-COASTER-001",
@@ -364,8 +362,7 @@ export const dummyProducts: Product[] = [
     shortDescription: "20oz stainless tumbler, double-walled.",
     longDescription:
       '<p class="font_7">A double-walled stainless steel tumbler that keeps drinks cold for hours. Laser-etched logo and a spill-resistant lid.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/tumbler.png#originWidth=1000&originHeight=1000",
+    image: "/images/yeti-tumbler-30oz.png",
     imageAltText: "Insulated Tumbler",
     price: 24,
     sku: "MERCH-TUMBLER-001",
@@ -381,8 +378,7 @@ export const dummyProducts: Product[] = [
     shortDescription: "Soft cotton tee with the flagship logo.",
     longDescription:
       '<p class="font_7">A comfortable ring-spun cotton tee featuring our flagship logo across the chest. Available in a full run of sizes.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/tshirt.png#originWidth=1000&originHeight=1000",
+    image: "",
     imageAltText: "Classic Logo T-Shirt",
     price: 28,
     sku: "MERCH-TSHIRT-001",
@@ -397,8 +393,7 @@ export const dummyProducts: Product[] = [
     shortDescription: "16oz shaker pint glass with etched logo.",
     longDescription:
       '<p class="font_7">A classic 16oz shaker pint glass with a permanently etched logo. Dishwasher safe and built to last.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/pint-glass.png#originWidth=1000&originHeight=1000",
+    image: "",
     imageAltText: "Branded Pint Glass",
     price: 9,
     sku: "MERCH-PINT-001",
@@ -406,6 +401,21 @@ export const dummyProducts: Product[] = [
     isFeaturedProduct: false,
     slug: "/shop/branded-pint-glass",
     id: "p5",
+  },
+  {
+    name: "Key Chain",
+    productType: "merch",
+    shortDescription: "16oz shaker pint glass with etched logo.",
+    longDescription:
+      '<p class="font_7">A classic 16oz shaker pint glass with a permanently etched logo. Dishwasher safe and built to last.</p>',
+    image: "/images/keychain-bottle-opener.png",
+    imageAltText: "Branded Pint Glass",
+    price: 9,
+    sku: "MERCH-PINT-001",
+    inStock: true,
+    isFeaturedProduct: false,
+    slug: "/shop/branded-pint-glass",
+    id: "p6",
   },
 ];
 // ----------------------------------------------------------------------------
