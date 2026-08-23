@@ -378,7 +378,7 @@ export const dummyProducts: Product[] = [
     shortDescription: "Soft cotton tee with the flagship logo.",
     longDescription:
       '<p class="font_7">A comfortable ring-spun cotton tee featuring our flagship logo across the chest. Available in a full run of sizes.</p>',
-    image: "",
+    image: "/images/t-shirt.png",
     imageAltText: "Classic Logo T-Shirt",
     price: 28,
     sku: "MERCH-TSHIRT-001",

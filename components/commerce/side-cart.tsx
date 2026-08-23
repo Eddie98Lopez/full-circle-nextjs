@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -19,12 +19,23 @@ import type { CartItem } from "./cart-provider";
 import Image from "next/image";
 import { StaggerReveal } from "../ui/stagger-wrapper";
 import { dummyProducts } from "@/lib/dummyData";
-import ProductCard from "../product-card";
+import ProductCard from "./product-card";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function SideCart() {
   const { cartItems, cartTotal, itemCount } = useCart();
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setOpen(false);
+  }
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="flex gap-1.5 items-center" id="header-cart-btn">
         {cartItems.length > 0 && (
           <motion.div
@@ -107,12 +118,16 @@ function SideCart() {
                   Taxes and shipping are calculated at checkout.
                 </p>
                 <div className="flex flex-col justify-center gap-2 mt-3">
-                  <Button size={"lg"} id="side-cart-checkout-btn">
-                    Checkout
-                  </Button>
-                  <Button size={"lg"} variant={"secondary"}>
-                    View Cart
-                  </Button>
+                  <Link href={"/shop/checkout"} className="grid">
+                    <Button size={"lg"} id="side-cart-checkout-btn">
+                      Checkout
+                    </Button>
+                  </Link>
+                  <Link href={"/shop/cart"} className="grid">
+                    <Button size={"lg"} variant={"secondary"}>
+                      View Cart
+                    </Button>
+                  </Link>
                 </div>
               </SheetFooter>
             </>

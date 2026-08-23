@@ -2,24 +2,31 @@
 import React from "react";
 import type { Product } from "@/lib/dummyData";
 import { ImageIcon } from "lucide-react";
-import { useCart } from "./commerce/cart-provider";
-import { Badge } from "./ui/badge";
-import AddToCartBtn from "./ui/add-to-cart-btn";
+import { useCart } from "./cart-provider";
+import { Badge } from "../ui/badge";
+import AddToCartBtn from "../ui/add-to-cart-btn";
 import Image from "next/image";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
   return (
     <div className="w-full group">
-      <div className="w-full aspect-7/9 bg-neutral-300 grid group-hover:bg-white transition-all duration-200 grid-cols-1 grid-rows-1 place-items-center place-content-center overflow-hidden">
-        <div className="relative z-1 col-start-1 row-start-1 w-full h-full flex place-items-center place-content-center overflow-hidden">
+      <div className="w-full aspect-7/9 bg-neutral-300 grid group-hover:bg-neutral-100 transition-all duration-200 grid-cols-1 grid-rows-1 place-items-center place-content-center overflow-hidden">
+        <div className="relative z-1 col-start-1 row-start-1 w-full h-full grid grid-cols-1 grid-rows-1 place-items-center place-content-center overflow-hidden">
+          <Image
+            src={"/images/product-bg.jpg"}
+            alt={product.imageAltText}
+            fill
+            quality={20}
+            className="object-cover group-hover:opacity-3 mix-blend-multiply opacity-0 transition-opacity duration-300 col-start-1 col-end-2 row-end-2 row-start-1 z-1"
+          />
           {product.image !== "" ? (
             <Image
               src={product.image}
               alt={product.imageAltText}
               fill
               sizes=""
-              className="object-cover group-hover:scale-105 transition-scale duration-300"
+              className="object-cover group-hover:scale-107 transition-scale duration-300 col-start-1 col-end-2 row-end-2 row-start-1 z-2"
             />
           ) : (
             <ImageIcon />

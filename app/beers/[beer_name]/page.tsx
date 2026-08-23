@@ -1,6 +1,14 @@
 import FeaturedBeerCard from "@/components/featured-beer";
 import SectionTitle from "@/components/section-title";
-import { dummyMyBeers } from "@/lib/dummyData";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselNext,
+  CarouselPrevious,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { dummyProducts, dummyMyBeers } from "@/lib/dummyData";
+import ProductCard from "@/components/commerce/product-card";
 import React from "react";
 
 const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
@@ -43,14 +51,28 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
       <section className="px-8 py-16 background-logo space-y-8">
         <SectionTitle>Merch</SectionTitle>
         <div className="max-w-[1600px] mx-auto">
-          <ul className="flex flex-nowrap gap-6 snap-x overflow-x-scroll w-full">
-            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
-            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
-            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
-            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
-            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
-            <li className="flex-none snap-center w-full max-w-sm bg-gray-300 aspect-square hover:bg-gray-600 transition-all"></li>
-          </ul>
+          <Carousel>
+            <CarouselContent className="-m-0">
+              {dummyProducts.map((product) => (
+                <CarouselItem
+                  key={`product-card-${product.id}`}
+                  className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-1/4 snap-center transition-all"
+                >
+                  <div className="decoration-none w-full h-full flex ">
+                    <ProductCard product={product} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious
+              className="left-0 rounded-none"
+              variant={"secondary"}
+            />
+            <CarouselNext
+              className="right-0 rounded-none"
+              variant={"secondary"}
+            />
+          </Carousel>
         </div>
       </section>
     </div>

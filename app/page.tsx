@@ -87,7 +87,9 @@ export default function Home() {
                       key={`featured-beer-${beer.id}`}
                       className="p-0"
                     >
-                      <FeaturedBeerCard beer={beer} />
+                      <Link href={`/beers/${beer.slug}`}>
+                        <FeaturedBeerCard beer={beer} />
+                      </Link>
                     </CarouselItem>
                   ))}
               </CarouselContent>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SlidersHorizontal, ListSortDescending } from "lucide-react";
 import { dummyProducts } from "@/lib/dummyData";
 import { StaggerReveal } from "@/components/ui/stagger-wrapper";
-import ProductCard from "@/components/product-card";
+import ProductCard from "@/components/commerce/product-card";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
 import {
