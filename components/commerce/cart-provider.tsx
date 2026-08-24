@@ -1,14 +1,6 @@
 "use client";
 import React, { createContext, useContext, useState, useMemo } from "react";
-
-// 1. Define your data shapes
-export interface Product {
-  id: string;
-  name: string;
-  price: number;
-  image?: string;
-  // Add any other baseline properties your template needs
-}
+import type { Product } from "@/lib/dummyData";
 
 export interface CartItem {
   product: Product;

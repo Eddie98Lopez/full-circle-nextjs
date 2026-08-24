@@ -19,11 +19,11 @@ export interface TeamMember {
 
 export const dummyTeam: TeamMember[] = [
   {
-    firstName: "Robert",
-    lastName: "Garcia",
-    jobTitle: "Taproom Manager",
-    image: "/team/robert-garcia.jpg",
-    id: "t1",
+    firstName: "Eddie",
+    lastName: "Lopez",
+    jobTitle: "Web Developer",
+    image: "/team/eddie-lopez.png",
+    id: "t6",
   },
   {
     firstName: "Mark",
@@ -32,6 +32,14 @@ export const dummyTeam: TeamMember[] = [
     image: "/team/mark-evans.png",
     id: "t2",
   },
+  {
+    firstName: "Robert",
+    lastName: "Garcia",
+    jobTitle: "Taproom Manager",
+    image: "/team/robert-garcia.jpg",
+    id: "t1",
+  },
+
   {
     firstName: "Alice",
     lastName: "Johnson",
@@ -52,13 +60,6 @@ export const dummyTeam: TeamMember[] = [
     jobTitle: "Sales Representative",
     image: "/team/liam-reynolds.png",
     id: "t5",
-  },
-  {
-    firstName: "Eddie",
-    lastName: "Lopez",
-    jobTitle: "Web Developer",
-    image: "/team/eddie-lopez.png",
-    id: "t6",
   },
 ];
 
@@ -105,7 +106,7 @@ export const dummyMyBeers: Beer[] = [
     slug: "hop-static",
     shortDescription: "Bright, aromatic IPA with a restrained bitterness.",
     longDescription:
-      '<p class="font_7">Hop Static leans into citrus and pine without overpowering the palate. A balanced malt base keeps the hops in check. It finishes dry and clean, making it surprisingly drinkable for the style.</p>',
+      "Hop Static leans into citrus and pine without overpowering the palate. A balanced malt base keeps the hops in check. It finishes dry and clean, making it surprisingly drinkable for the style.",
     image: "/images/beer-can.png",
     imageAltText: "Hop Static",
     color: "",
@@ -130,7 +131,7 @@ export const dummyMyBeers: Beer[] = [
     slug: "midnight-run",
     shortDescription: "Bold imperial porter brewed for late nights.",
     longDescription:
-      '<p class="font_7">Midnight Run is rich and layered with notes of cocoa and toasted malt. A warming alcohol presence adds depth without burning. This beer is intentionally bold and meant to be savored.</p>',
+      "Midnight Run is rich and layered with notes of cocoa and toasted malt. A warming alcohol presence adds depth without burning. This beer is intentionally bold and meant to be savored.",
     image: "/images/beer-can.png",
     imageAltText: "",
     color: "",
@@ -155,7 +156,7 @@ export const dummyMyBeers: Beer[] = [
     slug: "valley-gold",
     shortDescription: "A crisp, easy-drinking lager built for long afternoons.",
     longDescription:
-      '<p class="font_7">Valley Gold is clean and straightforward with a soft malt backbone. Light bitterness keeps it refreshing without feeling thin. This is the kind of beer you can drink more than one of without thinking about it.</p>',
+      "Valley Gold is clean and straightforward with a soft malt backbone. Light bitterness keeps it refreshing without feeling thin. This is the kind of beer you can drink more than one of without thinking about it.",
     image: "/images/beer-can.png",
     imageAltText: "Valley Gold",
     color: "",
@@ -180,7 +181,7 @@ export const dummyMyBeers: Beer[] = [
     slug: "black-alley-stout",
     shortDescription: "Smooth stout with roasted depth and subtle sweetness.",
     longDescription:
-      '<p class="font_7">Back Alley Stout opens with notes of coffee and dark chocolate. The body is full but not heavy, with a soft, rounded finish. It\u2019s built for slow sipping but still approachable.</p>',
+      "Back Alley Stout opens with notes of coffee and dark chocolate. The body is full but not heavy, with a soft, rounded finish. It\u2019s built for slow sipping but still approachable.",
     image: "/images/beer-can.png",
     imageAltText: "Black Alley Stout",
     color: "",
@@ -205,7 +206,7 @@ export const dummyMyBeers: Beer[] = [
     slug: "citrus-press",
     shortDescription: "Tart, refreshing sour with real citrus character.",
     longDescription:
-      '<p class="font_7">Citrus Press delivers bright acidity without being harsh. Fresh citrus notes lead, followed by a clean, dry finish. It\u2019s light, refreshing, and designed for warm weather.</p>',
+      "Citrus Press delivers bright acidity without being harsh. Fresh citrus notes lead, followed by a clean, dry finish. It\u2019s light, refreshing, and designed for warm weather.",
     image: "/images/beer-can.png",
     imageAltText: "Citrus Press",
     color: "",
@@ -252,7 +253,7 @@ export const dummyEvents: BreweryEvent[] = [
     title: "Spring Tap Takeover",
     shortDescription: "A full lineup of seasonal pours and live music.",
     longDescription:
-      '<p class="font_7">Join us as we tap our spring seasonals for the first time. Local food trucks, a live band, and limited-run pours all afternoon.</p>',
+      "Join us as we tap our spring seasonals for the first time. Local food trucks, a live band, and limited-run pours all afternoon.",
     image: "/images/tap.jpg",
     imageAltText: "Spring Tap Takeover",
     location: "Main Taproom",
@@ -268,7 +269,7 @@ export const dummyEvents: BreweryEvent[] = [
     title: "Brewmaster's Dinner",
     shortDescription: "A five-course meal paired with our flagship beers.",
     longDescription:
-      '<p class="font_7">An intimate evening pairing each course with a hand-selected beer, hosted by our brewmaster. Seating is limited.</p>',
+      "An intimate evening pairing each course with a hand-selected beer, hosted by our brewmaster. Seating is limited.",
     image: "/images/dinner.jpg",
     imageAltText: "Brewmaster's Dinner",
     location: "Barrel Room",
@@ -284,7 +285,7 @@ export const dummyEvents: BreweryEvent[] = [
     title: "Summer Sour Fest",
     shortDescription: "Celebrating our tart and refreshing sour releases.",
     longDescription:
-      '<p class="font_7">A day dedicated to sours, featuring Citrus Press and three brand-new fruited releases. Outdoor patio, lawn games, and cornhole.</p>',
+      "A day dedicated to sours, featuring Citrus Press and three brand-new fruited releases. Outdoor patio, lawn games, and cornhole.",
     image: "/images/fest.jpg",
     imageAltText: "Summer Sour Fest",
     location: "Beer Garden",
@@ -302,6 +303,10 @@ export const dummyEvents: BreweryEvent[] = [
 // Products (dummy — no CSV source)
 // ----------------------------------------------------------------------------
 
+export interface ProductBadge {
+  label: string;
+  color?: string;
+}
 export interface Product {
   name: string;
   productType: string;
@@ -315,7 +320,7 @@ export interface Product {
   isFeaturedProduct: boolean;
   slug: string;
   id: string;
-  badges?: string[];
+  badges?: ProductBadge[];
 }
 
 export const dummyProducts: Product[] = [
@@ -324,9 +329,8 @@ export const dummyProducts: Product[] = [
     productType: "coozie",
     shortDescription: "Neoprene coozie that keeps your can cold.",
     longDescription:
-      '<p class="font_7">A snug neoprene coozie printed with our logo. Fits standard 12oz cans and folds flat when you\u2019re done.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/coozie.png#originWidth=1000&originHeight=1000",
+      "A snug neoprene coozie printed with our logo. Fits standard 12oz cans and folds flat when you\u2019re done.",
+    image: "/images/coozie.png",
     imageAltText: "Logo Can Coozie",
     price: 6,
     sku: "MERCH-COOZIE-001",
@@ -334,15 +338,15 @@ export const dummyProducts: Product[] = [
     isFeaturedProduct: false,
     slug: "/shop/logo-can-coozie",
     id: "p1",
+    badges: [{ label: "new", color: "primary" }],
   },
   {
     name: "Cork-Back Coaster",
     productType: "coaster",
     shortDescription: "Absorbent cork-back coaster with our crest.",
     longDescription:
-      '<p class="font_7">A durable cork-back coaster that protects your table and soaks up condensation. Sold individually.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/coaster.png#originWidth=1000&originHeight=1000",
+      "A durable cork-back coaster that protects your table and soaks up condensation. Sold individually.",
+    image: "/images/coaster.png",
     imageAltText: "Cork-Back Coaster",
     price: 4,
     sku: "MERCH-COASTER-001",
@@ -350,15 +354,15 @@ export const dummyProducts: Product[] = [
     isFeaturedProduct: false,
     slug: "/shop/cork-back-coaster",
     id: "p2",
+    badges: [{ label: "Sale", color: `red` }, { label: "Limited time" }],
   },
   {
     name: "Insulated Tumbler",
     productType: "tumbler",
     shortDescription: "20oz stainless tumbler, double-walled.",
     longDescription:
-      '<p class="font_7">A double-walled stainless steel tumbler that keeps drinks cold for hours. Laser-etched logo and a spill-resistant lid.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/tumbler.png#originWidth=1000&originHeight=1000",
+      "A double-walled stainless steel tumbler that keeps drinks cold for hours. Laser-etched logo and a spill-resistant lid.",
+    image: "/images/yeti-tumbler-30oz.png",
     imageAltText: "Insulated Tumbler",
     price: 24,
     sku: "MERCH-TUMBLER-001",
@@ -366,15 +370,15 @@ export const dummyProducts: Product[] = [
     isFeaturedProduct: true,
     slug: "/shop/insulated-tumbler",
     id: "p3",
+    badges: [{ label: "Sale", color: `red` }, { label: "Limited time" }],
   },
   {
     name: "Classic Logo T-Shirt",
     productType: "t-shirt",
     shortDescription: "Soft cotton tee with the flagship logo.",
     longDescription:
-      '<p class="font_7">A comfortable ring-spun cotton tee featuring our flagship logo across the chest. Available in a full run of sizes.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/tshirt.png#originWidth=1000&originHeight=1000",
+      "A comfortable ring-spun cotton tee featuring our flagship logo across the chest. Available in a full run of sizes.",
+    image: "/images/t-shirt.png",
     imageAltText: "Classic Logo T-Shirt",
     price: 28,
     sku: "MERCH-TSHIRT-001",
@@ -388,16 +392,30 @@ export const dummyProducts: Product[] = [
     productType: "pint-glass",
     shortDescription: "16oz shaker pint glass with etched logo.",
     longDescription:
-      '<p class="font_7">A classic 16oz shaker pint glass with a permanently etched logo. Dishwasher safe and built to last.</p>',
-    image:
-      "wix:image://v1/7062f9_590a9b3c901c44e1b41f8ca4897b8779~mv2.png/pint-glass.png#originWidth=1000&originHeight=1000",
+      "A classic 16oz shaker pint glass with a permanently etched logo. Dishwasher safe and built to last.",
+    image: "/images/pint-glass.png",
+    imageAltText: "Branded Pint Glass",
+    price: 9,
+    sku: "MERCH-PINT-001",
+    inStock: false,
+    isFeaturedProduct: false,
+    slug: "/shop/branded-pint-glass",
+    id: "p5",
+  },
+  {
+    name: "Key Chain",
+    productType: "merch",
+    shortDescription: "16oz shaker pint glass with etched logo.",
+    longDescription:
+      "A classic 16oz shaker pint glass with a permanently etched logo. Dishwasher safe and built to last.",
+    image: "/images/keychain-bottle-opener.png",
     imageAltText: "Branded Pint Glass",
     price: 9,
     sku: "MERCH-PINT-001",
     inStock: true,
     isFeaturedProduct: false,
     slug: "/shop/branded-pint-glass",
-    id: "p5",
+    id: "p6",
   },
 ];
 // ----------------------------------------------------------------------------

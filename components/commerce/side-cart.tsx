@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -16,11 +16,26 @@ import { useCart } from "./cart-provider";
 import { motion, AnimatePresence } from "motion/react";
 import { ImageIcon, PlusIcon, MinusIcon } from "lucide-react";
 import type { CartItem } from "./cart-provider";
+import Image from "next/image";
+import { StaggerReveal } from "../ui/stagger-wrapper";
+import { dummyProducts } from "@/lib/dummyData";
+import ProductCard from "./product-card";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function SideCart() {
   const { cartItems, cartTotal, itemCount } = useCart();
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setOpen(false);
+  }
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="flex gap-1.5 items-center" id="header-cart-btn">
         {cartItems.length > 0 && (
           <motion.div
@@ -49,13 +64,28 @@ function SideCart() {
               initial={{ width: 0, opacity: 0 }}
               animate={{ width: 280, opacity: 1, transitionDelay: 0.2 }}
               exit={{ width: 0, opacity: 0, transitionDelay: 0 }}
-              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-              className="z-1 hidden md:block col-start-1 overflow-hidden h-full bg-neutral-200 flex flex-col"
+              transition={{
+                duration: 0.4,
+                ease: [0.4, 0, 0.2, 1],
+                delay: 0.15,
+              }}
+              className="z-1 hidden md:flex flex-col col-start-1 overflow-hidden h-full bg-neutral-200"
             >
-              <div className="w-70 p-4 flex flex-col shrink-0">
+              <div className="w-70 p-4 flex flex-col flex-1 min-h-0 gap-4">
                 <p className="uppercase font-bold text-foreground/70 tracking-wider text-center">
                   You might like
                 </p>
+                <StaggerReveal
+                  as="ul"
+                  delay={0.25}
+                  className="flex-1 min-h-0 overflow-y-auto gap-4 flex flex-col"
+                >
+                  {dummyProducts.map((product) => (
+                    <li key={`product-card-${product.id}`}>
+                      <ProductCard product={product} />
+                    </li>
+                  ))}
+                </StaggerReveal>
               </div>
             </motion.div>
           )}
@@ -88,12 +118,16 @@ function SideCart() {
                   Taxes and shipping are calculated at checkout.
                 </p>
                 <div className="flex flex-col justify-center gap-2 mt-3">
-                  <Button size={"lg"} id="side-cart-checkout-btn">
-                    Checkout
-                  </Button>
-                  <Button size={"lg"} variant={"secondary"}>
-                    View Cart
-                  </Button>
+                  <Link href={"/shop/checkout"} className="grid">
+                    <Button size={"lg"} id="side-cart-checkout-btn">
+                      Checkout
+                    </Button>
+                  </Link>
+                  <Link href={"/shop/cart"} className="grid">
+                    <Button size={"lg"} variant={"secondary"}>
+                      View Cart
+                    </Button>
+                  </Link>
                 </div>
               </SheetFooter>
             </>
@@ -101,7 +135,7 @@ function SideCart() {
             <div className="w-full text-center font-bold text-xl my-auto space-y-3">
               <ShoppingBag className="size-12 mx-auto" />
               <p>Your cart is empty</p>
-              <SheetClose>
+              <SheetClose asChild>
                 <Button variant={"secondary"} size={"sm"} className="uppercase">
                   Continue Shopping
                 </Button>
@@ -118,8 +152,18 @@ export function SideCartRowItem({ item }: { item: CartItem }) {
   const { updateQuantity } = useCart();
   return (
     <div className="flex gap-2 border-b py-4">
-      <div className="size-20 bg-neutral-200 flex-none flex justify-center items-center">
-        <ImageIcon />
+      <div className="size-20 bg-neutral-200 overflow-hidden relative flex-none flex justify-center items-center">
+        {item.product.image !== "" ? (
+          <Image
+            src={item.product.image}
+            alt={item.product.imageAltText}
+            fill
+            quality={30}
+            className="object-cover bg-transparent"
+          />
+        ) : (
+          <ImageIcon />
+        )}
       </div>
       <div className="flex-1 flex items-center">
         <div className="flex-1">

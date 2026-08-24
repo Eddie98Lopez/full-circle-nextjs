@@ -16,7 +16,7 @@ const TeamMemberCard = ({ image, name, role }: TeamMemberCardProps) => {
             <Image src={image} alt={name} width={600} height={600} />
           </div>
           <CardTitle className="tex-title text-[2rem]">{name}</CardTitle>
-          <CardDescription className="text-lg uppercase font-bold">
+          <CardDescription className="text-lg font-medium">
             {role}
           </CardDescription>
         </CardContent>

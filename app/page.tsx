@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/carousel";
 import FeaturedBeerCard from "@/components/featured-beer";
 import BlogCard from "@/components/ui/blog-card";
+import DemoDialog from "@/components/demo-dialog";
 
 export default function Home() {
   return (
@@ -58,9 +59,7 @@ export default function Home() {
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Mavz2MffYH9bwfpA4fcYKQlxHUh2JuV636QELOg7nOlRCjM9W7_RUW76BAFJTc3Y1Non5XxRb"
             target="_blank"
           >
-            <Button variant={"outline"} size={"lg"}>
-              Book A Call
-            </Button>
+            <Button size={"lg"}>Book A Call</Button>
           </Link>
         </StaggerReveal>
       </section>
@@ -89,7 +88,9 @@ export default function Home() {
                       key={`featured-beer-${beer.id}`}
                       className="p-0"
                     >
-                      <FeaturedBeerCard beer={beer} />
+                      <Link href={`/beers/${beer.slug}`}>
+                        <FeaturedBeerCard beer={beer} />
+                      </Link>
                     </CarouselItem>
                   ))}
               </CarouselContent>
@@ -176,7 +177,9 @@ export default function Home() {
                   className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-3/7 snap-center transition-all"
                 >
                   <div className="decoration-none w-full h-full flex aspect-4/5 md:aspect-9/7">
-                    <BlogCard post={post} />
+                    <DemoDialog>
+                      <BlogCard post={post} />
+                    </DemoDialog>
                   </div>
                 </CarouselItem>
               ))}
