@@ -6,6 +6,7 @@ import { dummyProducts } from "@/lib/dummyData";
 import { StaggerReveal } from "@/components/ui/stagger-wrapper";
 import ProductCard from "@/components/commerce/product-card";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -80,7 +81,12 @@ const ShopPage = () => {
             {dummyProducts.map((product) => {
               return (
                 <li key={`product-card-${product.id}`}>
-                  <ProductCard product={product} />
+                  <Link
+                    className="w-full h-full"
+                    href={`/shop/product/${product.slug}`}
+                  >
+                    <ProductCard product={product} />
+                  </Link>
                 </li>
               );
             })}

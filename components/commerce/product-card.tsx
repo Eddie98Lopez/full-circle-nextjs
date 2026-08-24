@@ -9,17 +9,16 @@ import Image from "next/image";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
+  const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addToCart(product);
+  };
   return (
     <div className="w-full group">
       <div className="w-full aspect-7/9 bg-neutral-300 grid group-hover:bg-neutral-100 transition-all duration-200 grid-cols-1 grid-rows-1 place-items-center place-content-center overflow-hidden">
         <div className="relative z-1 col-start-1 row-start-1 w-full h-full grid grid-cols-1 grid-rows-1 place-items-center place-content-center overflow-hidden">
-          <Image
-            src={"/images/product-bg.jpg"}
-            alt={product.imageAltText}
-            fill
-            quality={20}
-            className="object-cover group-hover:opacity-3 mix-blend-multiply opacity-0 transition-opacity duration-300 col-start-1 col-end-2 row-end-2 row-start-1 z-1"
-          />
+          <div className="w-full h-full background-brick absolute z-1 col-start-1 col-end-2 row-end-2 row-start-1 group-hover:opacity-70 opacity-0 transition-opacity duration-300"></div>
           {product.image !== "" ? (
             <Image
               src={product.image}
@@ -56,7 +55,7 @@ const ProductCard = ({ product }: { product: Product }) => {
               disabled={!product.inStock}
               size="lg"
               className="text-white font-bold uppercase !transition-colors disabled:hidden w-full"
-              onClick={() => addToCart(product)}
+              onClick={handleAddToCart}
             >
               Add to Cart
             </AddToCartBtn>
