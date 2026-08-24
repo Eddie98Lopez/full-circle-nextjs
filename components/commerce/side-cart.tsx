@@ -158,6 +158,7 @@ export function SideCartRowItem({ item }: { item: CartItem }) {
             src={item.product.image}
             alt={item.product.imageAltText}
             fill
+            quality={30}
             className="object-cover bg-transparent"
           />
         ) : (

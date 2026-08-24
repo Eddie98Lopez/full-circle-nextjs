@@ -6,6 +6,7 @@ import { StaggerReveal } from "@/components/ui/stagger-wrapper";
 import Banner from "@/components/ui/banner";
 import EmailOptIn from "@/components/email-subscribe";
 import { Separator } from "@/components/ui/separator";
+import DemoDialog from "@/components/demo-dialog";
 import {
   Card,
   CardContent,
@@ -42,7 +43,9 @@ const EventsPage = () => {
                     Venue Booking
                   </CardTitle>
                   <CardDescription></CardDescription>
-                  <Button size={"lg"}>Inquire Here</Button>
+                  <DemoDialog>
+                    <Button size={"lg"}>Inquire Here</Button>
+                  </DemoDialog>
                 </CardContent>
               </Card>
             </div>
@@ -76,7 +79,9 @@ const EventsPage = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             {dummyEvents.map((event) => (
-              <EventCard key={`event-${event.id}`} event={event} />
+              <DemoDialog key={`event-${event.id}`}>
+                <EventCard event={event} />
+              </DemoDialog>
             ))}
           </StaggerReveal>
         </div>

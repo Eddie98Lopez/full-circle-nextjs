@@ -7,6 +7,7 @@ import SectionTitle from "@/components/section-title";
 import Banner from "@/components/ui/banner";
 import EmailOptIn from "@/components/email-subscribe";
 import Hop from "@/components/hop";
+import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
@@ -15,6 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import DemoDialog from "@/components/demo-dialog";
 
 const categories = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -97,7 +99,9 @@ const EventsPage = () => {
                   className=" flex-none basis-9/10 lg:basis-3/7 snap-center transition-all pl-1 md:pl-4"
                 >
                   <div className="decoration-none w-full h-full flex aspect-4/5 md:aspect-9/7">
-                    <BlogCard post={post} />
+                    <DemoDialog>
+                      <BlogCard post={post} />
+                    </DemoDialog>
                   </div>
                 </CarouselItem>
               ))}

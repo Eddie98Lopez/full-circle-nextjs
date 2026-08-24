@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/carousel";
 import FeaturedBeerCard from "@/components/featured-beer";
 import BlogCard from "@/components/ui/blog-card";
+import DemoDialog from "@/components/demo-dialog";
 
 export default function Home() {
   return (
@@ -176,7 +177,9 @@ export default function Home() {
                   className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-3/7 snap-center transition-all"
                 >
                   <div className="decoration-none w-full h-full flex aspect-4/5 md:aspect-9/7">
-                    <BlogCard post={post} />
+                    <DemoDialog>
+                      <BlogCard post={post} />
+                    </DemoDialog>
                   </div>
                 </CarouselItem>
               ))}

@@ -43,7 +43,7 @@ const AboutPage = () => {
                 Book a call to see if this layout is right for your brewery.
               </strong>
             </p>
-            <Button variant={"outline"} size={"lg"}>
+            <Button size={"lg"}>
               <Link
                 href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Mavz2MffYH9bwfpA4fcYKQlxHUh2JuV636QELOg7nOlRCjM9W7_RUW76BAFJTc3Y1Non5XxRb"
                 target="_blank"

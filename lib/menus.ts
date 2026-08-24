@@ -23,9 +23,9 @@ export const footer_menu = [
 ];
 
 export const dummySocialLinks: SocialLink[] = [
-  { platform: "facebook", href: "https://facebook.com/yourpage" },
-  { platform: "instagram", href: "https://instagram.com/yourhandle" },
-  { platform: "tiktok", href: "https://tiktok.com/@yourhandle" },
-  { platform: "twitter", href: "https://twitter.com/yourhandle" },
-  { platform: "youtube", href: "https://youtube.com/@yourchannel" },
+  { platform: "facebook", href: "https://facebook.com/" },
+  { platform: "instagram", href: "https://instagram.com/" },
+  { platform: "tiktok", href: "https://tiktok.com/" },
+  { platform: "twitter", href: "https://twitter.com/" },
+  { platform: "youtube", href: "https://youtube.com/" },
 ];
