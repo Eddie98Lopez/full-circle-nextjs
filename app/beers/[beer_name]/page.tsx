@@ -11,6 +11,11 @@ import ProductCard from "@/components/commerce/product-card";
 import React from "react";
 import BeerCard, { BeerHero } from "@/components/beer-card";
 import Image from "next/image";
+import { BeerClubBanner } from "@/components/beer-card";
+import Banner from "@/components/ui/banner";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
   const { beer_name } = await params;
@@ -18,13 +23,13 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
   const beer = dummyMyBeers.filter((beer) => beer.slug == beer_name)[0];
   return (
     <div>
-      <section className=" background-brick pb-16 grid grid-rows-[10vh_35vh_auto]  w-full min-h-[60vh]">
+      <section className=" background-brick pb-16 grid grid-rows-[20vh_35vh_auto]  w-full min-h-[60vh] overflow-hidden">
         <div className="w-full h-full relative row-start-1 row-end-3 col-start-1 col-end-2 ">
           <Image
             fill
-            src="/images/product-bg.jpg"
+            src={beer.artwork}
             alt="background"
-            className="w-full object-cover opacity-20"
+            className="w-full object-cover mix-blend-multiply"
           />
         </div>
         <div className="w-full h-full row-start-2 row-end-4 col-start-1 col-end-2 px-4 md:px-8 ">
@@ -32,9 +37,9 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
         </div>
       </section>
 
-      <section className="background-paper w-full px-8 py-16 space-y-8">
+      <section className="background-brick w-full px-8 py-16 space-y-8">
         <SectionTitle>
-          <span className="text-white">You Might Like</span>
+          <span>You Might Like</span>
         </SectionTitle>
         <div className="max-w-[1600px] mx-auto">
           <Carousel>
@@ -47,7 +52,12 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
                     className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-1/3 snap-center transition-all"
                   >
                     <div className="decoration-none w-full h-full flex ">
-                      <BeerCard beer={br} />
+                      <Link
+                        href={`/beers/${br.slug}`}
+                        className="w-full h-full"
+                      >
+                        <BeerCard beer={br} />
+                      </Link>
                     </div>
                   </CarouselItem>
                 ))}
@@ -63,6 +73,7 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
           </Carousel>
         </div>
       </section>
+      <BeerClubBanner />
       <section className="px-8 py-16 background-logo space-y-8">
         <SectionTitle>Merch</SectionTitle>
         <div className="max-w-[1600px] mx-auto">
@@ -74,7 +85,12 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
                   className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-1/4 snap-center transition-all"
                 >
                   <div className="decoration-none w-full h-full flex ">
-                    <ProductCard product={product} />
+                    <Link
+                      href={`/shop/product/${product.slug}`}
+                      className="w-full h-full"
+                    >
+                      <ProductCard product={product} />
+                    </Link>
                   </div>
                 </CarouselItem>
               ))}
@@ -88,6 +104,17 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
               variant={"secondary"}
             />
           </Carousel>
+        </div>
+        <div className="mx-auto text-center mt-16">
+          <Link href="/shop">
+            <Button
+              variant={"link"}
+              className="uppercase font-bold text-foreground group"
+            >
+              Shop all Merch
+              <ArrowRight className="fill-black opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all" />
+            </Button>
+          </Link>
         </div>
       </section>
     </div>

@@ -19,6 +19,7 @@ import {
 import FeaturedBeerCard from "@/components/featured-beer";
 import BlogCard from "@/components/ui/blog-card";
 import DemoDialog from "@/components/demo-dialog";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -105,6 +106,17 @@ export default function Home() {
                 />
               </div>
             </Carousel>
+          </div>
+          <div className="mx-auto text-center mt-8">
+            <Link href="/beers">
+              <Button
+                variant={"link"}
+                className="uppercase font-bold text-foreground group"
+              >
+                View all Beers{" "}
+                <ArrowRight className="fill-black opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
