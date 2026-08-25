@@ -18,7 +18,7 @@ const hours = [
 
 function Footer() {
   return (
-    <footer className="w-full h-full flex justify-center background-paper p-16 md:bg-fixed">
+    <footer className="w-full h-full flex justify-center background-paper p-4 py-6 md:p-8 lg:p-16 md:bg-fixed">
       <div className="w-full max-w-[1600px] mx-auto flex flex-col lg:grid lg:grid-cols-3 gap-8 place-content-between items-center  text-center ">
         <div className="w-full">
           <EmailOptIn />

@@ -37,7 +37,7 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
         </div>
       </section>
 
-      <section className="background-brick w-full px-8 py-16 space-y-8">
+      <section className="background-brick w-full space-y-8 p-4 py-6 md:p-8 lg:p-16">
         <SectionTitle>
           <span>You Might Like</span>
         </SectionTitle>
@@ -74,7 +74,7 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
         </div>
       </section>
       <BeerClubBanner />
-      <section className="px-8 py-16 background-logo space-y-8">
+      <section className="p-4 py-6 md:p-8 lg:p-16 background-logo space-y-8">
         <SectionTitle>Merch</SectionTitle>
         <div className="max-w-[1600px] mx-auto">
           <Carousel>

@@ -8,8 +8,7 @@ import { BeerClubBanner } from "@/components/beer-card";
 
 const BeerPage = () => {
   return (
-    <>
-      {" "}
+    <div>
       <section className="background-brick w-full overflow-hidden">
         <div className="max-w-[1600px] mx-auto space-y-8 p-4 py-6 md:p-8 lg:p-16 ">
           <SectionTitle>Beers</SectionTitle>
@@ -27,7 +26,7 @@ const BeerPage = () => {
         </div>
       </section>
       <BeerClubBanner />
-    </>
+    </div>
   );
 };
 

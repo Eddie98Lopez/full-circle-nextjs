@@ -14,8 +14,8 @@ const BeerCard = ({ beer }: { beer: Beer }) => {
       <Image
         fill
         src={beer.artwork}
-        alt="background"
-        className="row-start-1 row-end-2 w-full object-cover opacity-0 translate-y-10 group-hover:opacity-100 transition-all duration-200 mix-blend-multiply"
+        alt="beer artwork"
+        className="row-start-1 row-end-2 w-full object-cover md:opacity-0 md:translate-y-10 group-hover:opacity-100 transition-all duration-200 mix-blend-multiply"
       />
       <div className="row-start-1 row-end-2 relative w-full z-1 translate-y-12 h-full min-h-70">
         <Image

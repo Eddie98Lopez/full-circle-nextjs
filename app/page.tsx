@@ -76,6 +76,19 @@ export default function Home() {
           <div>Great Website.</div>
         </StaggerReveal>
       </Banner>
+      <aside className="bg-primary py-4 text-white flex flex-col md:flex-row flex-wrap justify-center md:gap-8 text-xl items-center uppercase font-bold">
+        <p>visit us!</p>
+        <div className="r">Open today 9am - 5pm</div>
+
+        <Link href="#">
+          <Button
+            variant={"link"}
+            className="uppercase font-bold text-white px-0"
+          >
+            Get Directions
+          </Button>
+        </Link>
+      </aside>
       <section className="background-brick min-h-[50vh] p-4 py-6 md:p-8 lg:p-16">
         <div>
           <SectionTitle>Featured Beers</SectionTitle>
@@ -120,19 +133,52 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section>
-        <div className="w-full h-full grid md:grid-cols-2">
+        <div className="w-full h-full grid md:grid-cols-3 gap-1">
           {homeActions.map((act, i) => (
-            <ImageLinkCard
+            <Link
               key={`image-link-home-${i}`}
-              href={act.href}
-              label={act.label}
-              image={act.image}
-            />
+              href={`/${act.href}`}
+              className="h-32 md:h-full w-full md:aspect-4/5 "
+            >
+              <ImageLinkCard action={act} />
+            </Link>
           ))}
         </div>
       </section>
-      <section className="py-12 p-4 md:p-8 lg:p-16">
+      <section className="p-4 py-6 md:p-8 lg:p-16  background-logo">
+        <div className="space-y-8">
+          <SectionTitle>Blog</SectionTitle>
+          <Carousel>
+            <CarouselContent className="-m-0">
+              {dummyBlogPosts.map((post) => (
+                <CarouselItem
+                  key={`blog-card-${post.id}`}
+                  className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-3/7 snap-center transition-all"
+                >
+                  <div className="decoration-none w-full h-full flex aspect-4/5 md:aspect-9/7">
+                    <DemoDialog>
+                      <BlogCard post={post} />
+                    </DemoDialog>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious
+              className="left-0 rounded-none"
+              variant={"secondary"}
+              size={"lg"}
+            />
+            <CarouselNext
+              className="right-0 rounded-none"
+              variant={"secondary"}
+              size={"lg"}
+            />
+          </Carousel>
+        </div>
+      </section>
+      <section className="py-12 p-4 md:p-8 lg:p-16 bg-neutral-300">
         <div className="w-full max-w-[1280px] mx-auto space-y-4">
           <SectionTitle>Follow Us</SectionTitle>
           <div className="mx-auto w-min">
@@ -167,46 +213,6 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div>
-          <div className="relative h-[400px] w-full bg-[url(/images/47334.jpg)] bg-cover md:bg-fixed"></div>
-          <Banner>
-            <div className="h-80">Stuff goes here</div>
-          </Banner>
-          <div className="bg-gray-300 h-80">map</div>
-        </div>
-      </section>
-      <section className="p-4 py-6 md:p-8 lg:p-16  background-logo">
-        <div className="space-y-8">
-          <SectionTitle>Blog</SectionTitle>
-          <Carousel>
-            <CarouselContent className="-m-0">
-              {dummyBlogPosts.map((post) => (
-                <CarouselItem
-                  key={`blog-card-${post.id}`}
-                  className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-3/7 snap-center transition-all"
-                >
-                  <div className="decoration-none w-full h-full flex aspect-4/5 md:aspect-9/7">
-                    <DemoDialog>
-                      <BlogCard post={post} />
-                    </DemoDialog>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious
-              className="left-0 rounded-none"
-              variant={"secondary"}
-              size={"lg"}
-            />
-            <CarouselNext
-              className="right-0 rounded-none"
-              variant={"secondary"}
-              size={"lg"}
-            />
-          </Carousel>
         </div>
       </section>
     </div>
