@@ -8,11 +8,9 @@ import {
 } from "@/components/ui/carousel";
 import { dummyProducts, dummyMyBeers } from "@/lib/dummyData";
 import ProductCard from "@/components/commerce/product-card";
-import React from "react";
 import BeerCard, { BeerHero } from "@/components/beer-card";
 import Image from "next/image";
 import { BeerClubBanner } from "@/components/beer-card";
-import Banner from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -23,7 +21,7 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
   const beer = dummyMyBeers.filter((beer) => beer.slug == beer_name)[0];
   return (
     <div>
-      <section className=" background-brick pb-16 grid grid-rows-[20vh_35vh_auto]  w-full min-h-[60vh] overflow-hidden">
+      <section className=" background-brick pb-16 grid grid-rows-[150px_40vh_auto] md:grid-rows-[100px_50vh_auto]  w-full min-h-[60vh] overflow-hidden">
         <div className="w-full h-full relative row-start-1 row-end-3 col-start-1 col-end-2 ">
           <Image
             fill
@@ -49,7 +47,7 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
                 .map((br) => (
                   <CarouselItem
                     key={`beer-card-${br.id}`}
-                    className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-1/3 snap-center transition-all"
+                    className=" px-1 md:px-2 flex-none basis-10/10 lg:basis-1/3 snap-center transition-all"
                   >
                     <div className="decoration-none w-full h-full flex ">
                       <Link
