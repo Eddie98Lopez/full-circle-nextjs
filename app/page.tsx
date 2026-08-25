@@ -28,6 +28,7 @@ export default function Home() {
         <div className="w-full h-full bg-foreground col-start-1 row-start-1 aspect-4/5 z-1 lg:aspect-16/9 overflow-hidden flex justify-center items-center">
           <video
             autoPlay
+            playsInline
             loop
             muted
             /* ADDED object-cover, REMOVED stray "fill" class */
