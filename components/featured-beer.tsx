@@ -11,7 +11,7 @@ const FeaturedBeerCard = ({ beer }: { beer: Beer }) => {
           fill
           objectFit="contain"
           objectPosition={"center center"}
-          src="/images/beer-can.png"
+          src="/images/beer-can-with-logo.png"
           alt="beer can"
           className="scale-120 origin-center drop-shadow-xl w-full"
         />
