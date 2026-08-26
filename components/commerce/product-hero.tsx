@@ -6,7 +6,7 @@ import QuantityCounter from "./qty-counter";
 import { useCart } from "./cart-provider";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
-import Image from "next/image";
+import { Separator } from "../ui/separator";
 
 export function ProductHeroDetails({ product }: { product: Product }) {
   const [counter, setCounter] = useState(1);
@@ -26,7 +26,7 @@ export function ProductHeroDetails({ product }: { product: Product }) {
     addToCart(product, counter, selectedOptions);
   };
   return (
-    <div className="space-y-12">
+    <div className="space-y-8 md:space-y-12">
       <div className="space-y-4">
         {!product.inStock && (
           <Badge variant={"destructive"} className="uppercase">
@@ -34,17 +34,20 @@ export function ProductHeroDetails({ product }: { product: Product }) {
           </Badge>
         )}
         <div>
-          <h1 className="text-4xl text-title tracking-wide">{product.name}</h1>
+          <h1 className="text-3xl lg:text-5xl text-title tracking-wide">
+            {product.name}
+          </h1>
           <p className="text-xs font-medium text-muted-foreground">
             {product.sku}
           </p>
         </div>
-        <p className="text-xl font-bold">${product.price} USD</p>
-        <p className="text-xl text-muted-foreground">
+        <p className="text-2xl font-bold">${product.price} USD</p>
+        <Separator className="bg-foreground" />
+        <p className="text-lg md:text-xl text-muted-foreground">
           {product.shortDescription}
         </p>
       </div>
-      <div className="space-y-4">
+      <div className="space-y-2 lg:space-y-4">
         {product.options?.map((option) => (
           <div
             key={`${option.name}-option-container`}
@@ -78,7 +81,7 @@ export function ProductHeroDetails({ product }: { product: Product }) {
         onIncrease={() => setCounter(counter + 1)}
       />
 
-      <div className="w-full h-full flex flex-col">
+      <div className="w-full flex flex-col">
         <AddToCartBtn
           onClick={handleAddToCart}
           disabled={!product.inStock || !allOptionsSelected}

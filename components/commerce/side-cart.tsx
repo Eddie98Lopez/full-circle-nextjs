@@ -54,7 +54,7 @@ function SideCart() {
         <ShoppingBag />
       </SheetTrigger>
 
-      <SheetContent className="z-5001 bg-transparent data-[side=right]:w-full data-[side=right]:sm:max-w-none data-[side=right]:md:max-w-min grid gap-0 grid-cols-[auto_1fr] md:grid-cols-[auto_minmax(450px,_1fr)] ">
+      <SheetContent className="z-5001 bg-transparent data-[side=right]:w-full data-[side=right]:sm:max-w-none data-[side=right]:md:max-w-min grid grid-rows-1 gap-0 grid-cols-[auto_1fr] md:grid-cols-[auto_minmax(450px,_1fr)] ">
         <SheetClose className="z-5002 group fixed top-2 right-2 size-10  flex justify-center items-center">
           <XCircle className="opacity-25 group-hover:opacity-50" />
         </SheetClose>
@@ -91,7 +91,7 @@ function SideCart() {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="z-2 bg-white shadow-lg flex flex-col col-start-2 ">
+        <div className="z-2 bg-white shadow-lg flex flex-col col-start-2 min-h-0">
           <SheetHeader className="mb-0 pb-0">
             <div className="text-xl font-heading">
               Cart {`(${cartItems.reduce((a, b) => a + b.quantity, 0)})`}
@@ -100,7 +100,7 @@ function SideCart() {
           </SheetHeader>
           {cartItems.length > 0 ? (
             <>
-              <div className="px-4 flex-1 overflow-y-scroll">
+              <div className="px-4 flex-1 min-h-0 overflow-y-auto">
                 <ul>
                   {cartItems.map((item, i) => (
                     <li key={`side-cart-item-${item.product.id}-${i}`}>

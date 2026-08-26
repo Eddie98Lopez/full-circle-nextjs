@@ -1,4 +1,3 @@
-import React from "react";
 import SectionTitle from "@/components/section-title";
 import { Button } from "@/components/ui/button";
 import { SlidersHorizontal, ListSortDescending } from "lucide-react";
@@ -6,7 +5,6 @@ import { dummyProducts } from "@/lib/dummyData";
 import { StaggerReveal } from "@/components/ui/stagger-wrapper";
 import ProductCard from "@/components/commerce/product-card";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -15,7 +13,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
 const categories = ["Merch", "Apparel", "Glassware", "Hats"];
+
 const ShopPage = () => {
   return (
     <div className="relative">

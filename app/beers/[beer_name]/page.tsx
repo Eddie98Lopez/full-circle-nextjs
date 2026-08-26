@@ -82,12 +82,7 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
                   className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-1/4 snap-center transition-all"
                 >
                   <div className="decoration-none w-full h-full flex ">
-                    <Link
-                      href={`/shop/product/${product.slug}`}
-                      className="w-full h-full"
-                    >
-                      <ProductCard product={product} />
-                    </Link>
+                    <ProductCard product={product} />
                   </div>
                 </CarouselItem>
               ))}

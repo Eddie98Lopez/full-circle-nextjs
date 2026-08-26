@@ -12,8 +12,6 @@ import Link from "next/link";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
-  const [quickview, setQuickview] = React.useState(false);
-
   const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
