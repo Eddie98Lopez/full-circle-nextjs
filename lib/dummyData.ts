@@ -307,6 +307,11 @@ export interface ProductBadge {
   label: string;
   color?: string;
 }
+export interface ProductOption {
+  name: string; // "Size" | "Color" | ...
+  values: string[]; // ["S", "M", "L"]
+}
+
 export interface Product {
   name: string;
   productType: string;
@@ -318,6 +323,7 @@ export interface Product {
   sku: string;
   inStock: boolean;
   isFeaturedProduct: boolean;
+  options?: ProductOption[];
   slug: string;
   id: string;
   badges?: ProductBadge[];
@@ -385,6 +391,7 @@ export const dummyProducts: Product[] = [
     inStock: true,
     isFeaturedProduct: true,
     slug: "classic-logo-t-shirt",
+    options: [{ name: "size", values: ["S", "M", "LG", "XL"] }],
     id: "p4",
   },
   {
@@ -409,12 +416,12 @@ export const dummyProducts: Product[] = [
     longDescription:
       "A classic 16oz shaker pint glass with a permanently etched logo. Dishwasher safe and built to last.",
     image: "/images/keychain-bottle-opener.png",
-    imageAltText: "Branded Pint Glass",
+    imageAltText: "Branded metal bottle opener key chain",
     price: 9,
-    sku: "MERCH-PINT-001",
+    sku: "MERCH-KEY-CHAIN-001",
     inStock: true,
     isFeaturedProduct: false,
-    slug: "branded-pint-glass",
+    slug: "key-chain",
     id: "p6",
   },
 ];

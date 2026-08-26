@@ -6,6 +6,9 @@ import { useCart } from "./cart-provider";
 import { Badge } from "../ui/badge";
 import AddToCartBtn from "../ui/add-to-cart-btn";
 import Image from "next/image";
+import { Button } from "../ui/button";
+import QuickView from "./quick-view";
+import Link from "next/link";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
@@ -19,19 +22,24 @@ const ProductCard = ({ product }: { product: Product }) => {
       <div className="w-full aspect-7/9 bg-neutral-300 grid group-hover:bg-neutral-100 transition-all duration-200 grid-cols-1 grid-rows-1 place-items-center place-content-center overflow-hidden">
         <div className="relative z-1 col-start-1 row-start-1 w-full h-full grid grid-cols-1 grid-rows-1 place-items-center place-content-center overflow-hidden">
           <div className="w-full h-full background-brick absolute z-1 col-start-1 col-end-2 row-end-2 row-start-1 group-hover:opacity-70 opacity-0 transition-opacity duration-300"></div>
-          {product.image !== "" ? (
-            <Image
-              src={product.image}
-              alt={product.imageAltText}
-              fill
-              sizes=""
-              className="object-cover group-hover:scale-107 transition-scale duration-300 col-start-1 col-end-2 row-end-2 row-start-1 z-2"
-            />
-          ) : (
-            <ImageIcon />
-          )}
+          <Link
+            href={`/shop/product/${product.slug}`}
+            className="relative w-full h-full block"
+          >
+            {product.image !== "" ? (
+              <Image
+                src={product.image}
+                alt={product.imageAltText}
+                fill
+                sizes=""
+                className="object-cover group-hover:scale-107 transition-scale duration-300 col-start-1 col-end-2 row-end-2 row-start-1 z-2"
+              />
+            ) : (
+              <ImageIcon />
+            )}
+          </Link>
         </div>
-        <div className="flex flex-col justify-between w-full z-2 col-start-1 row-start-1 h-full p-2 md:p-4">
+        <div className="pointer-events-none flex flex-col justify-between w-full z-3 col-start-1 row-start-1 h-full p-2 md:p-4">
           <div className="flex flex-col gap-1">
             {product.inStock ? (
               product.badges?.map((badge) => (
@@ -50,15 +58,27 @@ const ProductCard = ({ product }: { product: Product }) => {
               </Badge>
             )}
           </div>
-          <div className="w-full flex flex-col lg:translate-y-20 lg:opacity-0 transition-[translate,opacity] duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-            <AddToCartBtn
-              disabled={!product.inStock}
-              size="lg"
-              className="text-white font-bold uppercase !transition-colors disabled:hidden w-full"
-              onClick={handleAddToCart}
-            >
-              Add to Cart
-            </AddToCartBtn>
+          <div className="pointer-events-auto w-full flex flex-col lg:translate-y-20 lg:opacity-0 transition-[translate,opacity] duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+            {!product.options ? (
+              <AddToCartBtn
+                disabled={!product.inStock}
+                size="lg"
+                className="text-white font-bold uppercase !transition-colors disabled:hidden w-full"
+                onClick={handleAddToCart}
+              >
+                Add to Cart
+              </AddToCartBtn>
+            ) : (
+              <QuickView product={product}>
+                <Button
+                  size={"lg"}
+                  variant={"secondary"}
+                  className="uppercase font-bold border border-foreground"
+                >
+                  Quick View
+                </Button>
+              </QuickView>
+            )}
           </div>
         </div>
       </div>

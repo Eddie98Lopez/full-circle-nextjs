@@ -14,7 +14,7 @@ import { Button } from "../ui/button";
 import { XCircle } from "lucide-react";
 import { useCart } from "./cart-provider";
 import { motion, AnimatePresence } from "motion/react";
-import { ImageIcon, PlusIcon, MinusIcon } from "lucide-react";
+import { ImageIcon } from "lucide-react";
 import type { CartItem } from "./cart-provider";
 import Image from "next/image";
 import { StaggerReveal } from "../ui/stagger-wrapper";
@@ -22,6 +22,7 @@ import { dummyProducts } from "@/lib/dummyData";
 import ProductCard from "./product-card";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import QuantityCounter from "./qty-counter";
 
 function SideCart() {
   const { cartItems, cartTotal, itemCount } = useCart();
@@ -53,7 +54,7 @@ function SideCart() {
         <ShoppingBag />
       </SheetTrigger>
 
-      <SheetContent className="z-5001 bg-transparent data-[side=right]:w-full data-[side=right]:sm:max-w-none data-[side=right]:md:max-w-min grid gap-0 grid-cols-[auto_1fr] md:grid-cols-[auto_minmax(450px,_1fr)] ">
+      <SheetContent className="z-5001 bg-transparent data-[side=right]:w-full data-[side=right]:sm:max-w-none data-[side=right]:md:max-w-min grid grid-rows-1 gap-0 grid-cols-[auto_1fr] md:grid-cols-[auto_minmax(450px,_1fr)] ">
         <SheetClose className="z-5002 group fixed top-2 right-2 size-10  flex justify-center items-center">
           <XCircle className="opacity-25 group-hover:opacity-50" />
         </SheetClose>
@@ -90,7 +91,7 @@ function SideCart() {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="z-2 bg-white shadow-lg flex flex-col col-start-2 ">
+        <div className="z-2 bg-white shadow-lg flex flex-col col-start-2 min-h-0">
           <SheetHeader className="mb-0 pb-0">
             <div className="text-xl font-heading">
               Cart {`(${cartItems.reduce((a, b) => a + b.quantity, 0)})`}
@@ -99,10 +100,10 @@ function SideCart() {
           </SheetHeader>
           {cartItems.length > 0 ? (
             <>
-              <div className="px-4 flex-1 overflow-y-scroll">
+              <div className="px-4 flex-1 min-h-0 overflow-y-auto">
                 <ul>
-                  {cartItems.map((item) => (
-                    <li key={`side-cart-item-${item.product.id}`}>
+                  {cartItems.map((item, i) => (
+                    <li key={`side-cart-item-${item.product.id}-${i}`}>
                       <SideCartRowItem item={item} />
                     </li>
                   ))}
@@ -169,28 +170,25 @@ export function SideCartRowItem({ item }: { item: CartItem }) {
         <div className="flex-1">
           <p className="font-medium">{item.product.name}</p>
           <p>${item.product.price}</p>
+          <div className="text-muted-foreground">
+            {item.product.options?.map((option, i) => (
+              <p key={`cart-item-option-${option.name}-${i}`}>
+                <span className="capitalize">{option.name}: </span>
+                {item.selectedOptions?.[option.name]}
+              </p>
+            ))}
+          </div>
         </div>
 
         <div className="ml-auto space-y-2">
           <p className="text-xl font-heading text-right">
             ${item.product.price * item.quantity}
           </p>
-          <div className="flex items-center justify-center w-min">
-            <Button
-              variant={"secondary"}
-              className="aspect-square rounded"
-              onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-            >
-              <MinusIcon />
-            </Button>
-            <p className="aspect-square w-6 text-center">{item.quantity}</p>
-            <Button
-              className="aspect-square rounded"
-              onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-            >
-              <PlusIcon />
-            </Button>
-          </div>
+          <QuantityCounter
+            value={item.quantity}
+            onDecrease={() => updateQuantity(item.id, item.quantity - 1)}
+            onIncrease={() => updateQuantity(item.id, item.quantity + 1)}
+          />
         </div>
       </div>
     </div>
