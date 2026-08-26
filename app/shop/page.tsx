@@ -81,12 +81,7 @@ const ShopPage = () => {
             {dummyProducts.map((product) => {
               return (
                 <li key={`product-card-${product.id}`}>
-                  <Link
-                    className="w-full h-full"
-                    href={`/shop/product/${product.slug}`}
-                  >
-                    <ProductCard product={product} />
-                  </Link>
+                  <ProductCard product={product} />
                 </li>
               );
             })}

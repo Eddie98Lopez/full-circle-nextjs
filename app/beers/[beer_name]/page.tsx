@@ -17,7 +17,6 @@ import Link from "next/link";
 
 const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
   const { beer_name } = await params;
-  console.log(beer_name);
   const beer = dummyMyBeers.filter((beer) => beer.slug == beer_name)[0];
   return (
     <div>
