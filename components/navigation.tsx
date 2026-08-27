@@ -33,7 +33,7 @@ export function MobileNav() {
       >
         <div className="flex flex-col lg:grid lg:grid-cols-[1fr_auto_1fr] lg:grid-rows-[1fr_auto] gap-8 h-[80vh] mx-auto max-w-[1600px] w-full">
           <div className="flex flex-col items-center justify-center gap-8 w-full">
-            <Logo className="size-40 lg:size-80 fill-white" />
+            <Logo className="size-35 lg:size-80 fill-white" />
             <SocialLinksBar links={dummySocialLinks} />
           </div>
 

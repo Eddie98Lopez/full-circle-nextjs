@@ -20,6 +20,7 @@ import FeaturedBeerCard from "@/components/featured-beer";
 import BlogCard from "@/components/ui/blog-card";
 import DemoDialog from "@/components/demo-dialog";
 import { ArrowRight } from "lucide-react";
+import VisitTicker from "@/components/visit-ticker";
 
 export default function Home() {
   return (
@@ -77,19 +78,7 @@ export default function Home() {
           <div>Great Website.</div>
         </StaggerReveal>
       </Banner>
-      <aside className="bg-primary py-4 text-white flex flex-col md:flex-row flex-wrap justify-center md:gap-8 text-xl items-center uppercase font-bold">
-        <p>visit us!</p>
-        <div className="r">Open today 9am - 5pm</div>
-
-        <Link href="#">
-          <Button
-            variant={"link"}
-            className="uppercase font-bold text-white px-0"
-          >
-            Get Directions
-          </Button>
-        </Link>
-      </aside>
+      <VisitTicker />
       <section className="background-brick min-h-[50vh] p-4 py-6 md:p-8 lg:p-16">
         <div>
           <SectionTitle>Featured Beers</SectionTitle>

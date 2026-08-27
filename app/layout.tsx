@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import { CartProvider } from "@/components/commerce/cart-provider";
 import { Rubik } from "next/font/google";
 
@@ -40,12 +38,7 @@ export default function RootLayout({
         lang="en"
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} h-full antialiased`}
       >
-        <head></head>
-        <body className="min-h-full flex flex-col">
-          <Header />
-          {children}
-          <Footer />
-        </body>
+        <body className="min-h-full flex flex-col">{children}</body>
       </html>
     </CartProvider>
   );

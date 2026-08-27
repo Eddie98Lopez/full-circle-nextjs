@@ -119,7 +119,7 @@ function SideCart() {
                   Taxes and shipping are calculated at checkout.
                 </p>
                 <div className="flex flex-col justify-center gap-2 mt-3">
-                  <Link href={"/shop/checkout"} className="grid">
+                  <Link href={"/checkout"} className="grid">
                     <Button size={"lg"} id="side-cart-checkout-btn">
                       Checkout
                     </Button>

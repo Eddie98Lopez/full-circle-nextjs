@@ -5,10 +5,14 @@ import { StaggerReveal } from "@/components/ui/stagger-wrapper";
 import BeerCard from "@/components/beer-card";
 import Link from "next/link";
 import { BeerClubBanner } from "@/components/beer-card";
+import VisitTicker from "@/components/visit-ticker";
 
 const BeerPage = () => {
   return (
-    <div>
+    <div className="relative">
+      <div className="md:sticky md:top-14 md:z-10">
+        <VisitTicker />
+      </div>
       <section className="background-brick w-full overflow-hidden">
         <div className="max-w-[1600px] mx-auto space-y-8 p-4 py-6 md:p-8 lg:p-16 ">
           <SectionTitle>Beers</SectionTitle>
