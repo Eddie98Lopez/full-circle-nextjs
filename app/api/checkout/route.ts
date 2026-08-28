@@ -11,7 +11,7 @@ const stripe = new Stripe(secretKey);
 export async function POST(req: Request) {
   const origin = (await headers()).get("origin");
   const { items } = await req.json();
-  console.log(items);
+
   // items = [{ id: 'prod_123', quantity: 2 }, ...] — IDs + qty only
 
   // look up real prices server-side (replace with your DB call)

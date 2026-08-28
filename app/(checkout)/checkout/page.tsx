@@ -34,12 +34,12 @@ const CheckoutPage = () => {
   );
   return (
     <div>
-      <div className="grid grid-cols-[1fr_1.5fr] bg-neutral-600 mx-auto min-h-screen w-full relative ">
-        <div className="flex relative justify-end background-brick text-white border-r border-r-black p-8">
+      <div className="grid relative grid-cols-1 lg:grid-cols-[1fr_1.5fr] bg-neutral-600 mx-auto min-h-screen w-full">
+        <div className="flex flex-col relative lg:block w-full lg:justify-end background-brick text-white border-r border-r-black p-4 md:p-8 lg:p-16 ">
           <Button variant={"ghost"} size={"xs"} onClick={() => router.back()}>
             <ArrowLeftIcon /> Back to site
           </Button>
-          <div className="min-w-lg space-y-4 p-4 py-6 md:p-8  sticky top-8 ">
+          <div className="w-full lg:w-md h-min lg:ml-auto lg:sticky lg:top-16 space-y-4">
             <div>
               <h2 className="text-xl uppercase text-title mb-4">
                 Cart Summary
@@ -87,7 +87,7 @@ const CheckoutPage = () => {
             </CheckoutElementsProvider>
             <div className=" mt-auto ">
               <Separator className="bg-black/50 mb-2" />
-              <div className="flex justify-between font-regular">
+              <div className="flex justify-center lg:justify-between font-regular flex-wrap">
                 <Button variant={"link"} className="text-sm text-foreground">
                   Refund Policy
                 </Button>
