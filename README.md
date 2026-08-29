@@ -1,4 +1,4 @@
-# [Brewery Name] — Craft Brewery Website (Concept)
+# Craft Brewery Website (Concept)
 
 A fully custom-branded storefront and marketing site for a craft brewery. The design, branding, and build are all my own — this is a portfolio concept piece where I set out to solve a small business's real goals, not just ship a good-looking page.
 
