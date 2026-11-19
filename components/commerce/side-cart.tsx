@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { ItemCarousel } from "../item-carousel";
 import {
   Sheet,
   SheetContent,
@@ -91,7 +92,7 @@ function SideCart() {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="z-2 bg-white shadow-lg flex flex-col col-start-2 min-h-0">
+        <div className="z-2 bg-white shadow-lg flex flex-col col-start-2 min-w-0 min-h-0">
           <SheetHeader className="mb-0 pb-0">
             <div className="text-xl font-heading">
               Cart {`(${cartItems.reduce((a, b) => a + b.quantity, 0)})`}
@@ -109,8 +110,19 @@ function SideCart() {
                   ))}
                 </ul>
               </div>
+              <div className="md:hidden px-2 py-4 space-y-3 border-t mt-auto">
+                <p className="uppercase font-bold text-foreground/70 tracking-wider text-center text-sm">
+                  You might like
+                </p>
+                <ItemCarousel
+                  items={dummyProducts}
+                  getKey={(p) => `cart-rec-${p.id}`}
+                  itemClassName="basis-[85%]"
+                  renderItem={(p) => <ProductCard product={p} size="sm" />}
+                />
+              </div>
               <SheetFooter className="mt-auto">
-                <Separator className="border mb-2" />
+                <Separator className="border mb-2 hidden md:block" />
                 <div className="flex justify-between text-lg font-bold">
                   <p>Estimated Total</p>
                   <p>${cartTotal}</p>
