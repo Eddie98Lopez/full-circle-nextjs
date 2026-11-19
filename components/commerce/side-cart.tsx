@@ -124,11 +124,7 @@ function SideCart() {
                       Checkout
                     </Button>
                   </Link>
-                  <Link href={"/shop/cart"} className="grid">
-                    <Button size={"lg"} variant={"secondary"}>
-                      View Cart
-                    </Button>
-                  </Link>
+                  <Link href={"/shop/cart"} className="grid"></Link>
                 </div>
               </SheetFooter>
             </>
