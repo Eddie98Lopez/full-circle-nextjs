@@ -1,11 +1,5 @@
 import SectionTitle from "@/components/section-title";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselNext,
-  CarouselPrevious,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { ItemCarousel } from "@/components/item-carousel";
 import { dummyProducts, dummyMyBeers } from "@/lib/dummyData";
 import ProductCard from "@/components/commerce/product-card";
 import BeerCard, { BeerHero } from "@/components/beer-card";
@@ -39,63 +33,30 @@ const Page = async ({ params }: { params: Promise<{ beer_name: string }> }) => {
           <span>You Might Like</span>
         </SectionTitle>
         <div className="max-w-[1600px] mx-auto">
-          <Carousel>
-            <CarouselContent className="-m-0">
-              {dummyMyBeers
-                .filter((br) => beer.relatedBeers.includes(br.id))
-                .map((br) => (
-                  <CarouselItem
-                    key={`beer-card-${br.id}`}
-                    className=" px-1 md:px-2 flex-none basis-10/10 lg:basis-1/3 snap-center transition-all"
-                  >
-                    <div className="decoration-none w-full h-full flex ">
-                      <Link
-                        href={`/beers/${br.slug}`}
-                        className="w-full h-full"
-                      >
-                        <BeerCard beer={br} />
-                      </Link>
-                    </div>
-                  </CarouselItem>
-                ))}
-            </CarouselContent>
-            <CarouselPrevious
-              className="left-0 rounded-none"
-              variant={"secondary"}
-            />
-            <CarouselNext
-              className="right-0 rounded-none"
-              variant={"secondary"}
-            />
-          </Carousel>
+          <ItemCarousel
+            items={dummyMyBeers.filter((br) =>
+              beer.relatedBeers.includes(br.id),
+            )}
+            getKey={(br) => `beer-card-${br.id}`}
+            itemClassName="basis-full lg:basis-1/3"
+            renderItem={(br) => (
+              <Link href={`/beers/${br.slug}`} className="w-full h-full">
+                <BeerCard beer={br} />
+              </Link>
+            )}
+          />
         </div>
       </section>
       <BeerClubBanner />
       <section className="p-4 py-6 md:p-8 lg:p-16 background-logo space-y-8">
         <SectionTitle>Merch</SectionTitle>
         <div className="max-w-[1600px] mx-auto">
-          <Carousel>
-            <CarouselContent className="-m-0">
-              {dummyProducts.map((product) => (
-                <CarouselItem
-                  key={`product-card-${product.id}`}
-                  className=" px-1 md:px-2 flex-none basis-9/10 lg:basis-1/4 snap-center transition-all"
-                >
-                  <div className="decoration-none w-full h-full flex ">
-                    <ProductCard product={product} />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious
-              className="left-0 rounded-none"
-              variant={"secondary"}
-            />
-            <CarouselNext
-              className="right-0 rounded-none"
-              variant={"secondary"}
-            />
-          </Carousel>
+          <ItemCarousel
+            items={dummyProducts}
+            getKey={(p) => `product-card-${p.id}`}
+            itemClassName="basis-9/10 lg:basis-1/4"
+            renderItem={(p) => <ProductCard product={p} />}
+          />
         </div>
         <div className="mx-auto text-center mt-16">
           <Link href="/shop">
